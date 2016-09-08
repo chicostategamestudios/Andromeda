@@ -4,6 +4,8 @@ using Assets.Scripts.Components;
 
 public class Lava : MonoBehaviour {
 
+	public float LavaDamage = 1f;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -11,7 +13,11 @@ public class Lava : MonoBehaviour {
 	
 	void OnTriggerEnter(Collider col){
 		if (col.gameObject.tag == "Player") {
-			col.GetComponent<Health> ().Death ();
+			col.GetComponent<Health> ().TakeDamage (LavaDamage);
+	
+			col.GetComponent<Death> ().PlayerDeath () ;
+		
+
 		}
 	}
 

@@ -23,6 +23,13 @@ public enum LockMode //this is just the lockmode of the level. We can use this t
     unlock
 }
 
+public enum LevelGrade{
+	A,
+	B,
+	C,
+	S
+}
+
 
 
 public class SaveGame : MonoBehaviour { //This class will save the game.
@@ -179,6 +186,8 @@ public class LevelStats //level stats is used to save attriubtes of levels. righ
 {
     public LevelToUnlock thisLevel;
     public LockMode locked;
+	public float relicCompletion;
+	public LevelGrade grade;
 }
 
 
