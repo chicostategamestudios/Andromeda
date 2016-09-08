@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 public class Movement : MonoBehaviour {
     //other shit
 	private CharacterController charCont;
@@ -20,7 +21,7 @@ public class Movement : MonoBehaviour {
 	static public float playerDirection = 0f;
 	private bool grounded;
 	private float verticleSpeed = 0f;
-	private Vector2 moveVector = Vector2.zero;
+	public Vector2 moveVector = Vector2.zero;
     public float speed;
 	private float realspeed;
 	private float gravity;
@@ -95,9 +96,7 @@ public class Movement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Death.dying) { 
-			return;
-		}
+		
 		            
 
 	
