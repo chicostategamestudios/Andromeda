@@ -11,6 +11,9 @@ public class DrippingDragonStatue : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+        isActive = DragonHeadRelic.isTempleActive;
+        if (isActive) {
+            //Repeatidly call a function for a user defined time.
+        }
 	}
 }
