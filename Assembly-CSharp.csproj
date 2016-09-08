@@ -77,6 +77,7 @@
      <Compile Include="Assets\Scripts\LevelComponenets\ElevatorPlat.cs" />
      <Compile Include="Assets\Scripts\LevelComponenets\FragilePillar.cs" />
      <Compile Include="Assets\Scripts\LevelComponenets\GasPlume.cs" />
+     <Compile Include="Assets\Scripts\LevelComponenets\GasPlumePlat.cs" />
      <Compile Include="Assets\Scripts\LevelComponenets\Lava.cs" />
      <Compile Include="Assets\Scripts\LevelComponenets\LavaMonster.cs" />
      <Compile Include="Assets\Scripts\LevelComponenets\MoltenCrab.cs" />

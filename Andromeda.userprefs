@@ -1,14 +1,18 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\LevelComponenets\GasPlume.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\LevelComponenets\GasPlumePlat.cs">
     <Files>
-      <File FileName="Assets\Scripts\LevelComponenets\GasPlume.cs" Line="18" Column="3" />
+      <File FileName="Assets\Scripts\LevelComponenets\GasPlume.cs" Line="28" Column="12" />
       <File FileName="Assets\Scripts\LevelComponenets\LavaMonster.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\LevelComponenets\WheelPlatforms.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\LevelComponenets\Zmovement.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\LevelComponenets\WheelPlatform.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Components\PlayerMovement.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\LevelComponenets\ElevatorPlat.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\LevelComponenets\ElevatorPlat.cs" Line="17" Column="3" />
+      <File FileName="Assets\Scripts\Components\Slash.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Character\CharController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\LevelComponenets\GasPlumePlat.cs" Line="20" Column="18" />
+      <File FileName="Assets\Scripts\LevelComponenets\BatBehavior.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
