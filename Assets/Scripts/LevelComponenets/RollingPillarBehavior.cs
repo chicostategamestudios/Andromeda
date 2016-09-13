@@ -15,21 +15,31 @@ public class RollingPillarBehavior : MonoBehaviour {
 	public float rayDir;
 	public float rotSpeed;
 	public Transform PillarMesh;
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+
+
+    void Start () {
+        //Detect 
 		rayDir = speed / (Mathf.Abs (speed));
 		PillarMesh = this.transform.GetChild (0);
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+
+
+    void Update () {
+        //If not start rolling return
 		if (!StartRolling) {
 			return;
 		}
-		grounded = (Physics.Raycast (transform.position, -Vector3.up, rayDist));
-		if (!grounded) {
+        //check if grounded, grouded is equal to raycast
+        grounded = (Physics.Raycast (transform.position, -Vector3.up, rayDist));
+
+        //If not grounded then force of gravity pushes down
+        if (!grounded) {
 			verticleSpeed -= gravityRate * Time.deltaTime;
-		} else {
+		} else //If grounded then jump up equal to jump height
+        {
 			verticleSpeed = jumpheight;
 		}
 
