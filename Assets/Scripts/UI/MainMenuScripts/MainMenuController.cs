@@ -2,12 +2,15 @@
 using System.Collections;
 
 public class MainMenuController : MonoBehaviour {
-	public bool canMoveCursor;
+	public bool canMoveCursor, canPressSubmit, canPressCancel;
 	public float thumbstickCursorThreshold, verticalThumb;
+
+	public GameObject currentCursor;
 
 	private GameObject mainMenuCanvas, splashMenu, mainMenu, gameSelectMenu,
 	levelSelectMenu, optionsMenu, creditsMenu, statsMenu, exitMenu, 
-	mainMenuCursor, gameSelectCursor, exitMenuCursor, currentCursor;
+	mainMenuCursor, gameSelectCursor, exitMenuCursor, /*currentCursor,*/
+	currentMenu, previousMenu, previousCursor, noCursor;
 
 	private bool onSplashScreen; 
 
@@ -15,6 +18,10 @@ public class MainMenuController : MonoBehaviour {
 	exitMenuCursorLocation;
 
 	void Start () {
+		previousMenu = null;
+		currentMenu = null;
+		canPressSubmit = true;
+		canPressCancel = true;
 		onSplashScreen = true;
 		canMoveCursor = true;
 		GetAllMainMenuObjects ();
@@ -31,6 +38,7 @@ public class MainMenuController : MonoBehaviour {
 				currentCursor.GetComponent<CursorIndexTracker> ().cursorIndexMax);
 			verticalThumb = Input.GetAxis ("Vertical");
 			MainMenuSelect ();
+			ResetButtonsOnUp ();
 		}
 	}
 
@@ -60,6 +68,18 @@ public class MainMenuController : MonoBehaviour {
 						}
 					}
 				}
+				if (child.gameObject.name == ("Credits_Menu")) {
+					creditsMenu = child.gameObject;
+				}
+				if (child.gameObject.name == ("No_Cursor")) {
+					noCursor = child.gameObject;
+				}
+				if (child.gameObject.name == ("Exit_Menu")) {
+					exitMenu = child.gameObject;
+				}
+				if (child.gameObject.name == ("Exit_Menu_Cursor")) {
+					exitMenuCursor = child.gameObject;
+				}
 			}
 		} else {
 			Debug.Log ("Cannot find Main_Menu_Canvas");
@@ -68,13 +88,17 @@ public class MainMenuController : MonoBehaviour {
 
 	//Moves from the Splash Screen to the Main Menu
 	//and sets the current cursor to mainMenuCursor
+
+	//For every getbutton down dont allow another unitl the button has been released
 	void EnterMainMenu(){
-		if (Input.GetButtonDown ("Submit") && splashMenu.activeInHierarchy) {
+		if (Input.GetButtonDown ("Submit") && splashMenu.activeInHierarchy && canPressSubmit) {
+			canPressSubmit = false;
 			onSplashScreen = false;
 			splashMenu.SetActive (false);
 			mainMenu.SetActive (true);
 			mainMenuCursor.SetActive (true);
 			currentCursor = mainMenuCursor;
+			currentMenu = mainMenu;
 		}
 
 	}
@@ -119,24 +143,43 @@ public class MainMenuController : MonoBehaviour {
 	}
 
 	void MainMenuSelect(){
-		if (Input.GetButtonDown ("Submit") && currentCursor == mainMenuCursor) {
+		if (Input.GetButtonDown ("Submit") && currentCursor == mainMenuCursor && canPressSubmit) {
+			canPressSubmit = false;
+			//If we're selecting Play
 			if (currentCursor.GetComponent<CursorIndexTracker> ().currentCursorIndex == 0) {
-				gameSelectMenu.SetActive (true);
-				currentCursor = gameSelectCursor;
+				SelectMenu (gameSelectMenu, gameSelectCursor, currentMenu, currentCursor);
+			}
+			//If we're selecting Credits
+			if (currentCursor.GetComponent<CursorIndexTracker> ().currentCursorIndex == 2) {
+				SelectMenu (creditsMenu, noCursor, currentMenu, currentCursor);
+			}
+			//If we're selecting Exit
+			if (currentCursor.GetComponent<CursorIndexTracker> ().currentCursorIndex == 4) {
+				SelectMenu (exitMenu, exitMenuCursor, currentMenu, currentCursor);
 			}
 		}
 
-		if (Input.GetButtonDown ("Cancel") && currentCursor != mainMenuCursor) {
-			ReturnToMainMenu ();
+		if (Input.GetButtonDown ("Cancel") && currentCursor != mainMenuCursor && canPressCancel) {
+			canPressCancel = false;
+			ReturnToPreviousMenu ();
 		}
 
 	}
 
-	void ReturnToMainMenu(){
-		if (gameSelectMenu.activeInHierarchy) {
+	void ReturnToPreviousMenu(){
+		GameObject menuTemp, cursorTemp;
+		if (currentMenu.activeInHierarchy) {
+			menuTemp = currentMenu;
+			cursorTemp = currentCursor;
+			menuTemp.SetActive (false);
+			cursorTemp.SetActive (false);
 			ResetCursor ();
-			gameSelectMenu.SetActive (false);
-			currentCursor = mainMenuCursor;
+			currentMenu = previousMenu;
+			currentCursor = previousCursor;
+			currentMenu.SetActive (true);
+			currentCursor.SetActive (true);
+
+
 		}
 	}
 
@@ -146,4 +189,25 @@ public class MainMenuController : MonoBehaviour {
 		currentCursor.GetComponent<RectTransform> ().localPosition = 
 			new Vector2 (currentCursorStartPos.x, currentCursor.GetComponent<CursorIndexTracker>().cursorYPositions[0]);
 	}
+
+	void ResetButtonsOnUp(){
+		if (Input.GetButtonUp ("Submit")) {
+			canPressSubmit = true;
+		}
+		if (Input.GetButtonUp ("Cancel")) {
+			canPressCancel = true;
+		}
+
+	}
+
+	void SelectMenu (GameObject selectedMenu, GameObject selectedMenuCursor, GameObject lastMenu, GameObject lastCursor)
+	{
+		previousCursor = lastCursor;
+		previousMenu = lastMenu;
+		selectedMenu.SetActive (true);
+		selectedMenuCursor.SetActive (true);
+		currentCursor = selectedMenuCursor;
+		currentMenu = selectedMenu;
+	}
+		
 }
