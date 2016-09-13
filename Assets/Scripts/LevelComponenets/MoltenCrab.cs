@@ -4,7 +4,7 @@ using System.Collections;
 public class MoltenCrab : MonoBehaviour {
 
 	bool grounded;
-	public float speed = 155;
+	public float speed = 3;
 	public float randomTimeCheck;
 	public float changeDirChance;
 	public float damage;
@@ -51,8 +51,8 @@ public class MoltenCrab : MonoBehaviour {
 
         Vector3 moveVector = new Vector3 (speed * forward, verticleSpeed, 0f);
 		transform.Translate (moveVector * Time.deltaTime);
-
-		if (Physics.Raycast (transform.position, Vector3.right * forward, wallDist)) {
+        RaycastHit hit;
+		if (Physics.Raycast (transform.position, Vector3.right * forward, out hit, wallDist) && hit.collider.gameObject.tag != "Player") {
 			forward *= -1f;
 		}
 
