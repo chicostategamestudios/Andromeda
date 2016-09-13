@@ -13,13 +13,11 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Web v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>WebPlayer:6</UnityBuildTarget>
     <UnityVersion>5.3.4f1</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion Condition=" '$(VisualStudioVersion)' != '10.0' ">4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -106,8 +104,9 @@
     <Compile Include="Assets\Scripts\LevelComponenets\BatNest.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\BreakingBridge.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\BurningBridge.cs" />
-    <Compile Include="Assets\Scripts\LevelComponenets\DragonHeadRelic.cs" />
-    <Compile Include="Assets\Scripts\LevelComponenets\DrippingDragonStatue.cs" />
+    <Compile Include="Assets\Scripts\LevelComponenets\Dragon Statues\DragonHeadRelic.cs" />
+    <Compile Include="Assets\Scripts\LevelComponenets\Dragon Statues\DrippingDragonStatue.cs" />
+    <Compile Include="Assets\Scripts\LevelComponenets\Dragon Statues\FireballDragonStatue.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\ElevatorPlat.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\FragilePillar.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\Lava.cs" />
