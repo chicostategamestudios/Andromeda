@@ -10,14 +10,19 @@ public class GasPlumePlat : MonoBehaviour {
 	bool Go = false;
 	bool addForce;
 	Vector3 moveVec;
+	public float maxHeight;
+
+
 	// Use this for initialization
 	void Start () {
 		startPos = transform.position;
-		//InvokeRepeating ("goUp", HowOften, HowOften);
 	}
 
 	// Update is called once per frame
 	void Update () {
+		if (GasPlume.S.isIgnited && transform.position.y < maxHeight) {
+			addForce = true;
+		}
 
 		if (addForce) {
 			vertSpeed = JumpForce;
@@ -36,9 +41,6 @@ public class GasPlumePlat : MonoBehaviour {
 
 
 
-	}
-	void goUp(){
-		addForce = true;
 	}
 
 }
