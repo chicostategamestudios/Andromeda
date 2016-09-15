@@ -1,7 +1,8 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\LevelComponenets\FragilePillar.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\LevelComponenets\FlamePillar.cs">
     <Files>
+      <File FileName="Assets\Scripts\LevelComponenets\FlamePillar.cs" Line="24" Column="3" />
       <File FileName="Assets\Scripts\LevelComponenets\GasPlumePlat.cs" Line="14" Column="2" />
       <File FileName="Assets\Scripts\LevelComponenets\GasPlume.cs" Line="6" Column="26" />
       <File FileName="Assets\Scripts\LevelComponenets\LavaMonster.cs" Line="1" Column="1" />
@@ -9,11 +10,10 @@
       <File FileName="Assets\Scripts\LevelComponenets\Zmovement.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\LevelComponenets\WheelPlatform.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Components\PlayerMovement.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\LevelComponenets\ElevatorPlat.cs" Line="17" Column="3" />
+      <File FileName="Assets\Scripts\LevelComponenets\ElevatorPlat.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Components\Slash.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Character\CharController.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\LevelComponenets\BatBehavior.cs" Line="1" Column="1" />
-      <File FileName="D:\School\CAGD 380-scripting\Gauntlet\Gauntlet_Final_Thompson_Pletcher\Assets\Scripts\Valkyrie.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\LevelComponenets\FragilePillar.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>

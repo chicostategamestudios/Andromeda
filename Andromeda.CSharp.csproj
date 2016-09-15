@@ -103,6 +103,7 @@
     <Compile Include="Assets\Scripts\LevelComponenets\BatBehavior.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\BatNest.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\ElevatorPlat.cs" />
+    <Compile Include="Assets\Scripts\LevelComponenets\FlamePillar.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\FragilePillar.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\GasPlume.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\GasPlumePlat.cs" />
