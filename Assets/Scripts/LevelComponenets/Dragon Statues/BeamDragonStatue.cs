@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class FireballDragonStatue : MonoBehaviour {
+public class BeamDragonStatue : MonoBehaviour {
     [Tooltip("Override for playtesting (or other reasons). Make this true if you want to activate it before the relic is grabbed")]
     public bool isActive;
-    [Tooltip("number of seconds in between fireballs")]
+    [Tooltip("number of seconds in between beam firing")]
     public float waitTime;
+    [Tooltip("duration of the beam when it's firing (in seconds)")]
+    public float durationOfBeam;
     [Tooltip("intial delay of activation after artifact has been collected (in seconds)")]
     public float initialDelay;
 
@@ -22,12 +24,15 @@ public class FireballDragonStatue : MonoBehaviour {
         if ((isActive || DragonHeadRelic.isTempleActive) && !activated)
         {
             activated = true;
-            InvokeRepeating("SpawnFireball", initialDelay, waitTime);
+            InvokeRepeating("FireBeam", initialDelay, waitTime + durationOfBeam);
         }
     }
 
-    void SpawnFireball()
+    void FireBeam()
     {
-        //Instantainate a new fireball
+        //Spawn Beam
+        //Has beam been activated for the user specified ammount of time?
+            //Despawn beam
+        
     }
 }

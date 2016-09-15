@@ -104,6 +104,7 @@
     <Compile Include="Assets\Scripts\LevelComponenets\BatNest.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\BreakingBridge.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\BurningBridge.cs" />
+    <Compile Include="Assets\Scripts\LevelComponenets\Dragon Statues\BeamDragonStatue.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\Dragon Statues\DragonHeadRelic.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\Dragon Statues\DrippingDragonStatue.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\Dragon Statues\FireballDragonStatue.cs" />

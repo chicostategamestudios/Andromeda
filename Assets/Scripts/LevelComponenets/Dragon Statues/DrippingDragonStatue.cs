@@ -26,7 +26,8 @@ public class DrippingDragonStatue : MonoBehaviour {
 	}
 
     void DrippingLava() {
-
-
+        //Spawn a lava burst
+        //is lava touching the ground?
+            //if it is, despawn the lava
     }
 }

@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class DragonHeadRelic : MonoBehaviour {
-    
+     
     public static bool isTempleActive; //Global Varible to tell the rest of the game that the temple is active. If you need to call it in anouther script, use 'DragonHeadRelic.isTempleActive
     [Tooltip("Use this varible to make the temple 'Activate' the rest of the level. If you need to call it in anouther script, use 'DragonHeadRelic.isTempleActive")]
     public bool isTempleActive_; // used to be able to manipulate the global varible while playtesting game (local varible)
