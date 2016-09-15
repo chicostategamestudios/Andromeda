@@ -20,18 +20,18 @@ public class LoadGameExample : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.L))
         {
-              SaveGame.GameSaver.LoadGame();
+          //    SaveGame.GameSaver.LoadGames();
            
         }
 
         if (UpdateGameSave)
         {
 
-            SaveGame.GameSaver.UpdateSave(whichLevel, lockMode);
+            //SaveGame.GameSaver.UpdateSave(whichLevel, lockMode);
 
             UpdateGameSave = false;
 
-           myStats = SaveGame.GameSaver.loadStats;
+        //   myStats = SaveGame.GameSaver.loadStats;
             Debug.Log(myStats.LevelOneStats.thisLevel + " : "+ myStats.LevelOneStats.locked );
 
             Debug.Log(myStats.LevelTwoStats.thisLevel + " : " + myStats.LevelTwoStats.locked);

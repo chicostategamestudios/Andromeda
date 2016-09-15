@@ -10,6 +10,7 @@ namespace Assets.Scripts.Components
 		public float CurStuff= 0f;
 		float pointValue;
 		List<GameObject> collectedLoot;
+		Death myDeathObj;
 
 		public void TotalStuff(){
 			GameObject[] tempList = GameObject.FindGameObjectsWithTag ("Loot");
@@ -39,8 +40,12 @@ namespace Assets.Scripts.Components
 		}
 
 		public void Death(){
-			Debug.LogError ("Death is being called on the Health Script, Make sure whatever is calling it is changed to be calling the death script instead");
+		//	Debug.LogError ("Death is being called on the Health Script, Make sure whatever is calling it is changed to be calling the death script instead");
+			if (myDeathObj == null) {
+				myDeathObj = this.gameObject.GetComponent<Death> ();
+			}
 
+			myDeathObj.Respawn ();
 
 		}
 
