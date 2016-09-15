@@ -49,7 +49,7 @@ public class MainMenuController : MonoBehaviour {
 		if (GameObject.Find ("Main_Menu_Canvas")) {
 			mainMenuCanvas = GameObject.Find ("Main_Menu_Canvas");
 			foreach (RectTransform child in mainMenuCanvas.GetComponent<RectTransform>()) {
-				if (child.gameObject.name == ("Splash_Screen_Image")) {
+				if (child.gameObject.name == ("Andromeda_Splash_Screen_Image")) {
 					splashMenu = child.gameObject;
 					splashMenu.SetActive (true);
 				}
@@ -68,7 +68,7 @@ public class MainMenuController : MonoBehaviour {
 						}
 					}
 				}
-				if (child.gameObject.name == ("Credits_Menu")) {
+				if (child.gameObject.name == ("Credits_Text_Controller_Obj")) {
 					creditsMenu = child.gameObject;
 				}
 				if (child.gameObject.name == ("No_Cursor")) {
@@ -166,7 +166,7 @@ public class MainMenuController : MonoBehaviour {
 
 	}
 
-	void ReturnToPreviousMenu(){
+	public void ReturnToPreviousMenu(){
 		GameObject menuTemp, cursorTemp;
 		if (currentMenu.activeInHierarchy) {
 			menuTemp = currentMenu;
