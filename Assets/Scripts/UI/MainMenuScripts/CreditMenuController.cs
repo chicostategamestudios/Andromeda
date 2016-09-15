@@ -18,7 +18,7 @@ public class CreditMenuController : MonoBehaviour {
 
 	void Start () {
 		creditsSourceFile = new FileInfo ("Assets\\Scripts\\UI\\MainMenuScripts\\creditsTextTest.txt");
-		creditsStream = creditsSourceFile.OpenText ();
+//		creditsStream = creditsSourceFile.OpenText ();
 		ReadInCreditsData ();
 		StartCoroutine(CreateCreditsText ());
 	}
