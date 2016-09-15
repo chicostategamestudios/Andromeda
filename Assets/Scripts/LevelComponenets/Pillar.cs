@@ -34,7 +34,7 @@ public class Pillar : MonoBehaviour {
 
 		if(col.gameObject.tag == ("Player")){
 			InvokeRepeating("Fall", 0.01f,0.01f);
-			Destroy (myTrigger);	
+			Destroy (myTrigger);
 		
 		}
 	}
