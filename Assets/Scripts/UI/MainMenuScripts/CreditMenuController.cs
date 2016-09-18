@@ -5,7 +5,7 @@ using System.IO;
 using UnityEngine.UI;
 public class CreditMenuController : MonoBehaviour {
 
-	public float timeBetweenText;
+	public float timeBetweenText, xPos, Ypos;
 	private List<string> creditsListStr = new List<string>();
 	private List<GameObject> creditsListObj = new List<GameObject>();
 	private FileInfo creditsSourceFile;
@@ -18,7 +18,7 @@ public class CreditMenuController : MonoBehaviour {
 
 	void Start () {
 		creditsSourceFile = new FileInfo ("Assets\\Scripts\\UI\\MainMenuScripts\\creditsTextTest.txt");
-//		creditsStream = creditsSourceFile.OpenText ();
+		creditsStream = creditsSourceFile.OpenText ();
 		ReadInCreditsData ();
 		StartCoroutine(CreateCreditsText ());
 	}
@@ -46,8 +46,8 @@ public class CreditMenuController : MonoBehaviour {
 		creditsOn = true;
 		foreach (string creditString in creditsListStr){
 			GameObject createdText = Instantiate (creditText) as GameObject;
-			createdText.transform.SetParent (mainMenuCanvas.transform);
-			creditText.transform.position = this.transform.position;
+			createdText.transform.SetParent (mainMenuCanvas.transform, false);
+			creditText.GetComponent<RectTransform> ().position = new Vector3 (xPos, Ypos, 0.0f);
 			createdText.GetComponent<Text>().text = creditString;
 			creditsListObj.Add (createdText);
 			yield return new  WaitForSeconds (timeBetweenText);

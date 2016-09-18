@@ -18,6 +18,8 @@ public class LoadGames : MonoBehaviour {
 	public LockMode unlockStuff;
 
 	void Awake(){
+		GameSaver = this.GetComponent<SaveGame> ();
+		GameSaver.LoadGames ();
 		GetSavedGames ();
 
 		for (int game = 0; game < myLoadedGames.Count; game++) {
@@ -58,12 +60,15 @@ public class LoadGames : MonoBehaviour {
 	public void GetSavedGames(){
 		myLoadedGames.Clear ();
 		if (_gamesInstance == null) {
+			//Debug.Log ("I'm creating a new MyGames() as _gamesInstance");
 			_gamesInstance = new MyGames ();
 		}
 		if (GameSaver == null) {
+			//Debug.Log ("GameSaver is " + SaveGame.GetGameSaver);
 			GameSaver = SaveGame.GetGameSaver;
 		}
 
+		//Debug.Log ("_gamesInstance is " + GameSaver.GetMyGames ());
 		_gamesInstance = GameSaver.GetMyGames ();
 
 
