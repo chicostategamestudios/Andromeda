@@ -40,5 +40,9 @@ public class GasPlume : MonoBehaviour {
 			//ignite
 			isIgnited = true;
 		}
+		//damage the player
+		if(other.gameObject.tag == "Player" && isIgnited){
+			Debug.Log("DEAL DAMAGE");
+		}
 	}
 }
