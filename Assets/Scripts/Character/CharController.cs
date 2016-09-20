@@ -24,7 +24,7 @@ namespace Assets.Scripts.Character
 		Components.Death _death;
 
 		float playerDirection;
-		float lastDir =1f;
+		public float lastDir =1f;
 		void Awake(){
 			_movement = gameObject.AddComponent<Components.PlayerMovement> ();
 			_relics = gameObject.AddComponent<Components.RelicManager> ();
