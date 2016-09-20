@@ -108,10 +108,6 @@
     <Compile Include="Assets\Scripts\LevelComponenets\LavaMonster.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\Lavguanas.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\MoltenCrab.cs" />
-<<<<<<< HEAD
-    <Compile Include="Assets\Scripts\LevelComponenets\Pellet.cs" />
-=======
->>>>>>> bd9a9fc704324b4c21d508bd508861e30f516b29
     <Compile Include="Assets\Scripts\LevelComponenets\Pillar.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\RollingPillar.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\RollingPillarBehavior.cs" />
