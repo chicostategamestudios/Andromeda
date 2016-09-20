@@ -17,7 +17,7 @@ namespace Assets.Scripts.Components
 		bool waitForJump;
 		public static bool applyGravity = true;
 		public static bool overrideInput = false;
-		float walled;
+		public static float walled;
 		public static float verticleSpeed;
 		public static float normalSpeed = 15f;
 		public static float boostedSpeed = 30f;
