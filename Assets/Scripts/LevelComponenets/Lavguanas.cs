@@ -2,8 +2,12 @@
 using System.Collections;
 using System;
 
+<<<<<<< HEAD
 public class Lavguanas : MonoBehaviour
 {
+=======
+public class Lavguanas : MonoBehaviour {
+>>>>>>> bd9a9fc704324b4c21d508bd508861e30f516b29
 
     bool grounded;
     public float speed = 3;
@@ -16,18 +20,25 @@ public class Lavguanas : MonoBehaviour
     float grav = 10;
     float distToGround;
     GameObject Player;
+<<<<<<< HEAD
     Renderer rend;
     private Color lerpedColor = Color.white;
     float fireRate = 5;
     float lerpTime = 0;
     public GameObject pellet;
     private GameObject clone;
+=======
+    int playerDirection;
+>>>>>>> bd9a9fc704324b4c21d508bd508861e30f516b29
 
 
     // Use this for initialization
     void Start()
     {
+<<<<<<< HEAD
         rend = GetComponent<Renderer>();
+=======
+>>>>>>> bd9a9fc704324b4c21d508bd508861e30f516b29
         Player = GameObject.FindGameObjectWithTag("Player");
         distToGround = GetComponent<Collider>().bounds.extents.y;
 
@@ -39,6 +50,7 @@ public class Lavguanas : MonoBehaviour
         if (Player == null)
         {
             Player = GameObject.FindGameObjectWithTag("Player");
+<<<<<<< HEAD
         }
         Movement movement = Player.GetComponent<Movement>();
         Debug.Log(Movement.playerDirection);
@@ -68,10 +80,20 @@ public class Lavguanas : MonoBehaviour
 
 
 
+=======
+            Movement movement = Player.GetComponent<Movement>();
+        }
+        if (Player.transform.position.x < transform.position.x)
+        {
+            if (playerDirection > 0)
+            {
+                Debug.Log("player is facing ig");
+>>>>>>> bd9a9fc704324b4c21d508bd508861e30f516b29
             }
         }
         else
         {
+<<<<<<< HEAD
             if (Movement.playerDirection > 0)
             {
                 Debug.Log("player is facing away");
@@ -121,3 +143,40 @@ public class Lavguanas : MonoBehaviour
         lerpTime = 0;
     }
 }
+=======
+
+        }
+
+        /*
+        if player is in range
+            check for player x and direction
+            if players x is less than ai and direction is + 
+            if players x is less than ai and direction is - 
+            if players x is greater than ai and direction is + 
+            if players x is greater than ai and direction is -
+                
+        */
+
+
+        /*
+        if (Physics.Raycast(transform.position, -Vector3.up, distToGround + 0.1f))
+        {
+            verticleSpeed = 0;
+        }
+        else
+        {
+            verticleSpeed -= grav * Time.deltaTime;
+        }
+
+        Vector3 moveVector = new Vector3(speed * forward, verticleSpeed, 0f);
+        transform.Translate(moveVector * Time.deltaTime);
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, Vector3.right * forward, out hit, wallDist) && hit.collider.gameObject.tag != "Player")
+        {
+            forward *= -1f;
+        }
+        */
+    }
+}
+
+>>>>>>> bd9a9fc704324b4c21d508bd508861e30f516b29
