@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-
 public class Movement : MonoBehaviour {
     //other shit
 	private CharacterController charCont;
@@ -21,7 +20,7 @@ public class Movement : MonoBehaviour {
 	static public float playerDirection = 0f;
 	private bool grounded;
 	private float verticleSpeed = 0f;
-	public Vector2 moveVector = Vector2.zero;
+	private Vector2 moveVector = Vector2.zero;
     public float speed;
 	private float realspeed;
 	private float gravity;
@@ -96,8 +95,10 @@ public class Movement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-		            
+		if (Death.dying) { 
+			return;
+		}
+        Debug.Log(playerDirection);
 
 	
 		realJumpHeight = jumpHeight; // temp for math to try to convert jumpHeight as a public variable into units of distance jumped

@@ -53,11 +53,5 @@ public class BatBehavior : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerEnter(Collider col){
-		if (col.gameObject.tag == "Player") {
-			Debug.Log("DEAL DAMAGE");
-		}
-	}
-
 
 }

@@ -36,7 +36,7 @@ public class WheelPlatforms : MonoBehaviour {
 		}
 
 		for (int plat = 0; plat < platforms.Length; plat++) {
-			//Debug.Log (plat);
+			Debug.Log (plat);
 			platformComp [plat] = platforms [plat].GetComponent<WheelPlatform> ();
 
 		}

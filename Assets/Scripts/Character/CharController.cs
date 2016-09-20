@@ -21,7 +21,6 @@ namespace Assets.Scripts.Character
 		Components.RelicManager _relics;
 		Components.Slash _slash;
 		Components.Health _health;
-		Components.Death _death;
 
 		float playerDirection;
 		float lastDir =1f;
@@ -30,15 +29,10 @@ namespace Assets.Scripts.Character
 			_relics = gameObject.AddComponent<Components.RelicManager> ();
 			_slash = gameObject.AddComponent<Components.Slash> ();
 			_health = gameObject.AddComponent<Components.Health> ();
-			_death = gameObject.AddComponent<Components.Death> ();
 			_health.TotalStuff ();
 		}
 
 		void Update(){
-			if (_death.dying) {
-				return;
-			}
-
 			GetInput ();
 			_movement.MovePlayer (playerDirection);
 			_movement.WallGrab ();
