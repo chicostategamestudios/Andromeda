@@ -1,4 +1,0 @@
-sceneSetups:
-- path: Assets/Scenes/TJ_Test.unity
-  isLoaded: 1
-  isActive: 1
