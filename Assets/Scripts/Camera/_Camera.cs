@@ -140,6 +140,38 @@ public class _Camera: MonoBehaviour {
 				//focusPosition += Vector2.up * currentLookAheadX/2; //Executes LookAhead
 				transform.position = (Vector3)focusPosition + Vector3.forward * -10; //Transforms Camera position
 			}
+
+			if (cameraEvent == 3) {
+				focusArea.Update (CharController.Instance.transform.GetComponent<CharacterController>().bounds);
+				//sets the vertical offset of the camera relative to player
+				Vector2 focusPosition = focusArea.center + Vector2.up * verticalOffset;
+
+
+				//Checks the look ahead depending on focus velocity
+				//if the focusArea is moving in x, continue looking ahead
+				if (focusArea.velocity.x != 0) {
+					lookAheadDirectionX = Mathf.Sign (focusArea.velocity.x);
+					if ((Mathf.Sign (PlayerMovement.moveVector.x) == Mathf.Sign (focusArea.velocity.x)) && PlayerMovement.moveVector.x != 0) {
+						lookAheadStopped = false;
+						targetLookAheadX = lookAheadDirectionX * lookAheadDistanceX;
+					} 
+				}
+				//if the focusArea is not moving in x, ease into movement
+				else {
+					if (!lookAheadStopped) {
+						lookAheadStopped = true;
+						targetLookAheadX = currentLookAheadX + (lookAheadDirectionX * lookAheadDistanceX - currentLookAheadX) / 4;
+					}
+				}
+
+				//sets the look ahead depending on direction moving and distance set
+				currentLookAheadX = Mathf.SmoothDamp (currentLookAheadX, targetLookAheadX, ref smoothLookVelocityX, lookSmoothTimeX);
+
+				focusPosition.y = Mathf.SmoothDamp (transform.position.y, focusLock.position.y, ref smoothVelocityY, verticalSmoothTime);
+				focusPosition.x = Mathf.SmoothDamp (transform.position.x, focusLock.position.x, ref smoothVelocityY, verticalSmoothTime);
+				//focusPosition += Vector2.up * currentLookAheadX/2; //Executes LookAhead
+				transform.position = (Vector3)focusPosition + Vector3.forward * -10; //Transforms Camera position
+			}
 		}
 
 		//This is the area around the target that the camera is focusing on

@@ -56,6 +56,12 @@
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
@@ -81,6 +87,7 @@
     <Compile Include="Assets\ProCore\ProGrids\Classes\pg_Enum.cs" />
     <Compile Include="Assets\ProCore\ProGrids\Classes\pg_SceneMeshRender.cs" />
     <Compile Include="Assets\ProCore\ProGrids\Classes\pg_Util.cs" />
+    <Compile Include="Assets\Scripts\Camera\CameraEvent.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Camera\ChangeCamera.cs" />
     <Compile Include="Assets\Scripts\Camera\_Camera.cs" />
