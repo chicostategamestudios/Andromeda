@@ -139,7 +139,7 @@ public class SaveGame : MonoBehaviour { //This class will save the game.
       
        // LevelStats newStats = new LevelStats(); //we create a new stats object.
        // newStats.thisLevel = level; //give the new object the level that we passed in
-       // newStats.locked = lockType; //as well as how we want this level to be locked
+       // newStatssetLocked(true) = lockType; //as well as how we want this level to be locked
 
         //later we will set more stats here
 
@@ -184,28 +184,15 @@ public class SaveGame : MonoBehaviour { //This class will save the game.
         GameStats newGame = new GameStats();
         LevelStats newGameStats = new LevelStats();
 
-		newGame.existingFile = false;
+		//newGame.existingFile = false;
 		newGame.PlayTime = 0f;
+		newGame.treasureCollected = 0f;
 
-        newGameStats.thisLevel = LevelToUnlock.tutorial;
-        newGameStats.locked = LockMode.locked;
-        newGame.TutorialLevelStats = newGameStats;
+      
+	
+   
 
-        newGameStats.thisLevel = LevelToUnlock.levelOne;
-        newGameStats.locked = LockMode.locked;
-        newGame.LevelOneStats = newGameStats;
-
-        newGameStats.thisLevel = LevelToUnlock.levelTwo;
-        newGameStats.locked = LockMode.locked;
-        newGame.LevelTwoStats = newGameStats;
-
-        newGameStats.thisLevel = LevelToUnlock.levelThree;
-        newGameStats.locked = LockMode.locked;
-        newGame.LevelThreeStats = newGameStats;
-
-        newGameStats.thisLevel = LevelToUnlock.levelFour;
-        newGameStats.locked = LockMode.locked;
-        newGame.LevelFourStats = newGameStats;
+   
 
         return newGame; //once our new game is created, return it
     }
@@ -229,11 +216,13 @@ public class GameStats //this object holds all of our game stats. we can store t
 
 	public float PlayTime;
 
-    public LevelStats TutorialLevelStats;
-    public LevelStats LevelOneStats;
-    public LevelStats LevelTwoStats;
-    public LevelStats LevelThreeStats;
-    public LevelStats LevelFourStats;
+	public float treasureCollected;
+
+	public LevelStats TutorialLevelStats = new LevelStats();
+	public LevelStats EarthLevelStats = new LevelStats();
+	public LevelStats FireLevelStats = new LevelStats();
+	public LevelStats WaterLevelStats = new LevelStats();
+	public LevelStats AirLevelStats = new LevelStats();
 }
 
 [Serializable]
@@ -241,9 +230,16 @@ public class LevelStats //level stats is used to save attriubtes of levels. righ
                    //things like player scores and times and things as well.
 {
     public LevelToUnlock thisLevel;
-    public LockMode locked;
+	private bool locked = true;
 	public float relicCompletion;
 	public LevelGrade grade;
+
+	public bool getLocked(){return locked;}
+
+	public void setLocked(bool newLocked){
+		locked = newLocked;
+	}
+
 }
 
 

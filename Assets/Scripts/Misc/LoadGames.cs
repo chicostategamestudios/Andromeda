@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 public class LoadGames : MonoBehaviour {
 
-	List<GameStats> myLoadedGames = new List<GameStats>();
+	public static List<GameStats> myLoadedGames = new List<GameStats>();
 
 	public bool setGameFile;
 	public float SetPlayTime;
@@ -15,13 +15,26 @@ public class LoadGames : MonoBehaviour {
 	MyGames _gamesInstance;
 	SaveGame GameSaver;
 
-	void Update(){
+	public LockMode unlockStuff;
 
+	void Awake(){
+		GetSavedGames ();
+
+		for (int game = 0; game < myLoadedGames.Count; game++) {
+		//	Debug.Log (myLoadedGames [game].LevelOneStats.getLocked());
+		}
+
+
+	}
+
+
+	void Update(){
+		
 		if (Input.GetKeyDown (KeyCode.F1)) {
 
+		
+
 			OpenSavedgame ();
-
-
 		} else if (Input.GetKeyDown (KeyCode.F2)) {
 
 			UpdateValues ();
@@ -31,10 +44,10 @@ public class LoadGames : MonoBehaviour {
 		} else if (Input.GetKeyDown (KeyCode.F4)) {
 
 		} else if (Input.GetKeyDown (KeyCode.Tab)) {
-			GetSavedGames ();
+	
 		}
 
-
+	
 
 
 	}
@@ -63,10 +76,7 @@ public class LoadGames : MonoBehaviour {
 
 
 
-		for (int game = 0; game < myLoadedGames.Count; game++) {
-			Debug.Log(myLoadedGames [game].existingFile);
-			Debug.Log(myLoadedGames [game].PlayTime);
-		}
+	
 
 
 
@@ -82,13 +92,51 @@ public class LoadGames : MonoBehaviour {
 
 	public void UpdateValues(){
 		GameStats updateGame = new GameStats ();
+
 		updateGame = GameSaver.GetGameStats;
+
+		LevelStats EarthLevel = new LevelStats ();
+		EarthLevel = updateGame.EarthLevelStats;
+
+		LevelStats FireLevel = new LevelStats ();
+		FireLevel = updateGame.FireLevelStats;
+
+		LevelStats AirLevel = new LevelStats ();
+		AirLevel = updateGame.AirLevelStats;
+
+		LevelStats WaterLevel = new LevelStats ();
+		WaterLevel = updateGame.WaterLevelStats;
+
+	
+
+
+
+		AirLevel.setLocked (false);
+
+
+
+		EarthLevel.setLocked (true);
+
+
+
+	
+
+
+	
+
 
 		updateGame.existingFile = setGameFile;
 		updateGame.PlayTime = SetPlayTime;
 
-		Debug.Log ("UPDATE VALUES");
+
+
+
+	
+
 		GameSaver.UpdateSave (updateGame);
+
+
+	
 
 
 	}
