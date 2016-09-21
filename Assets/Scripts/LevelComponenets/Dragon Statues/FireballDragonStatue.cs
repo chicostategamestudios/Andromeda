@@ -8,8 +8,11 @@ public class FireballDragonStatue : MonoBehaviour {
     public float waitTime;
     [Tooltip("intial delay of activation after artifact has been collected (in seconds)")]
     public float initialDelay;
+    public float lifetimeOfFireball;
+    public float speedOfFireball;
 
     bool activated = false;
+    public Fireball fireball_;
     // Use this for initialization
     void Start()
     {
@@ -19,8 +22,8 @@ public class FireballDragonStatue : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if ((isActive || DragonHeadRelic.isTempleActive) && !activated)
-        {
+        if ((isActive || DragonHeadRelic.isTempleActive) && !activated) {
+            isActive = true;
             activated = true;
             InvokeRepeating("SpawnFireball", initialDelay, waitTime);
         }
@@ -28,6 +31,12 @@ public class FireballDragonStatue : MonoBehaviour {
 
     void SpawnFireball()
     {
-        //Instantainate a new fireball
+        Fireball fireball = (Fireball) Instantiate(fireball_, GetComponent<Transform>().position, Quaternion.identity);
+        fireball.lifetime = lifetimeOfFireball;
+        fireball.speed = speedOfFireball;
+        fireball.jumpheight = 1;
+        fireball.gravityRate = -10;
+        fireball.rotSpeed = 10;
+
     }
 }

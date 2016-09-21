@@ -46,10 +46,13 @@ public class LavaMonster : MonoBehaviour {
 		spew = true;
 		playerBlocker.enabled = true;
 		mySystem.Play();
-		yield return new WaitForSeconds (lavaDuration);
+        mySystem.GetComponent<BoxCollider>().enabled = true;
+        yield return new WaitForSeconds (lavaDuration);
 		spew = false;
 		playerBlocker.enabled = false;
-		mySystem.Stop ();
+        mySystem.GetComponent<BoxCollider>().enabled = false;
+
+        mySystem.Stop ();
 		yield return new WaitForSeconds (waitDuration);
 		if (transform.position == endPos) {
 			StartCoroutine("SpewLava");
@@ -72,7 +75,6 @@ public class LavaMonster : MonoBehaviour {
 
 	void OnTriggerEnter(Collider col){
 		if (col.gameObject.tag == "Player") {
-
 			Awaken();
 		}
 
@@ -84,6 +86,4 @@ public class LavaMonster : MonoBehaviour {
 		}
 
 	}
-
-
 }
