@@ -75,8 +75,15 @@ public class Fireball : MonoBehaviour {
 
         if (col.gameObject.name == "CubeDeath")
         {
-             Destroy(this.gameObject);
+             Destroy(gameObject);
         }
+        
+        if (col.gameObject.tag == "Player")
+        {
+            Destroy(gameObject);
+        }
+
+        
 
     }
 
