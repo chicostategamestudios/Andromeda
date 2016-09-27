@@ -2,32 +2,33 @@
 using System.Collections;
 
 public class DrippingDragonStatue : MonoBehaviour {
-    [Tooltip("Override for playtesting (or other reasons). Make this true if you want to activate it before the relic is grabbed")]
+    [Tooltip("Override for playtesting (or other reasons). Make this true if you want to activate it before the relic is grabbed. This only last for a second and has a 1 second timer inbetween")]
     public bool isActive;
-    [Tooltip("number of seconds in between bursts")]
-    public float waitTime;
-    [Tooltip("duration of bursts of lava (in seconds)")]
-    public float durationOfDrip;
-    [Tooltip("intial delay of activation after artifact has been collected (in seconds)")]
-    public float initialDelay;
+    
+
+    public Lava_Stream lavaStream;
 
     bool activated = false;
 	// Use this for initialization
 	void Start () {
         
 	}
-	
-	// Update is called once per frame
-	void Update () {
-        if((isActive || DragonHeadRelic.isTempleActive) && !activated) {
+
+    void DrippingLava()
+    {
+        lavaStream.GetComponent<Lava_Stream>().enabled = true;
+        lavaStream.timer = 1;
+    }
+
+    // Update is called once per frame
+    void Update () {
+        if ((isActive || DragonHeadRelic.isTempleActive) && !activated) {
+            isActive = true;
             activated = true;
-            InvokeRepeating("DrippingLava", initialDelay, waitTime + durationOfDrip);
+            lavaStream.gameObject.SetActive(true);
+            DrippingLava();
         }
 	}
 
-    void DrippingLava() {
-        //Spawn a lava burst
-        //is lava touching the ground?
-            //if it is, despawn the lava
-    }
+    
 }
