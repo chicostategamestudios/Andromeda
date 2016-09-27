@@ -56,12 +56,6 @@
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
@@ -91,6 +85,7 @@
     <Compile Include="Assets\Scripts\Camera\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Camera\ChangeCamera.cs" />
     <Compile Include="Assets\Scripts\Camera\_Camera.cs" />
+    <Compile Include="Assets\Scripts\Camera\_CameraOri.cs" />
     <Compile Include="Assets\Scripts\Character\CharController.cs" />
     <Compile Include="Assets\Scripts\Character\CharStates.cs" />
     <Compile Include="Assets\Scripts\CharacterController\BasicAnim.cs" />
