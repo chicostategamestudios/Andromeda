@@ -4,23 +4,20 @@ using System.Collections;
 public class LavaMonster : MonoBehaviour {
 
 
-	public float lavaDuration;
-	public float waitDuration;
-
-	//public float moveHeight;
-
-	Vector3 startPos;
-	Vector3 targetPos;
-	Vector3 endPos;
-	public float speed;
-	public float moveUpHeight = 3f;
-	//public Transform endPosTrans;
-	bool canStartLava = false;
-	public bool spew;
-	ParticleSystem  mySystem;
-	public BoxCollider playerBlocker;
+	public float lavaDuration;          //time the lava spew is active
+    public float waitDuration;          //time between lava spews
+	Vector3 startPos;                   //where the AI starts before it rises
+	Vector3 targetPos;                  //position where the AI currently wants to go
+	Vector3 endPos;                     //the ending position of the AI 
+	public float speed;                 //speed the AI rises at
+	public float moveUpHeight = 3f;     //how far up the AI moves
+	bool canStartLava = false;          //bool to check if the AI can spew lava
+	public bool spew;                   //bool to check if the Ai is spewing
+	ParticleSystem  mySystem;           //ref to the particle system
+	public BoxCollider playerBlocker;   //ref to the spew's collider
 
 	// Use this for initialization
+    //sets variables needed on start.
 	void Start () {
 		playerBlocker.enabled = false;
 		mySystem = gameObject.transform.GetComponentInChildren<ParticleSystem> ();
@@ -32,16 +29,19 @@ public class LavaMonster : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        //if current position is not targetPos move torwards that pos.
 		if (transform.position != targetPos) {
 			transform.position = Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
 		}
-
+        //if target pos is end pos, and current position is end positon and canStartLava is true start the coroutine for spewing lava and set canStartLava false
 		if (targetPos == endPos && transform.position == endPos && canStartLava) {
 			StartCoroutine("SpewLava");
 			canStartLava = false;
 		}
 
 	}
+
+    //Starts the timer for spweing lava. turns on the collider for particles and plays the particle system. After waitDuration turn off the collider and particle system
 	IEnumerator SpewLava(){
 		spew = true;
 		playerBlocker.enabled = true;
@@ -59,13 +59,14 @@ public class LavaMonster : MonoBehaviour {
 		}
 	}
 	
-
+    //have the AI rise up and allow it to spew lava
 	void Awaken(){
 		targetPos = endPos;
 			canStartLava = true;
 
 	}
 
+    //have the AI go back down and stop spewing lava
 	void Sleep(){
 		targetPos = startPos;
 		StopAllCoroutines ();
@@ -73,13 +74,14 @@ public class LavaMonster : MonoBehaviour {
 		mySystem.Stop ();
 	}
 
+    //if player enters the collider around the AI awaken
 	void OnTriggerEnter(Collider col){
 		if (col.gameObject.tag == "Player") {
 			Awaken();
 		}
 
 	}
-
+    //If player leaves the collider around the AI go to sleep
 	void OnTriggerExit(Collider col){
 		if (col.gameObject.tag == "Player") {
 			Sleep();
