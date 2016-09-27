@@ -31,6 +31,7 @@ public class Lavguanas : MonoBehaviour
         rend = GetComponent<Renderer>();
         Player = GameObject.FindGameObjectWithTag("Player");
         distToGround = GetComponent<Collider>().bounds.extents.y;
+        
 
     }
 
@@ -46,7 +47,9 @@ public class Lavguanas : MonoBehaviour
         {
             if (charController.lastDir > 0)
             {
-                rend.enabled = false;
+                Color color = rend.material.color;
+                color.a = 0.0f;
+                rend.material.color = color;
                 speed = 1;
                 if (lerpTime > 0)
                 {
@@ -56,7 +59,7 @@ public class Lavguanas : MonoBehaviour
             }
             else
             {
-                rend.enabled = true;
+
                 speed = 3;
                 lerpedColor = Color.Lerp(Color.white, Color.red, lerpTime);
                 if (lerpTime < 1)
@@ -93,7 +96,9 @@ public class Lavguanas : MonoBehaviour
             else
             {
                 {
-                    rend.enabled = false;
+                    Color color = rend.material.color;
+                    color.a = 0.0f;
+                    rend.material.color = color;
                     speed = 1;
                     if (lerpTime > 0)
                     {
@@ -104,7 +109,7 @@ public class Lavguanas : MonoBehaviour
             }
 
         }
-        /*
+        
         if (Physics.Raycast(transform.position, -Vector3.up, distToGround + 0.1f))
         {
             verticleSpeed = 0;
@@ -121,7 +126,7 @@ public class Lavguanas : MonoBehaviour
         {
             forward *= -1f;
         }
-    */
+    
     }
 
 
@@ -141,6 +146,7 @@ public class Lavguanas : MonoBehaviour
         pelletScript.moveDirection = fireDirection;
         lerpTime = 0;
     }
+
 }
 
 
