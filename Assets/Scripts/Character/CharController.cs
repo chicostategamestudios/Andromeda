@@ -82,7 +82,8 @@ namespace Assets.Scripts.Character
 				} 
 
 			if (Input.GetButtonDown ("Fire3")) {
-				_slash.SlashAttack (lastDir);
+                _slash.SlashAttack(lastDir);
+                Debug.Log("Fire3 pressed");
 			}
 		
 
