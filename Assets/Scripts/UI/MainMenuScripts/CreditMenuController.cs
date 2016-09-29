@@ -5,22 +5,20 @@ using System.IO;
 using UnityEngine.UI;
 public class CreditMenuController : MonoBehaviour {
 
-	public float timeBetweenText;
+	public float timeBetweenText, xPos, Ypos;
 	private List<string> creditsListStr = new List<string>();
 	private List<GameObject> creditsListObj = new List<GameObject>();
 	private FileInfo creditsSourceFile;
 	private bool creditsOn = false;
-	//private StreamReader creditsStream = null;
+	private StreamReader creditsStream = null;
 	private string textRead = " ";
 
 	[SerializeField]
 	private GameObject creditText, mainMenuCanvas;
 
 	void Start () {
-
 		creditsSourceFile = new FileInfo ("Assets\\Scripts\\UI\\MainMenuScripts\\creditsTextTest.txt");
-		//using (StreamReader creditsStream = creditsSourceFile.OpenText())
-		//	creditsStream = creditsSourceFile.OpenText ();
+		creditsStream = creditsSourceFile.OpenText ();
 		ReadInCreditsData ();
 		StartCoroutine(CreateCreditsText ());
 	}
@@ -38,7 +36,7 @@ public class CreditMenuController : MonoBehaviour {
 	void ReadInCreditsData(){
 		if (creditsSourceFile.Exists) {
 			while (textRead != null) {
-				//textRead = creditsStream.ReadLine ();
+				textRead = creditsStream.ReadLine ();
 				creditsListStr.Add (textRead);
 			}
 		}
@@ -48,8 +46,8 @@ public class CreditMenuController : MonoBehaviour {
 		creditsOn = true;
 		foreach (string creditString in creditsListStr){
 			GameObject createdText = Instantiate (creditText) as GameObject;
-			createdText.transform.SetParent (mainMenuCanvas.transform);
-			creditText.transform.position = this.transform.position;
+			createdText.transform.SetParent (mainMenuCanvas.transform, false);
+			creditText.GetComponent<RectTransform> ().position = new Vector3 (xPos, Ypos, 0.0f);
 			createdText.GetComponent<Text>().text = creditString;
 			creditsListObj.Add (createdText);
 			yield return new  WaitForSeconds (timeBetweenText);
