@@ -75,6 +75,7 @@
      <Compile Include="Assets\Scripts\LevelComponenets\BatBehavior.cs" />
      <Compile Include="Assets\Scripts\LevelComponenets\BatNest.cs" />
      <Compile Include="Assets\Scripts\LevelComponenets\CheckPoint.cs" />
+     <Compile Include="Assets\Scripts\LevelComponenets\DragonHeadRelic.cs" />
      <Compile Include="Assets\Scripts\LevelComponenets\ElevatorPlat.cs" />
      <Compile Include="Assets\Scripts\LevelComponenets\FragilePillar.cs" />
      <Compile Include="Assets\Scripts\LevelComponenets\Lava.cs" />
@@ -89,6 +90,7 @@
      <Compile Include="Assets\Scripts\LevelComponenets\Zmovement.cs" />
      <Compile Include="Assets\Scripts\Misc\DealDamage.cs" />
      <Compile Include="Assets\Scripts\Misc\HideSprite.cs" />
+     <Compile Include="Assets\Scripts\Misc\LevelStateManager.cs" />
      <Compile Include="Assets\Scripts\Misc\LoadGameExample.cs" />
      <Compile Include="Assets\Scripts\Misc\LoadGames.cs" />
      <Compile Include="Assets\Scripts\Misc\Projectile.cs" />
@@ -101,9 +103,12 @@
      <Compile Include="Assets\Scripts\Relics\Relics.cs" />
      <Compile Include="Assets\Scripts\Relics\UpgradeRelic.cs" />
      <Compile Include="Assets\Scripts\UI\Healthbar.cs" />
+     <Compile Include="Assets\Scripts\UI\InGameScripts\AbilityImagesActiveInactive.cs" />
      <Compile Include="Assets\Scripts\UI\MainMenuScripts\AssignCursorIndices.cs" />
      <Compile Include="Assets\Scripts\UI\MainMenuScripts\CreditMenuController.cs" />
      <Compile Include="Assets\Scripts\UI\MainMenuScripts\CreditTextBehavior.cs" />
+     <Compile Include="Assets\Scripts\UI\MainMenuScripts\CreditsReadFromScript.cs" />
+     <Compile Include="Assets\Scripts\UI\MainMenuScripts\CreditsString.cs" />
      <Compile Include="Assets\Scripts\UI\MainMenuScripts\CursorIndexTracker.cs" />
      <Compile Include="Assets\Scripts\UI\MainMenuScripts\DisplayGameFiles.cs" />
      <Compile Include="Assets\Scripts\UI\MainMenuScripts\DropDownMenuCursorBehavior.cs" />
@@ -115,6 +120,7 @@
      <Compile Include="Assets\Scripts\UI\MainMenuScripts\MainMenuController.cs" />
      <Compile Include="Assets\Scripts\UI\MainMenuScripts\MenuImageSelectedBehavior.cs" />
      <Compile Include="Assets\Scripts\UI\MainMenuScripts\OptionsMenuCursorBehavior.cs" />
+     <Compile Include="Assets\Scripts\UI\MainMenuScripts\VisualOptionsBehavior.cs" />
      <Compile Include="Assets\Scripts\UI\Timer.cs" />
      <None Include="Assets\ProCore\ProGrids\Shader\pg_GridShader.shader" />
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_TransparentOverlay.shader" />
