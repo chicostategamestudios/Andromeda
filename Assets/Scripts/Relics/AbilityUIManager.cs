@@ -2,63 +2,46 @@
 using System.Collections;
 using Assets.Scripts.Components;
 using UnityEngine.UI;
-using Assets.Scripts.Character;
-using Assets.Scripts.Components;
 
 public class AbilityUIManager : MonoBehaviour {
 
-	RelicManager Manager;
-	Transform Player;
-	GameObject Slash;
-	GameObject DoubleJump;
-	GameObject WallJump;
-	GameObject Dash;
-
+	RelicManager manager;
+	Image Slash;
+	Image Jump;
+	Image WallJump;
+	Image Dash;
+	// Use this for initialization
 	void Start () {
-		Manager = GameObject.FindGameObjectWithTag ("Player").GetComponent<RelicManager> ();
-		Player = CharController.Instance.transform;
-		Slash = transform.FindChild ("Canvas/Base/Slash").gameObject;
-		DoubleJump = transform.FindChild ("Canvas/Base/Double_Jump").gameObject;
-		WallJump = transform.FindChild ("Canvas/Base/Wall_Jump").gameObject;
-		Dash = transform.FindChild ("Canvas/Base/Dash").gameObject;
+		manager = GameObject.FindGameObjectWithTag ("Player").GetComponent<RelicManager> ();
+
+		Slash = transform.FindChild ("Canvas/Base/Slash/Image").gameObject.GetComponent<Image>();
+		Jump = transform.FindChild ("Canvas/Base/Jump/Image").gameObject.GetComponent<Image>();
+		WallJump = transform.FindChild ("Canvas/Base/WallJump/Image").gameObject.GetComponent<Image>();
+		Dash = transform.FindChild ("Canvas/Base/Dash/Image").gameObject.GetComponent<Image>();
 	}
-		
+	
+	// Update is called once per frame
 	void Update () {
-
-		//Still need to add in the bool that tells whether the ability is available during escape phase
-		//Or may need to control this in the actual ability script
-		AbilityActiveInactive (Slash, Player.GetComponent<Slash>().GetCanSlash(), Manager.slashRelic, true);
-		AbilityActiveInactive (DoubleJump, Player.GetComponent<Jumping>().GetCanDoubleJump(), Manager.jumpRelic, true);
-		AbilityActiveInactive (WallJump, Player.GetComponent<Jumping>().GetCanWallJump(), true);
-		AbilityActiveInactive (Dash, Player.GetComponent<Dash>().GetCanDash(), Manager.dashRelic, true);
-	}
-
-	void AbilityActiveInactive(GameObject abilityIcon, bool isActive, bool abilityUnlocked, bool usableOnThisPhase){
-		
-		AbilityImagesActiveInactive images = abilityIcon.GetComponent<AbilityImagesActiveInactive> ();
-		Image abilityIconImage = abilityIcon.GetComponent<Image> ();
-
-		if (abilityUnlocked) {
-			if (isActive && usableOnThisPhase) {
-				abilityIconImage.sprite = images.abilityIcons [0];
-			} else {
-				abilityIconImage.sprite = images.abilityIcons [1];
-			}
+		if (manager.slashRelic) {
+			Slash.enabled = true;
 		} else {
-			abilityIconImage.sprite = images.abilityIcons [2];
+			Slash.enabled = false;
 		}
-	}
-
-	//Used for the wall jump Icon because that ability is available (although limited) from the start of the game
-	void AbilityActiveInactive(GameObject abilityIcon, bool isActive, bool usableOnThisPhase){
-
-		AbilityImagesActiveInactive images = abilityIcon.GetComponent<AbilityImagesActiveInactive> ();
-		Image abilityIconImage = abilityIcon.GetComponent<Image> ();
-
-		if (isActive) {
-			abilityIconImage.sprite = images.abilityIcons [0];
+		if (manager.jumpRelic) {
+			Jump.enabled = true;
 		} else {
-			abilityIconImage.sprite = images.abilityIcons [1];
+			Jump.enabled = false;
 		}
+		if (manager.wallJumpRelic) {
+			WallJump.enabled = true;
+		} else {
+			WallJump.enabled = false;
+		}
+		if (manager.dashRelic) {
+			Dash.enabled = true;
+		} else {
+			Dash.enabled = false;
+		}
+
 	}
 }

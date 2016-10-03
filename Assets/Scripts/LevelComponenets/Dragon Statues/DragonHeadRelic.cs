@@ -22,6 +22,7 @@ public class DragonHeadRelic : MonoBehaviour {
         isTempleActive = isTempleActive_;
 	}
 
+	//mamma mia, papa pia, fire in the pizzeria
     // if the player collides with the relic, then the temple activates
     // also destroys the relic and the trigger
     void OnTriggerEnter(Collider col) {

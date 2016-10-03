@@ -8,9 +8,6 @@ public class DisplayGameFiles : MonoBehaviour {
 
 	public Text[] myTreasureTexts;
 	public Text[] myNameTexts;
-	public Text[] myLevelGradeTexts;
-	public Text[] myTreasurePercentCompleteTexts;
-	public Text[] myLevelTimesText;
 	public Sprite[] fireLevelIconSpr, waterLevelIconSpr, earthLevelIconSpr, airLevelIconSpr;
 	public Image[] fireLevelIconImage, waterLevelIconImage, earthLevelIconImage, airLevelIconImage;
 
@@ -28,7 +25,7 @@ public class DisplayGameFiles : MonoBehaviour {
 		for (int game = 0; game < mygames.Count; game++) {
 
 			//Assigning treasure percent
-			myTreasureTexts [game].text = mygames [game].treasureCollected.ToString() + "%";
+			myTreasureTexts [game].text =mygames [game].treasureCollected.ToString() + "%";
 
 			//Debug.Log (mygames [game].PlayTime);
 
@@ -71,7 +68,7 @@ public class DisplayGameFiles : MonoBehaviour {
 				airLevelIconImage [game].sprite = airLevelIconSpr [0];
 			}
 
-			//Assigning Stats Menu
+
 
 		}
 

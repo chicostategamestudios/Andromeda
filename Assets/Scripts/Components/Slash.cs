@@ -27,9 +27,5 @@ namespace Assets.Scripts.Components
 			}
 		}
 
-		public bool GetCanSlash(){
-			return canSlash;
-		}
-
 	}
 }

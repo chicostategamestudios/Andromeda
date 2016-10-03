@@ -4,9 +4,7 @@ using System.Collections;
 public class FadeBehavior : MonoBehaviour {
 
 	public bool doesDestroyOnFade;
-	public bool doesDeactivateOnFade;
 	public bool doesFadeIn;
-	public bool controlFadeOut;
 	public bool doesFadeOut;
 	public float displayTime = 3.0f;
 	public float timeToFade = 1.0f;
@@ -29,7 +27,7 @@ public class FadeBehavior : MonoBehaviour {
 		fadingOut = false;
 
 		if (myUIGroup == null) {
-			Debug.Log ("No canvas group!");
+			Debug.Log ("No canvas group for the credits text!");
 			this.enabled = false;
 		} else {
 			if (doesFadeIn) {
@@ -49,7 +47,7 @@ public class FadeBehavior : MonoBehaviour {
 		}
 	}
 
-	public void FadeIn(){
+	void FadeIn(){
 		beginAlpha = 0.0f;
 		endAlpha = 1.0f;
 		fading = true;
@@ -58,7 +56,7 @@ public class FadeBehavior : MonoBehaviour {
 		}
 	}
 
-	public void FadeOut(){
+	void FadeOut(){
 		beginAlpha = 1.0f;
 		endAlpha = 0.0f;
 		fading = true;
@@ -68,9 +66,7 @@ public class FadeBehavior : MonoBehaviour {
 
 	IEnumerator BeginFadeOut (){
 		yield return new WaitForSeconds (displayTime);
-		if (!controlFadeOut) {
-			FadeOut ();
-		}
+		FadeOut();
 	}
 
 	IEnumerator FadingBehavior(){
@@ -89,9 +85,6 @@ public class FadeBehavior : MonoBehaviour {
 				if (fadingOut) {
 					if (doesDestroyOnFade) {
 						Destroy (this.gameObject);
-					}
-					if (doesDeactivateOnFade) {
-						this.gameObject.SetActive (false);
 					}
 				}
 
