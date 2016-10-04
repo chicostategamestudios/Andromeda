@@ -11,7 +11,7 @@ namespace Assets.Scripts.Components
 		Components.WallGrab _wallGrab;
 
 
-	
+
 		CharacterController charCont;
 
 		bool waitForJump;
@@ -46,11 +46,13 @@ namespace Assets.Scripts.Components
 		}
 
 		// Update is called once per frame
-	
+
 
 
 
 		public void MovePlayer(float playerDirection){
+
+			//	Debug.Log (grounded);
 
 			RaycastHit hit;
 			Ray downRay = new Ray (transform.position, -Vector3.up); 
@@ -74,7 +76,7 @@ namespace Assets.Scripts.Components
 
 			if (grounded && !waitForJump) {
 				_jump.resetJumps ();
-			
+
 			}
 
 			if (walled !=0) {
@@ -112,20 +114,20 @@ namespace Assets.Scripts.Components
 
 			Upray ();
 			if(!overrideInput){
-		
+
 				moveVector = new Vector2 (playerDirection * speed* speedModifier, verticleSpeed); //calculate movement in the x and y 
-			
+
 			}
-		
+
 			charCont.Move (moveVector * Time.deltaTime); //apply movement in the x and y
-		
+
 			if (transform.position.z != 0) {
 				transform.position = new Vector3 (transform.position.x, transform.position.y, 0f);
 			}
 
 		}
 
-	
+
 		public void JumpPlayer(float Direction){
 			if (_wallGrab.notWall != 0) {
 				return;
@@ -136,16 +138,19 @@ namespace Assets.Scripts.Components
 
 				return;
 			} else {
-			//	if (grounded) {
+				if (grounded) {
 					StartCoroutine ("groundJump");
-					
-					return;
-			//	}
-			//	_jump.BasicJump (jumpHeight);
-			//	print ("goddammit");
-			//	return;
+				} else {
+					_jump.BasicJump (jumpHeight);
+				}
+
+
+
+				//	
+				//	print ("goddammit");
+				//	return;
 			}
-		
+
 		}
 
 		public void WallGrab(){
@@ -154,22 +159,22 @@ namespace Assets.Scripts.Components
 				walled = _wallGrab.WallSlide (playerDir);
 				//Debug.Log (walled);
 			}
-			
+
 		}
 
 		public void DashPlayer(){
 			if (walled != 0) {
 				return;
 			}
-		//	if (grounded) {
-				StartCoroutine ("GroundDash");
-				_dash.StartDashing (playerDir);
-				return;
-		//	}
+			//	if (grounded) {
+			StartCoroutine ("GroundDash");
+			_dash.StartDashing (playerDir);
+			return;
+			//	}
 			//_jump.BasicJump (dashJump);
-		//	_dash.StartDashing (playerDir);
+			//	_dash.StartDashing (playerDir);
 		}
-	
+
 
 		public void Upray(){
 
@@ -198,19 +203,19 @@ namespace Assets.Scripts.Components
 			waitForJump = true;
 			checkforground = false;
 			//applyGravity = false;
-		
+
 			_jump.BasicJump (jumpHeight);
 			yield return new WaitForSeconds (0.05f);
 
 			checkforground = true;
 			//applyGravity = true;
 			waitForJump = false;
-		//	yield return new WaitForSeconds (0.1f);
+			//	yield return new WaitForSeconds (0.1f);
 			checkforwalls = true;
-		
+
 
 
 
 		}
-}
+	}
 }
