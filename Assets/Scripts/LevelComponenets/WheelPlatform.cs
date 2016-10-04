@@ -26,14 +26,14 @@ public class WheelPlatform : MonoBehaviour {
 	
 	void FixedUpdate(){
         if ((Mathf.Abs(this.gameObject.transform.localPosition.x) < breakPoint) &&
-            this.gameObject.transform.localPosition.z > 0)  {
+            this.gameObject.transform.localPosition.y < 0f)  {
             myType = platType.none;
+            
         } else if (this.gameObject.transform.localPosition.x > breakPoint) {
 			myType = platType.right;
-		} else if (this.gameObject.transform.localPosition.x < (breakPoint * -1)) {
+		} else if (this.gameObject.transform.localPosition.x < (breakPoint * -1f)) {
 			myType = platType.left;
-		} else
-        {
+		} else {
             myType = platType.left;
         }
 
@@ -45,7 +45,9 @@ public class WheelPlatform : MonoBehaviour {
 		if (col.gameObject.tag == "Player") {
 			if (myType == platType.none) {
                 print("none");
-				return;
+                print(gameObject.transform.localPosition.z);
+                print("Y:" + gameObject.transform.localPosition.y);
+                return;
 			}
 			if (myType == platType.right) {
 				print ("right");
