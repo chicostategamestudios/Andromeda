@@ -12,9 +12,9 @@ namespace Assets.Scripts.Components
 
 		public void SlashAttack(float Dir){
 
-			if (!canSlash) {
-				return;
-			}
+			//if (!canSlash) {
+			//	return;
+			//}
 
 			RaycastHit hit;
 			Vector3 RayDir = new Vector3 (Dir, 0f, 0f);
