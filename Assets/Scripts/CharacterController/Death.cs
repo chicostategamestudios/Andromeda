@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Assets.Scripts.Components;
 
 public class Death : MonoBehaviour {
 	private GameObject spawner;
@@ -7,6 +8,7 @@ public class Death : MonoBehaviour {
 	public float waitToInput;
 	static public bool dying = false;
 	private Vector3 currentLoc;
+	private GameObject camera;
 	// Use this for initialization
 	void Start () {
 		spawner = GameObject.FindGameObjectWithTag ("Spawn"); 
@@ -32,6 +34,7 @@ public class Death : MonoBehaviour {
 		currentLoc = new Vector3 (transform.position.x, transform.position.y, transform.position.z); //get the player position
 		dying = true; //set death to true, this stops the update loop of the main movement controller
 		yield return new WaitForSeconds (deathTime); //wait for however long
+		_Camera.cameraEvent = 0;
 		dying = false; //set death back to false, letting the player control themselves again.
 		transform.position = new Vector3 (spawner.transform.position.x, spawner.transform.position.y, this.transform.position.z); 
 						//move the player to the spawner location
