@@ -15,6 +15,9 @@ public class Pillar : MonoBehaviour {
 
 	public float speedIncrease = 1.02f;
 
+	private Vector3 startPosition;
+	private Quaternion startRotation;
+
 	BoxCollider myTrigger;
 	// Use this for initialization
 	void Start () {
@@ -67,6 +70,20 @@ public class Pillar : MonoBehaviour {
 		}
 
 
+
+	}
+
+	void StoreStartPosition(ref Vector3 startPos, ref Quaternion startRot){
+
+		startPos = this.transform.position;
+		startRot = this.transform.rotation;
+
+	}
+
+	public void Reset(){
+
+		this.transform.position = startPosition;
+		this.transform.rotation = startRotation;
 
 	}
 }

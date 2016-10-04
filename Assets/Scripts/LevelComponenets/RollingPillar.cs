@@ -6,9 +6,12 @@ public class RollingPillar : MonoBehaviour {
 	public RollingPillarBehavior[] myChildren;
 	public float speed;
 
+	private Vector3 startPosition;
+	private Quaternion startRotation;
+
 	void Start(){
 		myChildren = transform.gameObject.GetComponentsInChildren<RollingPillarBehavior> ();
-
+		StoreStartPosition (ref startPosition, ref startRotation);
 	}
 
 	void OnTriggerEnter(Collider col){
@@ -23,6 +26,20 @@ public class RollingPillar : MonoBehaviour {
 
 		}
 
+	}
+
+	void StoreStartPosition(ref Vector3 startPos, ref Quaternion startRot){
+
+		startPos = this.transform.position;
+		startRot = this.transform.rotation;
+		
+	}
+
+	public void Reset(){
+
+		this.transform.position = startPosition;
+		this.transform.rotation = startRotation;
+		
 	}
 
 }
