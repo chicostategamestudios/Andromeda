@@ -15,8 +15,10 @@ public class RollingPillarBehavior : MonoBehaviour {
 	public float rayDir;
 	public float rotSpeed;
 	public Transform PillarMesh;
+
 	// Use this for initialization
 	void Start () {
+
 		rayDir = speed / (Mathf.Abs (speed));
 		PillarMesh = this.transform.GetChild (0);
 	}
@@ -38,7 +40,7 @@ public class RollingPillarBehavior : MonoBehaviour {
 		moveVector = new Vector3 (speed * rayDir,0, verticleSpeed);
 		transform.Translate (moveVector * Time.deltaTime);
 
-		if (Physics.Raycast (transform.position, Vector3.right * rayDir, rayDist, 8)) {
+		if (Physics.Raycast (transform.position, Vector3.right * rayDir, rayDist, 1 << 8 | 1 << 0)) {
 			
 			rayDir *= -1f;
 		}
