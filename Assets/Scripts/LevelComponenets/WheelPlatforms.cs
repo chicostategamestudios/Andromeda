@@ -6,7 +6,7 @@ public enum WheelType{
 	FreeSpinning,
 	momentum
 }
-
+//this is the wheel platform holder
 public class WheelPlatforms : MonoBehaviour {
 	public WheelType WheelBehavior;
 
