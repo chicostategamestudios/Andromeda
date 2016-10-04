@@ -6,7 +6,7 @@ public enum WheelType{
 	FreeSpinning,
 	momentum
 }
-
+//this is the wheel platform holder
 public class WheelPlatforms : MonoBehaviour {
 	public WheelType WheelBehavior;
 
@@ -19,9 +19,10 @@ public class WheelPlatforms : MonoBehaviour {
 	public float deceleration;
 	public WheelPlatform[] platformComp;
 	public float maxSpeed = 0.8f;
-
+	Quaternion StartingRot;
 	// Use this for initialization
 	void Start () {
+		LevelReset.myLevelElements.Add (this);
 		if (WheelBehavior == WheelType.Still) {
 			for (int plat = 0; plat < platforms.Length; plat++) {
 				platforms [plat].position = platformPoints [plat].position;
@@ -44,9 +45,9 @@ public class WheelPlatforms : MonoBehaviour {
 		//
 	}
 	
-	void Update(){
-		//wheel.Rotate (Vector3.up * rotationSpeed);
-
+	public void Reset(){
+		wheel.rotation = StartingRot;
+		rotationSpeed = 0;
 	}
 
 
