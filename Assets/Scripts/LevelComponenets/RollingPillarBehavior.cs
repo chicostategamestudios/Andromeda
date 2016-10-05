@@ -16,9 +16,14 @@ public class RollingPillarBehavior : MonoBehaviour {
 	public float rotSpeed;
 	public Transform PillarMesh;
 
+
+	private Vector3 startPosition;
+	private Quaternion startRotation;
+
 	// Use this for initialization
 	void Start () {
-
+		StoreStartPosition(ref startPosition, ref startRotation);
+		LevelReset.myLevelElements.Add(this);
 		rayDir = speed / (Mathf.Abs (speed));
 		PillarMesh = this.transform.GetChild (0);
 	}
@@ -40,7 +45,7 @@ public class RollingPillarBehavior : MonoBehaviour {
 		moveVector = new Vector3 (speed * rayDir,0, verticleSpeed);
 		transform.Translate (moveVector * Time.deltaTime);
 
-		if (Physics.Raycast (transform.position, Vector3.right * rayDir, rayDist, 1 << 8 | 1 << 0)) {
+		if (Physics.Raycast (transform.position, Vector3.right * rayDir, rayDist, 1 << 8)) {
 			
 			rayDir *= -1f;
 		}
@@ -51,11 +56,28 @@ public class RollingPillarBehavior : MonoBehaviour {
 	void OnTriggerEnter(Collider col){
 		
 		if (col.gameObject.name == "CubeDeath") {
-			Debug.Log ("fuck");
-			Destroy (this.gameObject);
+		//	Debug.Log ("fuck");
+			this.gameObject.SetActive(false);
 		}
 
 	}
 
+
+	public void Reset()
+	{
+		StartRolling = false;
+		this.gameObject.SetActive(true);
+		this.transform.position = startPosition;
+		this.transform.rotation = startRotation;
+
+	}
+
+	void StoreStartPosition(ref Vector3 startPos, ref Quaternion startRot)
+	{
+
+		startPos = this.transform.position;
+		startRot = this.transform.rotation;
+
+	}
 
 }

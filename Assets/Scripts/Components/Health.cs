@@ -38,9 +38,9 @@ namespace Assets.Scripts.Components
 
 		public void TakeDamage(float damage){
 			for (int relicsLost = 0; relicsLost < damage; relicsLost++) {
-				GameObject turnOn = collectedLoot [Random.Range (0, collectedLoot.Count)];
-				collectedLoot.Remove (turnOn);
-				turnOn.SetActive (true);
+			//	GameObject turnOn = collectedLoot [Random.Range (0, collectedLoot.Count)];
+			//	collectedLoot.Remove (turnOn);
+			//	turnOn.SetActive (true);
 				CurStuff -= pointValue;
 			}
 		}

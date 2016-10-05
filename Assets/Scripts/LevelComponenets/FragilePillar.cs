@@ -7,12 +7,14 @@ public class FragilePillar : MonoBehaviour {
 	BoxCollider CrackTrigger;
 	public Jumping playerjumping;
 	bool canDestroy;
-
+	Vector3 botHalfPos;
 	// Use this for initialization
 	void Start () {
+
+		LevelReset.myLevelElements.Add(this);
 		PillarBotHalf = this.gameObject.transform.FindChild ("BotHalf");
 		CrackTrigger = this.gameObject.GetComponent<BoxCollider> ();
-
+		botHalfPos = PillarBotHalf.transform.position;
 	}
 	
 
@@ -35,5 +37,13 @@ public class FragilePillar : MonoBehaviour {
 		}
 
 	}
+
+	public void Reset()
+	{
+		PillarBotHalf.GetComponent<Rigidbody>().isKinematic = true;
+		PillarBotHalf.transform.position = botHalfPos;
+
+	}
+
 
 }

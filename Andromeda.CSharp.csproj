@@ -104,6 +104,7 @@
     <Compile Include="Assets\Scripts\Components\Slash.cs" />
     <Compile Include="Assets\Scripts\Components\StatesBase.cs" />
     <Compile Include="Assets\Scripts\Components\WallGrab.cs" />
+    <Compile Include="Assets\Scripts\Destroy.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\BatBehavior.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\BatNest.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\BreakingBridge.cs" />
@@ -124,8 +125,11 @@
     <Compile Include="Assets\Scripts\LevelComponenets\GasPlume.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\GasPlumePlat.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\Lava.cs" />
+    <Compile Include="Assets\Scripts\LevelComponenets\Lava\LavaChunk.cs" />
+    <Compile Include="Assets\Scripts\LevelComponenets\Lava\TestingLava.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\LavaMonster.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\Lava_Stream.cs" />
+    <Compile Include="Assets\Scripts\LevelComponenets\LevelReset.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\MoltenCrab.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\Pellet.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\Pillar.cs" />
@@ -146,6 +150,7 @@
     <Compile Include="Assets\Scripts\LevelComponenets\turretActivator.cs" />
     <Compile Include="Assets\Scripts\Misc\DealDamage.cs" />
     <Compile Include="Assets\Scripts\Misc\HideSprite.cs" />
+    <Compile Include="Assets\Scripts\Misc\LevelStateManager.cs" />
     <Compile Include="Assets\Scripts\Misc\LoadGames.cs" />
     <Compile Include="Assets\Scripts\Misc\Projectile.cs" />
     <Compile Include="Assets\Scripts\Misc\SaveGame.cs" />
@@ -157,14 +162,25 @@
     <Compile Include="Assets\Scripts\Relics\Relics.cs" />
     <Compile Include="Assets\Scripts\Relics\UpgradeRelic.cs" />
     <Compile Include="Assets\Scripts\UI\Healthbar.cs" />
+    <Compile Include="Assets\Scripts\UI\InGameScripts\AbilityImagesActiveInactive.cs" />
+    <Compile Include="Assets\Scripts\UI\MainMenuScripts\AssignCursorIndices.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenuScripts\CreditMenuController.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenuScripts\CreditTextBehavior.cs" />
+    <Compile Include="Assets\Scripts\UI\MainMenuScripts\CreditsReadFromScript.cs" />
+    <Compile Include="Assets\Scripts\UI\MainMenuScripts\CreditsString.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenuScripts\CsgsSplashBehavior.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenuScripts\CursorIndexTracker.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenuScripts\DisplayGameFiles.cs" />
+    <Compile Include="Assets\Scripts\UI\MainMenuScripts\DropDownMenuCursorBehavior.cs" />
+    <Compile Include="Assets\Scripts\UI\MainMenuScripts\DropDownValueHolder.cs" />
+    <Compile Include="Assets\Scripts\UI\MainMenuScripts\DropMenuDataTracker.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenuScripts\ExitCursorBehavior.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenuScripts\FadeBehavior.cs" />
+    <Compile Include="Assets\Scripts\UI\MainMenuScripts\GameSelectCursorBehavior.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenuScripts\MainMenuController.cs" />
+    <Compile Include="Assets\Scripts\UI\MainMenuScripts\MenuImageSelectedBehavior.cs" />
+    <Compile Include="Assets\Scripts\UI\MainMenuScripts\OptionsMenuCursorBehavior.cs" />
+    <Compile Include="Assets\Scripts\UI\MainMenuScripts\VisualOptionsBehavior.cs" />
     <Compile Include="Assets\Scripts\UI\Timer.cs" />
   </ItemGroup>
   <ItemGroup>
