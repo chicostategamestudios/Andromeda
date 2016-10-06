@@ -32,8 +32,10 @@ namespace Assets.Scripts.Components
 		public bool checkforwalls;
 		public static bool checkforground = true;
 		public float upRayLength = 0.9f;
-		public float ceilingHitSpeed = -1f;
-		int celingmask = 1 << 8;
+		public float ceilingHitSpeed = -2f;
+		int celingmask = (1 << 0) | (1 << 8);
+		Vector2 modificationVec = Vector2.zero;
+		//int wallMask = 1 << 8;
 		int movingGround = 1 << 9;
 		public float maxVertSpeed = -40;
 		// Use this for initialization
@@ -54,11 +56,20 @@ namespace Assets.Scripts.Components
 
 			//	Debug.Log (grounded);
 
+			if (Input.GetKey (KeyCode.X)) {
+				modificationVec.x = 22f;
+			} else {
+				modificationVec = Vector2.zero;
+			}
+
+
+
 			RaycastHit hit;
 			Ray downRay = new Ray (transform.position, -Vector3.up); 
 			if (Physics.Raycast (downRay, out hit, 1f)) {
 				if (hit.transform.gameObject.layer == 9) {
 					this.gameObject.transform.SetParent (hit.transform);
+
 				} else {
 					this.gameObject.transform.SetParent (null);
 				}
@@ -67,10 +78,13 @@ namespace Assets.Scripts.Components
 			}
 
 			if (checkforground) {
-				grounded = charCont.isGrounded;
+				  grounded = charCont.isGrounded;
+				Debug.Log (grounded);
 			} else {
 				grounded = false;
 			}
+
+
 			playerDir = playerDirection;
 			_dash.ManageDashing (grounded, playerDir);
 
@@ -118,6 +132,7 @@ namespace Assets.Scripts.Components
 				moveVector = new Vector2 (playerDirection * speed* speedModifier, verticleSpeed); //calculate movement in the x and y 
 
 			}
+			moveVector += modificationVec;
 
 			charCont.Move (moveVector * Time.deltaTime); //apply movement in the x and y
 
@@ -177,10 +192,12 @@ namespace Assets.Scripts.Components
 
 
 		public void Upray(){
-
+			
 			//Ray UpRay = new Ray (transform.position , transform.up); 
 			if(Physics.Raycast(transform.position, transform.up, upRayLength, celingmask)){
-				verticleSpeed = ceilingHitSpeed;
+				if (verticleSpeed > 0) {
+					verticleSpeed = ceilingHitSpeed;
+				}
 			}
 		}
 
