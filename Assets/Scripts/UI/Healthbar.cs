@@ -10,7 +10,7 @@ public class Healthbar : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		health = GameObject.FindGameObjectWithTag ("Player").GetComponent<Health> ();
+		health = FindObjectOfType<Health> ();
 		HealthFill.fillAmount = 0f;
 		HealthFillBG.fillAmount = 0f;
 	}

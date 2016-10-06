@@ -122,6 +122,10 @@ namespace Assets.Scripts.Components
 
 		}
 
+		public bool GetCanDash(){
+			return canDash;
+		}
+
 		IEnumerator SetDashing(){
 
 

@@ -5,7 +5,7 @@ public class SpawnPlayer : MonoBehaviour {
 
 	public GameObject player;
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		//Transform spawnPoint = GameObject.FindGameObjectWithTag ("StartPoint").transform;
 
 		Instantiate (player, transform.position, Quaternion.identity);
