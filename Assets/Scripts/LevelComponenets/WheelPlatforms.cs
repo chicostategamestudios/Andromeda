@@ -23,6 +23,9 @@ public class WheelPlatforms : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		LevelReset.myLevelElements.Add (this);
+
+		StartingRot = wheel.rotation;
+
 		if (WheelBehavior == WheelType.Still) {
 			for (int plat = 0; plat < platforms.Length; plat++) {
 				platforms [plat].position = platformPoints [plat].position;
@@ -38,6 +41,10 @@ public class WheelPlatforms : MonoBehaviour {
 
 		for (int plat = 0; plat < platforms.Length; plat++) {
 			//Debug.Log (plat);
+			if (platforms[plat].GetComponent<WheelPlatform>() == null)
+			{
+				platforms[plat].gameObject.AddComponent<WheelPlatform>();
+			}
 			platformComp [plat] = platforms [plat].GetComponent<WheelPlatform> ();
 
 		}

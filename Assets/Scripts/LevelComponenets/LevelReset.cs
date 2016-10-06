@@ -7,14 +7,26 @@ public class LevelReset : MonoBehaviour {
 
 	public bool reset = false;
 
-	public void Reset(){
+	public static void Reset(){
+
+		Debug.Log("reset");
 
 		foreach (var plat in myLevelElements) {
 			if (plat is WheelPlatforms) {
 				(plat as WheelPlatforms).Reset ();
 			}
-
-
+			if (plat is Pillar)
+			{
+				(plat as Pillar).Reset();
+			}
+			if (plat is RollingPillarBehavior)
+			{
+				(plat as RollingPillarBehavior).Reset();
+			}
+			if (plat is FragilePillar)
+			{
+				(plat as FragilePillar).Reset();
+			}
 
 
 		}

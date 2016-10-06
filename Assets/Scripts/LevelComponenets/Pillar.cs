@@ -8,6 +8,7 @@ public class Pillar : MonoBehaviour {
 	float fallspeed;
 	public float fallAngle;
 
+	bool resetting = false;
 
 	[Tooltip("be careful while adjusting these values, the speed increase is multaplicative with starting speed, so as you increase starting speed, make sure to dramatically decrease speedIncrease, down to 1.01 - 1.015ish")]
 	public bool ___Hover_Here_For_Tool_Tip________;
@@ -18,9 +19,16 @@ public class Pillar : MonoBehaviour {
 	private Vector3 startPosition;
 	private Quaternion startRotation;
 
+	
+
 	BoxCollider myTrigger;
 	// Use this for initialization
 	void Start () {
+
+
+		platform.position = platformPoint.position;
+		StoreStartPosition();
+		LevelReset.myLevelElements.Add(this);
 		fallspeed = startingSpeed;
 		platform.position = platformPoint.position;
 		myTrigger = this.gameObject.GetComponent<BoxCollider> ();
@@ -37,7 +45,8 @@ public class Pillar : MonoBehaviour {
 
 		if(col.gameObject.tag == ("Player")){
 			InvokeRepeating("Fall", 0.01f,0.01f);
-			Destroy (myTrigger);	
+			//Destroy (myTrigger);	
+			myTrigger.enabled = false;
 		
 		}
 	}
@@ -49,7 +58,11 @@ public class Pillar : MonoBehaviour {
 
 	void Fall () {
 		//pillarRoot.localEulerAngles= new Vector3 (0f, 0f, fallAngle);
+
+		Debug.LogError("Fuck yea");
+
 		fallspeed *= speedIncrease;
+
 
 		if (fallAngle < 180) {
 			if (pillarRoot.localEulerAngles.z <= fallAngle) {
@@ -73,17 +86,21 @@ public class Pillar : MonoBehaviour {
 
 	}
 
-	void StoreStartPosition(ref Vector3 startPos, ref Quaternion startRot){
+	void StoreStartPosition(){
 
-		startPos = this.transform.position;
-		startRot = this.transform.rotation;
+		startPosition = platform.position;
+		startRotation = pillarRoot.localRotation;
 
 	}
 
 	public void Reset(){
-
-		this.transform.position = startPosition;
-		this.transform.rotation = startRotation;
+		myTrigger.enabled = true;
+		
+		CancelInvoke("Fall");
+		myTrigger.enabled = true;
+		fallspeed = startingSpeed;
+		platform.position = startPosition;
+		pillarRoot.localRotation = startRotation;
 
 	}
 }
