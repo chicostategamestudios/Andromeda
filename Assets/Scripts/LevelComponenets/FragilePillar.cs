@@ -34,6 +34,7 @@ public class FragilePillar : MonoBehaviour {
 	void Update(){
 		if (canDestroy&& playerjumping.JustwallJumped) {
 			PillarBotHalf.GetComponent<Rigidbody> ().isKinematic = false;
+			CrackTrigger.enabled = false;
 		}
 
 	}
@@ -42,6 +43,7 @@ public class FragilePillar : MonoBehaviour {
 	{
 		PillarBotHalf.GetComponent<Rigidbody>().isKinematic = true;
 		PillarBotHalf.transform.position = botHalfPos;
+		CrackTrigger.enabled = true;
 
 	}
 
