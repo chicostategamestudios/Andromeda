@@ -147,7 +147,6 @@
     <Compile Include="Assets\Scripts\LevelComponenets\rubble.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\swingingplatform.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\turret.cs" />
-    <Compile Include="Assets\Scripts\LevelComponenets\turretActivator.cs" />
     <Compile Include="Assets\Scripts\Misc\DealDamage.cs" />
     <Compile Include="Assets\Scripts\Misc\HideSprite.cs" />
     <Compile Include="Assets\Scripts\Misc\LevelStateManager.cs" />

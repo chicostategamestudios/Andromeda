@@ -26,14 +26,18 @@ public class RollingPillarBehavior : MonoBehaviour {
 		LevelReset.myLevelElements.Add(this);
 		rayDir = speed / (Mathf.Abs (speed));
 		PillarMesh = this.transform.GetChild (0);
-	}
+        gameObject.GetComponent<DealDamage>().enabled = false;
+    }
 	
 	// Update is called once per frame
 	void Update () {
 		if (!StartRolling) {
 			return;
-		}
-		grounded = (Physics.Raycast (transform.position, -Vector3.up, rayDist));
+        }else {
+            gameObject.GetComponent<DealDamage>().enabled = true;
+        }
+
+        grounded = (Physics.Raycast (transform.position, -Vector3.up, rayDist));
 		if (!grounded) {
 			verticleSpeed -= gravityRate * Time.deltaTime;
 		} else {
@@ -45,7 +49,7 @@ public class RollingPillarBehavior : MonoBehaviour {
 		moveVector = new Vector3 (speed * rayDir,0, verticleSpeed);
 		transform.Translate (moveVector * Time.deltaTime);
 
-		if (Physics.Raycast (transform.position, Vector3.right * rayDir, rayDist, 1 << 8)) {
+		if (Physics.Raycast (transform.position, Vector3.right * rayDir, rayDist, 1 << 8 | 1 << 0)) {
 			
 			rayDir *= -1f;
 		}
@@ -54,9 +58,9 @@ public class RollingPillarBehavior : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider col){
-		
+        Debug.Log("hit)");
 		if (col.gameObject.name == "CubeDeath") {
-		//	Debug.Log ("fuck");
+	
 			this.gameObject.SetActive(false);
 		}
 
