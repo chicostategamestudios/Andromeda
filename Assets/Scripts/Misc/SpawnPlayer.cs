@@ -8,7 +8,7 @@ public class SpawnPlayer : MonoBehaviour {
 	void Start () {
 		//Transform spawnPoint = GameObject.FindGameObjectWithTag ("StartPoint").transform;
 
-		Instantiate (player, transform.position, Quaternion.identity);
+		Instantiate (player, transform.position, Quaternion.Euler(0, 120, 0));
 
 	}
 	

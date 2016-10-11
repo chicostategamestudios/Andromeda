@@ -35,7 +35,7 @@ public class Movement : MonoBehaviour {
 	private float realDashY;
 	private bool canDash;
 	private float realJumpHeight;
-	private float dashPhase = 0;
+	public float dashPhase = 0;
 
 	private bool floating = false;
 	public float floatFallSpeed;

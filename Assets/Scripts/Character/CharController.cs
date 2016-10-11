@@ -25,6 +25,8 @@ namespace Assets.Scripts.Character
 
 		float playerDirection;
 		public float lastDir =1f;
+        public bool dashing = false;
+        public bool jumping = false;
 		void Awake(){
 			_movement = gameObject.AddComponent<Components.PlayerMovement> ();
 			_relics = gameObject.AddComponent<Components.RelicManager> ();
@@ -58,30 +60,49 @@ namespace Assets.Scripts.Character
 			if (Mathf.Abs (horzInput) > 0.15f) {
 				if (horzInput > 0) {
 					playerDirection = 1f;
-					lastDir = 1f;
-				}
-				if (horzInput < 0) {
+                    if (lastDir != 1f)
+                    {
+                        transform.rotation = Quaternion.Euler(new Vector3(0, transform.rotation.eulerAngles.y * -1, 0));
+                    }
+                    lastDir = 1f;
+
+                }
+                if (horzInput < 0) {
 					playerDirection = -1f;
-					lastDir = -1f;
-				}
-			} else {
+                    if (lastDir != -1f)
+                    {
+                        transform.rotation = Quaternion.Euler(new Vector3(0, transform.rotation.eulerAngles.y * -1, 0));
+                    }
+                    lastDir = -1f;
+
+                }
+            } else {
 				playerDirection = 0f;
 			}
 
 
 				//if ((Input.GetKeyDown(KeyCode.Space))
-					if(Input.GetButtonDown("Fire1"))
+				if(Input.GetButtonDown("Fire1"))
 				{
-				_movement.JumpPlayer(playerDirection);
-			
+				    _movement.JumpPlayer(playerDirection);
+                    jumping = true;
 				}
+                else
+                {
+                    jumping = false;
+                }
 			
 				//if (Input.GetKeyDown (KeyCode.LeftShift)) {
-					if(Input.GetButtonDown("Fire2")){
+			if(Input.GetButtonDown("Fire2")){
+                dashing = true;
 				_movement.DashPlayer();
-				} 
+				}
+            else
+            {
+                dashing = false;
+            }
 
-			if (Input.GetButtonDown ("Fire3")) {
+            if (Input.GetButtonDown ("Fire3")) {
 				_slash.SlashAttack (lastDir);
 			}
 		
