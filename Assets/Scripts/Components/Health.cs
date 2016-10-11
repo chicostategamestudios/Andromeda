@@ -11,6 +11,10 @@ namespace Assets.Scripts.Components
 		float pointValue;
 		List<GameObject> collectedLoot;
 		Death myDeathObj;
+        [Tooltip("How many seconds is the player invunlerable for after taking damage?")]
+        public float iFrames;
+        [Tooltip("Is the player Invinsible for a specfic amount of frames (keep this checked off please)")]
+        public bool isInvinsible = false;
 
 		public void TotalStuff(){
 			GameObject[] tempList = GameObject.FindGameObjectsWithTag ("Loot");
@@ -30,14 +34,23 @@ namespace Assets.Scripts.Components
 		}
 
 		public void TakeDamage(float damage){
-			for (int relicsLost = 0; relicsLost < damage; relicsLost++) {
-			//	GameObject turnOn = collectedLoot [Random.Range (0, collectedLoot.Count)];
-			//	collectedLoot.Remove (turnOn);
-			//	turnOn.SetActive (true);
-				CurStuff -= pointValue;
-			}
-
+            if (!isInvinsible) {
+                for (int relicsLost = 0; relicsLost < damage; relicsLost++) {
+                    //	GameObject turnOn = collectedLoot [Random.Range (0, collectedLoot.Count)];
+                    //	collectedLoot.Remove (turnOn);
+                    //	turnOn.SetActive (true);
+                    CurStuff -= pointValue;
+                }
+                isInvinsible = true;
+                StartCoroutine("Stun");
+            }
 		}
+
+        IEnumerator Stun()
+        {
+            yield return new WaitForSeconds(iFrames);
+            isInvinsible = false;
+        }
 
 		public void Death(){
 		//	Debug.LogError ("Death is being called on the Health Script, Make sure whatever is calling it is changed to be calling the death script instead");

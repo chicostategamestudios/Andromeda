@@ -36,6 +36,7 @@ namespace Assets.Scripts.Components
 		int celingmask = 1 << 8;
 		int movingGround = 1 << 9;
 		public float maxVertSpeed = -40;
+        public bool isStunned = false;
 		// Use this for initialization
 		void Awake () {
 			_jump = gameObject.AddComponent<Jumping> ();
@@ -112,9 +113,14 @@ namespace Assets.Scripts.Components
 
 			Upray ();
 			if(!overrideInput){
-		
-				moveVector = new Vector2 (playerDirection * speed* speedModifier, verticleSpeed); //calculate movement in the x and y 
-			
+		        
+				
+			    if(isStunned) {
+                    moveVector = new Vector2(0, verticleSpeed); ;
+                    StartCoroutine("Stun");
+                } else{
+                    moveVector = new Vector2(playerDirection * speed * speedModifier, verticleSpeed); //calculate movement in the x and y 
+                }
 			}
 		
 			charCont.Move (moveVector * Time.deltaTime); //apply movement in the x and y
@@ -212,5 +218,11 @@ namespace Assets.Scripts.Components
 
 
 		}
+
+        IEnumerator Stun()
+        {
+            yield return new WaitForSeconds(.2f);
+            isStunned = false;
+        }
 }
 }
