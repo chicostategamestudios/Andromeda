@@ -12,7 +12,14 @@ public class FragilePillar : MonoBehaviour {
 	void Start () {
 
 		LevelReset.myLevelElements.Add(this);
-		PillarBotHalf = this.gameObject.transform.FindChild ("BotHalf");
+		//PillarBotHalf = this.gameObject.transform.FindChild ("BotHalf");
+		if (this.gameObject.transform.GetComponentInChildren<Rigidbody> () != null) {
+			PillarBotHalf = this.gameObject.transform.GetComponentInChildren<Rigidbody>().transform;
+		} else {
+			Debug.LogError ("Make sure that :" + this.transform.name + " has a rigidbody attached to the pillar bot half");
+			return;
+		}
+
 		CrackTrigger = this.gameObject.GetComponent<BoxCollider> ();
 		botHalfPos = PillarBotHalf.transform.position;
 	}

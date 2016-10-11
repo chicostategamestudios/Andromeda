@@ -79,7 +79,7 @@ namespace Assets.Scripts.Components
 
 			if (checkforground) {
 				  grounded = charCont.isGrounded;
-				Debug.Log (grounded);
+
 			} else {
 				grounded = false;
 			}

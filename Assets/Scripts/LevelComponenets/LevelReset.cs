@@ -9,7 +9,7 @@ public class LevelReset : MonoBehaviour {
 
 	public static void Reset(){
 
-		Debug.Log("reset");
+		//Debug.Log("reset");
 
 		foreach (var plat in myLevelElements) {
 			if (plat is WheelPlatforms) {
@@ -26,6 +26,8 @@ public class LevelReset : MonoBehaviour {
 			if (plat is FragilePillar)
 			{
 				(plat as FragilePillar).Reset();
+			}if (plat is TestingLava) {
+				(plat as TestingLava).Reset ();
 			}
 
 

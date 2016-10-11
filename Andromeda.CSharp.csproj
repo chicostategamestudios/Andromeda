@@ -94,9 +94,6 @@
     <Compile Include="Assets\Scripts\Camera\_CameraOri.cs" />
     <Compile Include="Assets\Scripts\Character\CharController.cs" />
     <Compile Include="Assets\Scripts\Character\CharStates.cs" />
-    <Compile Include="Assets\Scripts\CharacterController\BasicAnim.cs" />
-    <Compile Include="Assets\Scripts\CharacterController\Blast.cs" />
-    <Compile Include="Assets\Scripts\CharacterController\Movement.cs" />
     <Compile Include="Assets\Scripts\Components\ControllerBase.cs" />
     <Compile Include="Assets\Scripts\Components\CustomComponenetBase.cs" />
     <Compile Include="Assets\Scripts\Components\Dash.cs" />
