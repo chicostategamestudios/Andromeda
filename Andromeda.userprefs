@@ -1,0 +1,28 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\LevelComponenets\Lava\TestingLava.cs">
+    <Files>
+      <File FileName="Assets\Scripts\LevelComponenets\Lava\TestingLava.cs" Line="14" Column="8" />
+      <File FileName="Assets\Scripts\LevelComponenets\Pillar.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Components\PlayerMovement.cs" Line="135" Column="33" />
+      <File FileName="Assets\Scripts\Misc\SaveGame.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Misc\LoadGames.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Components\Health.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Components\Jumping.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Character\CharController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\LevelComponenets\RollingPillar.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\LevelComponenets\RollingPillarBehavior.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Components\Death.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Components\WallGrab.cs" Line="95" Column="1" />
+      <File FileName="Assets\Scripts\LevelComponenets\Lava\LavaChunk.cs" Line="51" Column="53" />
+      <File FileName="Assets\Scripts\Camera\_Camera.cs" Line="35" Column="1" />
+      <File FileName="Assets\Scripts\LevelComponenets\FragilePillar.cs" Line="20" Column="11" />
+      <File FileName="Assets\Scripts\LevelComponenets\LevelReset.cs" Line="30" Column="36" />
+      <File FileName="Assets\Scripts\LevelComponenets\CheckPoint.cs" Line="10" Column="46" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
