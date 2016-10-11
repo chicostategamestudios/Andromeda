@@ -10,21 +10,15 @@ public class FlamePillar : MonoBehaviour {
 	Renderer beamRenderer;
 	ParticleSystem mySystem;
 	Collider myCollider;
-    CapsuleCollider thisCollider;
-    public float beamDuration;
-    public float dealyOfExplosion;
-    public float explosionDuration;
 
 	// Use this for initialization
 	void Start () {
 		myCollider = GetComponentInChildren<BoxCollider>();
 		beamRenderer = GetComponent<MeshRenderer> ();
 		mySystem = GetComponentInChildren<ParticleSystem>();
-        thisCollider = GetComponent<CapsuleCollider>();
 		isActive = false;
 		beamRenderer.enabled = false;
 		myCollider.enabled = false;
-        thisCollider.enabled = false;
 	}
 	
 	// Update is called once per frame
@@ -36,16 +30,13 @@ public class FlamePillar : MonoBehaviour {
 
 	IEnumerator FireBeam(){
 		beamRenderer.enabled = true;
-        thisCollider.enabled = true;
-		yield return new WaitForSeconds(beamDuration);
+		yield return new WaitForSeconds(2);
 		beamRenderer.enabled = false;
-        thisCollider.enabled = false;   
 		isActive = false;
-		yield return new WaitForSeconds(dealyOfExplosion);
+		yield return new WaitForSeconds(1);
 		myCollider.enabled = true;
 		mySystem.Play();
-		yield return new WaitForSeconds(explosionDuration);
-        mySystem.Stop();
+		yield return new WaitForSeconds(4);
 		myCollider.enabled = false;
 	}
 		

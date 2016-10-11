@@ -6,7 +6,9 @@ public class RollingPillar : MonoBehaviour {
 	public RollingPillarBehavior[] myChildren;
 	public float speed;
 
+
 	void Start(){
+		
 		myChildren = transform.gameObject.GetComponentsInChildren<RollingPillarBehavior> ();
 
 	}
@@ -24,5 +26,9 @@ public class RollingPillar : MonoBehaviour {
 		}
 
 	}
+
+	
+
+
 
 }

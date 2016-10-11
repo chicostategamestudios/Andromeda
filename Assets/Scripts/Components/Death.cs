@@ -32,7 +32,8 @@ namespace Assets.Scripts.Components
 		currentLoc = new Vector3 (transform.position.x, transform.position.y, transform.position.z); //get the player position
 		dying = true; //set death to true, this stops the update loop of the main movement controller
 		yield return new WaitForSeconds (deathTime); //wait for however long
-		
+
+			LevelReset.Reset();
 		transform.position = spawnPoint;
 						//move the player to the spawner location
 		yield return new WaitForSeconds (waitToInput); //how long after respawner should the player wait before they can input again
