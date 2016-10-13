@@ -5,7 +5,9 @@ using System.Collections.Generic;
 //This is the testing Lava script, it is used to make the lava wall move along a path, filling with lava chunks behind it
 
 public class TestingLava : MonoBehaviour {
-	
+
+	public static TestingLava LavaWall;
+
 	List<LavaChunk> myTargetPoints = new List<LavaChunk> (); //this list will be filled by all of my children that have
 															//lava chunks attached to them
 	LavaChunk checkPoint; //this holds the last checkPoint. It is set when we pass by 
@@ -15,13 +17,17 @@ public class TestingLava : MonoBehaviour {
 	public Transform myLavaWall;
 	int currentPos = 0;
 	float rotSpeedModifier = 0.1f;
-
+	public float scalingRate = 2f;
 
 	public Vector3 diffVec = Vector3.zero;
-
+	Vector3 startingVec = Vector3.zero;
+	//public float curHeight;
+	//public float newHeight;
+	float ChunkDistance =0f;
+	bool move = false;
 	void Awake () {
+		LavaWall = this;
 		LevelReset.myLevelElements.Add (this);
-	
 		Transform myTargetParents = this.transform.FindChild ("Targets");
 
 		for (int child = 0; child < myTargetParents.childCount; child++) {
@@ -30,38 +36,80 @@ public class TestingLava : MonoBehaviour {
 			myTargetPoints [myTargetPoints.Count - 1].DisableRenderer ();
 		}
 
-		checkPoint = myTargetPoints [0];
-		myLavaWall.LookAt (myTargetPoints [1].transform.position );
-
 
 	}
-	
+
+	public void StartLavaWall(){
+
+
+		checkPoint = myTargetPoints [0];
+		myLavaWall.transform.position = myTargetPoints [0].transform.position;
+		myLavaWall.LookAt (myTargetPoints [1].transform.position );
+		move = true;
+	}
+
+
 	// Update is called once per frame
 	void FixedUpdate () {
+		if (move) {
+			diffVec = (myLavaWall.transform.position - myTargetPoints [currentPos].transform.position);
 
-		diffVec = (myLavaWall.transform.position - myTargetPoints [currentPos].transform.position);
+			myLavaWall.transform.position = Vector3.MoveTowards (myLavaWall.transform.position, myTargetPoints [currentPos].transform.position, speed);
+			Vector3 dir = myTargetPoints [currentPos].transform.position - myLavaWall.transform.position;
 
-		myLavaWall.transform.position = Vector3.MoveTowards (myLavaWall.transform.position, myTargetPoints [currentPos].transform.position, speed);
-		Vector3 dir = myTargetPoints [currentPos].transform.position - myLavaWall.transform.position;
+			Vector3 newDir = Vector3.RotateTowards (myLavaWall.transform.forward, dir, rotSpeedModifier / (Vector3.Distance (myLavaWall.transform.position, myTargetPoints [currentPos].transform.position)), 0f);
 
-		Vector3 newDir = Vector3.RotateTowards (myLavaWall.transform.forward, dir, rotSpeedModifier / (Vector3.Distance (myLavaWall.transform.position, myTargetPoints [currentPos].transform.position)), 0f);
-
-		myLavaWall.rotation = Quaternion.LookRotation (newDir);
+			myLavaWall.rotation = Quaternion.LookRotation (newDir);
 
 
 
-		if (myLavaWall.transform.position == myTargetPoints [currentPos].transform.position) {
-			myTargetPoints [currentPos].EnableRenderer ();
-			if (myTargetPoints [currentPos].CheckPoint) {
-				checkPoint = myTargetPoints [currentPos];
+			if (myLavaWall.transform.position == myTargetPoints [currentPos].transform.position) {
+				myTargetPoints [currentPos].EnableRenderer ();
+				if (myTargetPoints [currentPos].CheckPoint) {
+					checkPoint = myTargetPoints [currentPos];
+				}
+				if (currentPos < (myTargetPoints.Count - 1)) {
+					float curHeight = myTargetPoints [currentPos].transform.GetComponentInChildren<MeshFilter> ().mesh.bounds.max.y * scalingRate;
+					//ChunkDistance = Vector3.Distance (myTargetPoints [currentPos].transform.position, myTargetPoints [currentPos + 1].transform.position);
+
+					myLavaWall.localScale = new Vector3 (myLavaWall.localScale.x, curHeight, myLavaWall.localScale.z);
+			
+					currentPos++;
+
+					//newHeight = myTargetPoints [currentPos].transform.GetComponentInChildren<MeshFilter> ().mesh.bounds.extents.y * 2;
+
+
+				}
 			}
-			if (currentPos < (myTargetPoints.Count-1)) {
-				currentPos++;
-			}
+		}
+	}
+	/*
+	void Update(){
+		if (currentPos > 0) {
+		//	Scale ();
+		}
+	}
+	*/
+	public void Scale(){
+		if (myLavaWall != null) {
+			float curDistance = Vector3.Distance(myLavaWall.transform.position, myTargetPoints[currentPos].transform.position);
+				
+			//float heightChange = newHeight - curHeight;
+			//Debug.Log (heightChange);
+			//heightChange *= curDistance / ChunkDistance;
+
+			//Vector3 newScale = new Vector3 (1, newHeight, 1);
+		
+			//myLavaWall.localScale = Vector3.Lerp (startingVec, newScale, (curDistance/ChunkDistance));
+		
+		
+		
 		}
 
 
+
 	}
+
 
 	public void Reset(){
 

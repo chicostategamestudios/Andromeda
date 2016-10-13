@@ -44,6 +44,10 @@ public class LavaChunk : MonoBehaviour {
 			myRenderer = getMyRenderer ();
 		}
 		myRenderer.enabled = true;
+
+
+
+
 	}
 
 	Renderer getMyRenderer(){
