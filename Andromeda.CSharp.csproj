@@ -94,9 +94,6 @@
     <Compile Include="Assets\Scripts\Camera\_CameraOri.cs" />
     <Compile Include="Assets\Scripts\Character\CharController.cs" />
     <Compile Include="Assets\Scripts\Character\CharStates.cs" />
-    <Compile Include="Assets\Scripts\CharacterController\BasicAnim.cs" />
-    <Compile Include="Assets\Scripts\CharacterController\Blast.cs" />
-    <Compile Include="Assets\Scripts\CharacterController\Movement.cs" />
     <Compile Include="Assets\Scripts\Components\ControllerBase.cs" />
     <Compile Include="Assets\Scripts\Components\CustomComponenetBase.cs" />
     <Compile Include="Assets\Scripts\Components\Dash.cs" />
@@ -112,7 +109,6 @@
     <Compile Include="Assets\Scripts\LevelComponenets\BatBehavior.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\BatNest.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\BreakingBridge.cs" />
-    <Compile Include="Assets\Scripts\LevelComponenets\BridgeEnergy.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\BurningBridge.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\CheckPoint.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\Dragon Statues\BeamDragonStatue.cs" />
@@ -167,6 +163,12 @@
     <Compile Include="Assets\Scripts\Relics\UpgradeRelic.cs" />
     <Compile Include="Assets\Scripts\UI\Healthbar.cs" />
     <Compile Include="Assets\Scripts\UI\InGameScripts\AbilityImagesActiveInactive.cs" />
+    <Compile Include="Assets\Scripts\UI\InGameScripts\PauseGame.cs" />
+    <Compile Include="Assets\Scripts\UI\InGameScripts\PauseMenuSelect.cs" />
+    <Compile Include="Assets\Scripts\UI\InGameScripts\PauseMenuYesNo.cs" />
+    <Compile Include="Assets\Scripts\UI\InGameScripts\TimerDisplay.cs" />
+    <Compile Include="Assets\Scripts\UI\LevelSelectMenu\EnterSelectedLevel.cs" />
+    <Compile Include="Assets\Scripts\UI\LevelSelectMenu\LevelSelectController.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenuScripts\AssignCursorIndices.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenuScripts\CreditMenuController.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenuScripts\CreditTextBehavior.cs" />

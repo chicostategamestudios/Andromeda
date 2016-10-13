@@ -43,12 +43,17 @@ public class PauseMenuYesNo : MonoBehaviour {
 				{
 					if (selectedValue == 0) {
 						//Restart
+						Time.timeScale = 1.0f;
 						SceneManager.LoadScene (SceneManager.GetActiveScene ().name, LoadSceneMode.Single);
+
 					} else if (selectedValue == 1) {
 						//Level Select
+						Time.timeScale = 1.0f;
 						SceneManager.LoadScene (levelSelectSceneIndex, LoadSceneMode.Single);
+
 					} else if (selectedValue == 2) {
 						//Save and Quit
+						Time.timeScale = 1.0f;
 						SceneManager.LoadScene (mainMenuSceneIndex, LoadSceneMode.Single);
 					} else {
 						//Indice out of range
