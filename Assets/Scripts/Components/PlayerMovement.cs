@@ -33,8 +33,11 @@ namespace Assets.Scripts.Components
 		public static bool checkforground = true;
 		public float upRayLength = 0.9f;
 		public float ceilingHitSpeed = -1f;
+        [Tooltip("Time in seconds in which you wish the player to be stunned after taking damage. Can't jump, can't dash, can't move, can't slash.")]
+        public float stunnedLength;
 		int celingmask = 1 << 8;
-		int movingGround = 1 << 9;
+        public Vector2 modificationVec = Vector2.zero;
+        int movingGround = 1 << 9;
 		public float maxVertSpeed = -40;
         public bool isStunned = false;
 		// Use this for initialization
@@ -53,11 +56,19 @@ namespace Assets.Scripts.Components
 
 		public void MovePlayer(float playerDirection){
 
-			RaycastHit hit;
+            if (Input.GetKey(KeyCode.X)) {
+                modificationVec.x = 22f;
+            } else {
+                modificationVec = Vector2.zero;
+            }
+
+
+            RaycastHit hit;
 			Ray downRay = new Ray (transform.position, -Vector3.up); 
 			if (Physics.Raycast (downRay, out hit, 1f)) {
 				if (hit.transform.gameObject.layer == 9) {
 					this.gameObject.transform.SetParent (hit.transform);
+
 				} else {
 					this.gameObject.transform.SetParent (null);
 				}
@@ -116,12 +127,13 @@ namespace Assets.Scripts.Components
 		        
 				
 			    if(isStunned) {
-                    moveVector = new Vector2(0, verticleSpeed); ;
+                    moveVector = new Vector2(0, verticleSpeed);
                     StartCoroutine("Stun");
                 } else{
                     moveVector = new Vector2(playerDirection * speed * speedModifier, verticleSpeed); //calculate movement in the x and y 
                 }
 			}
+            moveVector += modificationVec;
 		
 			charCont.Move (moveVector * Time.deltaTime); //apply movement in the x and y
 		
@@ -133,6 +145,9 @@ namespace Assets.Scripts.Components
 
 	
 		public void JumpPlayer(float Direction){
+            if(isStunned) {
+                return;
+            }
 			if (_wallGrab.notWall != 0) {
 				return;
 			}
@@ -155,7 +170,7 @@ namespace Assets.Scripts.Components
 		}
 
 		public void WallGrab(){
-			if (checkforwalls && !grounded) {
+            if (checkforwalls && !grounded) {
 
 				walled = _wallGrab.WallSlide (playerDir);
 				//Debug.Log (walled);
@@ -164,7 +179,7 @@ namespace Assets.Scripts.Components
 		}
 
 		public void DashPlayer(){
-			if (walled != 0) {
+			if (walled != 0 || isStunned) {
 				return;
 			}
 		//	if (grounded) {
@@ -221,7 +236,7 @@ namespace Assets.Scripts.Components
 
         IEnumerator Stun()
         {
-            yield return new WaitForSeconds(.2f);
+            yield return new WaitForSeconds(stunnedLength);
             isStunned = false;
         }
 }

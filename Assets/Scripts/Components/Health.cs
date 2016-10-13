@@ -13,7 +13,7 @@ namespace Assets.Scripts.Components
 		Death myDeathObj;
         [Tooltip("How many seconds is the player invunlerable for after taking damage?")]
         public float iFrames;
-        [Tooltip("Is the player Invinsible for a specfic amount of frames (keep this checked off please)")]
+        [Tooltip("Is the player Invinsible for a specfic amount of frames (keep this false please)")]
         public bool isInvinsible = false;
 
 		public void TotalStuff(){

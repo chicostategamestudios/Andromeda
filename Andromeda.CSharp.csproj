@@ -150,6 +150,7 @@
     <Compile Include="Assets\Scripts\Misc\SetSection.cs" />
     <Compile Include="Assets\Scripts\Misc\SpawnPlayer.cs" />
     <Compile Include="Assets\Scripts\Misc\Teleport.cs" />
+    <Compile Include="Assets\Scripts\Misc\WindyArea.cs" />
     <Compile Include="Assets\Scripts\Relics\AbilityUIManager.cs" />
     <Compile Include="Assets\Scripts\Relics\CanDestroy.cs" />
     <Compile Include="Assets\Scripts\Relics\RelicGUI.cs" />
