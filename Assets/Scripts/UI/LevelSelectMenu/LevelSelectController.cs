@@ -37,7 +37,7 @@ public class LevelSelectController : MonoBehaviour {
 			//Move the cursor up
 			if (Input.GetAxis ("Vertical") > 0) {
 				if (cursorPositionIndex == 0) {
-					cursorPositionIndex = cursorPositionIndexMax - 1;
+					cursorPositionIndex = cursorPositionIndexMax;
 				} else {
 					cursorPositionIndex--;
 				}
@@ -47,7 +47,7 @@ public class LevelSelectController : MonoBehaviour {
 			//If the thumbstick has been pushed down
 			//Move the cursor down
 			else if (Input.GetAxis ("Vertical") < 0) {
-				if (cursorPositionIndex == cursorPositionIndexMax - 1) {
+				if (cursorPositionIndex == cursorPositionIndexMax) {
 					cursorPositionIndex = 0;
 				} else {
 					cursorPositionIndex++;

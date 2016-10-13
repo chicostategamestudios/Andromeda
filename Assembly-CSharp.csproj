@@ -133,6 +133,9 @@
      <Compile Include="Assets\Scripts\Relics\UpgradeRelic.cs" />
      <Compile Include="Assets\Scripts\UI\Healthbar.cs" />
      <Compile Include="Assets\Scripts\UI\InGameScripts\AbilityImagesActiveInactive.cs" />
+     <Compile Include="Assets\Scripts\UI\InGameScripts\PauseGame.cs" />
+     <Compile Include="Assets\Scripts\UI\InGameScripts\PauseMenuSelect.cs" />
+     <Compile Include="Assets\Scripts\UI\InGameScripts\PauseMenuYesNo.cs" />
      <Compile Include="Assets\Scripts\UI\InGameScripts\TimerDisplay.cs" />
      <Compile Include="Assets\Scripts\UI\LevelSelectMenu\EnterSelectedLevel.cs" />
      <Compile Include="Assets\Scripts\UI\LevelSelectMenu\LevelSelectController.cs" />

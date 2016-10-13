@@ -4,7 +4,7 @@ using Assets.Scripts.Components;
 using UnityEngine.UI;
 
 public class Healthbar : MonoBehaviour {
-	Health health;
+	/*Health health;
 	public Image HealthFillBG;
 	public Image HealthFill;
 
@@ -24,5 +24,5 @@ public class Healthbar : MonoBehaviour {
 			HealthFillBG.fillAmount = HealthFill.fillAmount;
 		}
 
-	}
+	}*/
 }
