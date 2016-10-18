@@ -27,7 +27,10 @@ public class LevelReset : MonoBehaviour {
 			{
 				(plat as FragilePillar).Reset();
 			}
-
+            if(plat is WheelPlatform_Audio)
+            {
+                (plat as WheelPlatform_Audio).Reset();
+            }
 
 		}
 
