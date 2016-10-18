@@ -116,13 +116,17 @@
      <Compile Include="Assets\Scripts\LevelComponenets\turret.cs" />
      <Compile Include="Assets\Scripts\LevelComponenets\turretActivator.cs" />
      <Compile Include="Assets\Scripts\Misc\DealDamage.cs" />
+     <Compile Include="Assets\Scripts\Misc\GameManager.cs" />
      <Compile Include="Assets\Scripts\Misc\HideSprite.cs" />
      <Compile Include="Assets\Scripts\Misc\LevelStateManager.cs" />
      <Compile Include="Assets\Scripts\Misc\LoadGames.cs" />
      <Compile Include="Assets\Scripts\Misc\Projectile.cs" />
      <Compile Include="Assets\Scripts\Misc\SaveGame.cs" />
+     <Compile Include="Assets\Scripts\Misc\SaveLevelStats.cs" />
      <Compile Include="Assets\Scripts\Misc\SetSection.cs" />
      <Compile Include="Assets\Scripts\Misc\SpawnPlayer.cs" />
+     <Compile Include="Assets\Scripts\Misc\Treasure.cs" />
+     <Compile Include="Assets\Scripts\Misc\TreasureManager.cs" />
      <Compile Include="Assets\Scripts\Relics\AbilityUIManager.cs" />
      <Compile Include="Assets\Scripts\Relics\CanDestroy.cs" />
      <Compile Include="Assets\Scripts\Relics\RelicGUI.cs" />

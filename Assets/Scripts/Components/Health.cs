@@ -22,10 +22,11 @@ namespace Assets.Scripts.Components
 		}
 
 		void OnTriggerEnter(Collider col){
-			if (col.gameObject.tag == "Loot") {
+			if (col.gameObject.GetComponent<Treasure>() != null) {
 				CurStuff += pointValue;
-				collectedLoot.Add (col.gameObject);
-				col.gameObject.SetActive (false);
+				//collectedLoot.Add (col.gameObject);
+				TreasureManager.GetManager.AddTreasure(col.gameObject.GetComponent<Treasure>());
+				//col.gameObject.SetActive (false);
 
 				int Active = 0;
 				for (int cube = 0; cube < myLoot.Count; cube++) {

@@ -40,28 +40,28 @@ public class DisplayGameFiles : MonoBehaviour {
 
 			//Assigning level completion
 			//Fire Level
-			if (mygames [game].FireLevelStats.getLocked()) {
+			if (mygames [game].FireLevelStats.locked) {
 				fireLevelIconImage [game].sprite = fireLevelIconSpr [1];
 				//Debug.Log (mygames [game].FireLevelStats.getLocked());
 			} else {
 				fireLevelIconImage [game].sprite = fireLevelIconSpr [0];
 			}
 
-			if (mygames [game].WaterLevelStats.getLocked()) {
+			if (mygames [game].WaterLevelStats.locked) {
 				//Debug.Log (mygames [game].FireLevelStats.getLocked());
 				waterLevelIconImage [game].sprite = waterLevelIconSpr [1];
 			} else {
 				waterLevelIconImage [game].sprite = waterLevelIconSpr [0];
 			}
 
-			if (mygames [game].EarthLevelStats.getLocked()) {
+			if (mygames [game].EarthLevelStats.locked) {
 				earthLevelIconImage [game].sprite = earthLevelIconSpr [1];
 				//Debug.Log (mygames [game].FireLevelStats.getLocked());
 			} else {
 				earthLevelIconImage [game].sprite = earthLevelIconSpr [0];
 			}
 
-			if (mygames [game].AirLevelStats.getLocked()) {
+			if (mygames [game].AirLevelStats.locked) {
 				airLevelIconImage [game].sprite = airLevelIconSpr [1];
 				//Debug.Log (mygames [game].FireLevelStats.getLocked());
 			} else {

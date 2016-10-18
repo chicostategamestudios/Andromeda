@@ -237,7 +237,7 @@ public class LevelStats //level stats is used to save attriubtes of levels. righ
 //things like player scores and times and things as well.
 {
 	public LevelToUnlock thisLevel;
-	private bool locked = true;
+	public bool locked = true;
 	public float relicsCollected;
 	public float totalRelics;
 
@@ -247,11 +247,7 @@ public class LevelStats //level stats is used to save attriubtes of levels. righ
 
 	public List<Vector3> TreasuresRemaining = new List<Vector3>();
 
-	public bool getLocked(){return locked;}
 
-	public void setLocked(bool newLocked){
-		locked = newLocked;
-	}
 
 }
 
