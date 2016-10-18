@@ -104,7 +104,6 @@
     <Compile Include="Assets\Scripts\Components\Slash.cs" />
     <Compile Include="Assets\Scripts\Components\StatesBase.cs" />
     <Compile Include="Assets\Scripts\Components\WallGrab.cs" />
-    <Compile Include="Assets\Scripts\Destroy.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\BatBehavior.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\BatNest.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\BreakingBridge.cs" />
@@ -124,6 +123,8 @@
     <Compile Include="Assets\Scripts\LevelComponenets\FragilePillar.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\GasPlume.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\GasPlumePlat.cs" />
+    <Compile Include="Assets\Scripts\LevelComponenets\Ice_Fall.cs" />
+    <Compile Include="Assets\Scripts\LevelComponenets\Ice_Trigger.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\Lava.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\Lava\LavaChunk.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\Lava\TestingLava.cs" />

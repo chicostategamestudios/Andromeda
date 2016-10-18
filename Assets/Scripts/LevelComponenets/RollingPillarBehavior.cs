@@ -58,7 +58,6 @@ public class RollingPillarBehavior : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider col){
-        Debug.Log("hit)");
 		if (col.gameObject.name == "CubeDeath") {
 	
 			this.gameObject.SetActive(false);
