@@ -30,6 +30,7 @@ public class DragonHeadRelic : MonoBehaviour {
             isTempleActive_ = true;
             Destroy(relic);
             Destroy(myTrigger);
+			TestingLava.LavaWall.StartLavaWall ();
         }
     }
 }

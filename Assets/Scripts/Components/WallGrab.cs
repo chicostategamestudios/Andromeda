@@ -92,6 +92,7 @@ namespace Assets.Scripts.Components
 			RaycastHit hit;
 			if(Physics.Raycast(rightRay,out hit, wallDist)) //check to see if there is a wall within wallDist to the right of us
 			{
+
 				if (hit.transform.gameObject.layer == 8) {
 					return 1f;
 					rightwalled = true;

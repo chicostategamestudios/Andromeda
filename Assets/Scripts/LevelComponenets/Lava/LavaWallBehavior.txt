@@ -1,0 +1,31 @@
+*************************************************This is the Lava Wall Instruction Manual**********************************
+Intro: The Lava wall is a tool that will chase players once activated. The wall itself will have two main peices. It will have the wall itself, as well as the 
+lava wall background that represents the lava that will fill in behind the wall. This background wall will be given to us by the modeling team, which will be 
+a mesh that is activated as the lava wall travels. 
+
+To Get Started-
+	1.Create WallController-
+		a. Create an empty gameobject
+		b. Add the TestingLava script to it. 
+
+	2. Add Lava Wall-
+		a. Create an empty GameObject.
+		b. Add the mesh we are using for the lava wall (ideally as a child object)(this wall should be straight up and down)
+			i. Note: the wall will be snapped to the start location when the wall is activated, so you don't need it to be at the start
+				of the lava wall path, feel free to put it anywhere, if you want it to spawn in or activate dynamically, feel free
+				to request this from a programmer
+		c. on your lava wall controller object, set the "MyLavaWall" component to the lava wall
+
+	3. Add Lava wall points
+		a. Create an emtpy gameobject under the wall controller named "Targets"
+		b. Place the sliced background mesh as a child of this object, it should already be the proper size for the level
+		c. each section of the slice mesh needs to have a Lava Chunk component attached to it. 
+			i. If you want the lava chunk to be a checkpoint, tick the "is checkpoint", this will be where the lava wall is reset to
+			when the player dies, that way the wall is not in front of the player when they respawn
+	4. Catch up points
+		a. We can snap the lava wall forward if the player gets too far ahead. 
+		b. To set a lava wall catch up point, go to a checkpoint that you want to trigger the lava wall catch up
+		c. in the lava wall catch up drag a lava chunk into the "Snap To This Lava" parameter
+			i. This is where the lava wall will snap forward to when the player passes through it
+				*Note: this will also set the lava check point to this location, if you don't want it to have this behavior, let us know
+	

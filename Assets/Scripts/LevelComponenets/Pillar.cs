@@ -45,7 +45,7 @@ public class Pillar : MonoBehaviour {
 
 		if(col.gameObject.tag == ("Player")){
 			InvokeRepeating("Fall", 0.01f,0.01f);
-			//Destroy (myTrigger);	
+				
 			myTrigger.enabled = false;
 		
 		}
@@ -59,7 +59,7 @@ public class Pillar : MonoBehaviour {
 	void Fall () {
 		//pillarRoot.localEulerAngles= new Vector3 (0f, 0f, fallAngle);
 
-		Debug.LogError("Fuck yea");
+		//Debug.LogError("Fuck yea");
 
 		fallspeed *= speedIncrease;
 

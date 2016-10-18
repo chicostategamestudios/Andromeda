@@ -104,6 +104,7 @@
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_VertexShader.shader" />
      <None Include="Assets\ProCore\ProGrids\About\changelog.txt" />
      <None Include="Assets\ProCore\ProBuilder\readme.txt" />
+     <None Include="Assets\Scripts\LevelComponenets\Lava\LavaWallBehavior.txt" />
      <None Include="Assets\ProCore\ProBuilder\About\Credits.txt" />
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>C:/Program Files/Unity Versions/Unity5_3/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
