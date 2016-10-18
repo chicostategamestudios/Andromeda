@@ -1,28 +1,10 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\LevelComponenets\Lava\LavaWallBehavior.txt">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\LevelComponenets\CheckPoint.cs">
     <Files>
-      <File FileName="Assets\Scripts\LevelComponenets\Lava\LavaWallBehavior.txt" Line="32" Column="2" />
-      <File FileName="Assets\Scripts\LevelComponenets\Lava\TestingLava.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\LevelComponenets\Pillar.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Components\PlayerMovement.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Misc\SaveGame.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Misc\LoadGames.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Components\Health.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Components\Jumping.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Character\CharController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\LevelComponenets\RollingPillar.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\LevelComponenets\RollingPillarBehavior.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Components\Death.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Components\WallGrab.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\LevelComponenets\Lava\TestingLava.cs" Line="116" Column="52" />
       <File FileName="Assets\Scripts\LevelComponenets\Lava\LavaChunk.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Camera\_Camera.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\LevelComponenets\FragilePillar.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\LevelComponenets\LevelReset.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\LevelComponenets\CheckPoint.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\LevelComponenets\Dragon Statues\DragonHeadRelic.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\LevelComponenets\WheelPlatform.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\LevelComponenets\WheelPlatforms.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\LevelComponenets\CheckPoint.cs" Line="24" Column="85" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

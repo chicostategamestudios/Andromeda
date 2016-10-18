@@ -22,12 +22,14 @@ public class CheckPoint : MonoBehaviour {
 	void OnTriggerEnter(Collider col){
 		if ((col.gameObject.tag == "Player") && (col.gameObject.GetComponent<Death> () != null)) {
 			col.gameObject.GetComponent<Death> ().SetCheckPoint (myChild.transform.position);
-			if (SnapToThisLava != null) {
-				SnapToThisLava.SnapToMe ();
+
+			if (SnapToThisLava != null) { //if we do have a lava chunk that we want to snap back on respawn
+				SnapToThisLava.SnapToMe (); //call snap on it so the wall snaps there
 			}
 
 		} else {
-			
+			//this is just to avoid a floating if else
+			return;
 		}
 
 	}
