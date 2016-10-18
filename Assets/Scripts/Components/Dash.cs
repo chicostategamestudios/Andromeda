@@ -51,7 +51,6 @@ namespace Assets.Scripts.Components
 			}
 
 			if (currentPhase == DashPhase.startingLock) { //inputted the dash button, now start timers for locked dash and checking to reset dash
-				
 				if (facingRight) { //we use playerDirection to decide which direction we dash										//
 					dashDir = 1f;
 				} else {
