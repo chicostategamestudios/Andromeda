@@ -16,20 +16,29 @@ namespace Assets.Scripts.Components
         [Tooltip("Is the player Invinsible for a specfic amount of frames (keep this false please)")]
         public bool isInvinsible = false;
 
-		public void TotalStuff(){
-			GameObject[] tempList = GameObject.FindGameObjectsWithTag ("Loot");
-			float maxStuff = tempList.Length;
-			pointValue = 1f / maxStuff;
-			collectedLoot = new List<GameObject> ();
+        public static List<Transform> myLoot = new List<Transform>();
 
-		}
+        public void TotalStuff()
+        {
+            //	GameObject[] tempList = GameObject.FindGameObjectsWithTag ("Loot");
+            float maxStuff = myLoot.Count;
+            pointValue = 1f / maxStuff;
+            collectedLoot = new List<GameObject>();
+        }
 
-		void OnTriggerEnter(Collider col){
+        void OnTriggerEnter(Collider col){
 			if (col.gameObject.tag == "Loot") {
 				CurStuff += pointValue;
 				collectedLoot.Add (col.gameObject);
 				col.gameObject.SetActive (false);
-			}
+
+                int Active = 0;
+                for (int cube = 0; cube < myLoot.Count; cube++) {
+                    if (myLoot[cube].gameObject.activeInHierarchy) {
+                        Active++;
+                    }
+                }
+            }
 
 		}
 
