@@ -58,8 +58,6 @@ namespace Assets.Scripts.Components
 
             if (Input.GetKey(KeyCode.X)) {
                 modificationVec.x = 22f;
-            } else {
-                modificationVec = Vector2.zero;
             }
 
 
@@ -134,7 +132,7 @@ namespace Assets.Scripts.Components
                 }
 			}
             moveVector += modificationVec;
-		
+
 			charCont.Move (moveVector * Time.deltaTime); //apply movement in the x and y
 		
 			if (transform.position.z != 0) {
