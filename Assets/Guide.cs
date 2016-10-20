@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Assets.Scripts.Components;
+using Assets.Scripts.Character;
 
     public enum GuideType{
         DoubleJump,
@@ -12,39 +14,61 @@ public class Guide : MonoBehaviour
 {
 
     public GuideType GuideBehavior;
-    public GameObject Player;
+    RelicManager myMan;
+    GameObject Player;
+    Light Lighton;
+
 
     // Use this for initialization
     void Start()
     {
-        Player.GetComponent<Relics>();
+        Lighton = GetComponent<Light>();
+        Player = CharController.Instance.transform.gameObject;
+        myMan = Player.GetComponent<RelicManager>();
+
+        Lighton.enabled = false;
     }
-    void Update()
+    void OnTriggerEnter(Collider col)
     {
+        if (col.gameObject == Player)
+        {
+            if (GuideBehavior == GuideType.DoubleJump)
+            {
+                if (myMan.jumpRelic == true)
+                {
+                    Lighton.enabled = true;
+                    GetComponent<Light>().color = Color.green;
+                }
+            }
         
-        if (GuideBehavior == GuideType.DoubleJump)
-        {
-            GetComponent<Light>().color = Color.green;
-        }
-
-        if (GuideBehavior == GuideType.WallJump)
-        {
-            GetComponent<Light>().color = Color.yellow;
-        }
-
-        if (GuideBehavior == GuideType.Dash)
-        {
-            GetComponent<Light>().color = Color.red;
-        }
-
-        if (GuideBehavior == GuideType.Slash)
-        {
-            GetComponent<Light>().color = Color.cyan;
+            if (GuideBehavior == GuideType.WallJump)
+            {
+                if (myMan.wallJumpRelic == true)
+                {
+                    Lighton.enabled = true;
+                    GetComponent<Light>().color = Color.yellow;
+                }
+            }
+            if (GuideBehavior == GuideType.Dash)
+            {
+                if (myMan.dashRelic == true)
+                {
+                    Lighton.enabled = true;
+                    GetComponent<Light>().color = Color.red;
+                }
+            }
+            if (GuideBehavior == GuideType.Slash)
+            {
+                if (myMan.slashRelic == true)
+                {
+                    Lighton.enabled = true;
+                    GetComponent<Light>().color = Color.cyan;
+                }
+            }
         }
     }
-/*.PlayerMovement _movement;
-Components.RelicManager _relics;
-Components.Slash _slash;
-Components.Health _health;
-Components.Death _death;
-*/}
+    void OnTriggerExit(Collider col)
+    {
+        Lighton.enabled = false;
+    }
+}
