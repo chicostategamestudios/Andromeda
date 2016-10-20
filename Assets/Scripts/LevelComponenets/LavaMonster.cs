@@ -15,11 +15,14 @@ public class LavaMonster : MonoBehaviour {
 	public bool spew;                   //bool to check if the Ai is spewing
 	ParticleSystem  mySystem;           //ref to the particle system
 	public BoxCollider playerBlocker;   //ref to the spew's collider
-
+    GameObject player;
+    public bool tracking;
+    Vector3 offset = new Vector3(0, 1, 0);
 	// Use this for initialization
     //sets variables needed on start.
 	void Start () {
-		playerBlocker.enabled = false;
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerBlocker.enabled = false;
 		mySystem = gameObject.transform.GetComponentInChildren<ParticleSystem> ();
 		mySystem.Stop ();
 		startPos = transform.position;
@@ -29,8 +32,16 @@ public class LavaMonster : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+        }
+        if (tracking == true)
+        {
+            mySystem.transform.LookAt(player.transform.position + offset);
+        }
         //if current position is not targetPos move torwards that pos.
-		if (transform.position != targetPos) {
+        if (transform.position != targetPos) {
 			transform.position = Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
 		}
         //if target pos is end pos, and current position is end positon and canStartLava is true start the coroutine for spewing lava and set canStartLava false
@@ -39,19 +50,15 @@ public class LavaMonster : MonoBehaviour {
 			canStartLava = false;
 		}
 
-	}
+    }
 
     //Starts the timer for spweing lava. turns on the collider for particles and plays the particle system. After waitDuration turn off the collider and particle system
-	IEnumerator SpewLava(){
+    IEnumerator SpewLava(){
 		spew = true;
-		playerBlocker.enabled = true;
-		mySystem.Play();
-        mySystem.GetComponent<BoxCollider>().enabled = true;
+        mySystem.Play();
+        mySystem.transform.LookAt(player.transform.position + offset);
         yield return new WaitForSeconds (lavaDuration);
 		spew = false;
-		playerBlocker.enabled = false;
-        mySystem.GetComponent<BoxCollider>().enabled = false;
-
         mySystem.Stop ();
 		yield return new WaitForSeconds (waitDuration);
 		if (transform.position == endPos) {

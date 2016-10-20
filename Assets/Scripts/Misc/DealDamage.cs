@@ -8,6 +8,7 @@ public class DealDamage : MonoBehaviour {
 
 	void OnTriggerEnter(Collider col){
 		if (col.gameObject.tag == "Player") {
+            Debug.Log("happens");
 			col.GetComponent<Health> ().TakeDamage (damage);
 		}
 	
