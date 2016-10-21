@@ -25,3 +25,22 @@
 [LOG] Thread::callback                         : * FMOD Studio bank load thread started
 [LOG] Manager::readBank                        : fileversion = 79, compatVersion = 70 (oldest = 44, newest = 80)
 [LOG] Manager::readBank                        : fileversion = 79, compatVersion = 70 (oldest = 44, newest = 80)
+[LOG] Manager::readBank                        : fileversion = 79, compatVersion = 70 (oldest = 44, newest = 80)
+[LOG] Manager::readBank                        : fileversion = 79, compatVersion = 70 (oldest = 44, newest = 80)
+[LOG] Manager::readBank                        : fileversion = 79, compatVersion = 70 (oldest = 44, newest = 80)
+[LOG] Manager::readBank                        : fileversion = 79, compatVersion = 70 (oldest = 44, newest = 80)
+[WRN] ObjectLookup::get                        : Lookup failed for BusWithInputs: {407e275c-47eb-4f43-a3bc-2755495e34bf}
+[WRN] ObjectLookup::get                        : Lookup failed for BusWithInputs: {407e275c-47eb-4f43-a3bc-2755495e34bf}
+[WRN] ObjectLookup::get                        : Lookup failed for BusWithInputs: {407e275c-47eb-4f43-a3bc-2755495e34bf}
+[WRN] ObjectLookup::get                        : Lookup failed for BusWithInputs: {7597178b-92e1-46c6-968b-a93039c20efd}
+[WRN] ObjectLookup::get                        : Lookup failed for BusWithInputs: {407e275c-47eb-4f43-a3bc-2755495e34bf}
+[WRN] ObjectLookup::get                        : Lookup failed for BusWithInputs: {eb698bc1-b54a-4a13-b826-2d48f1fb9b11}
+[WRN] ObjectLookup::get                        : Lookup failed for BusWithInputs: {bcdd3952-8797-4ef5-86b7-639d3dc7bf1a}
+[WRN] ObjectLookup::get                        : Lookup failed for BusWithInputs: {407e275c-47eb-4f43-a3bc-2755495e34bf}
+[WRN] ObjectLookup::get                        : Lookup failed for BusWithInputs: {407e275c-47eb-4f43-a3bc-2755495e34bf}
+[WRN] ObjectLookup::get                        : Lookup failed for BusWithInputs: {407e275c-47eb-4f43-a3bc-2755495e34bf}
+[WRN] ObjectLookup::get                        : Lookup failed for BusWithSends: {94c58a65-4812-4dff-91b9-fa3f1e44c791}
+[WRN] ObjectLookup::get                        : Lookup failed for BusWithSends: {94c58a65-4812-4dff-91b9-fa3f1e44c791}
+[WRN] ObjectLookup::get                        : Lookup failed for BusWithSends: {94c58a65-4812-4dff-91b9-fa3f1e44c791}
+[LOG] Manager::readBank                        : fileversion = 79, compatVersion = 70 (oldest = 44, newest = 80)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
