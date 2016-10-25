@@ -62,10 +62,8 @@ namespace Assets.Scripts.Components
             if (Input.GetKey(KeyCode.X))
             {
                 modificationVec.x = 22f;
-            }
             else
             {
-                modificationVec = Vector2.zero;
             }
 
 

@@ -13,15 +13,17 @@ public class WindyArea : MonoBehaviour {
     public float timeGoingRight = 2;
     public bool activated = false;
     PlayerMovement move;
+    Vector2 modVec;
     
 
 	void OnTriggerEnter(Collider col) {
         if(col.tag == "Player") {
             if (!activated) {
-                //Once the player collides with the wind object, then
-                StartCoroutine("Windy");
+                //Once the player collides with the wind object, 
                 activated = true;
                 move = col.GetComponent<PlayerMovement>();
+                StartCoroutine("Windy");
+                
             }
         }
     }
@@ -30,15 +32,26 @@ public class WindyArea : MonoBehaviour {
         if(col.tag == "Player" && activated) {
             StopCoroutine("Windy");
             activated = false;
+            modVec = Vector2.zero;
         }
     }
 
     IEnumerator Windy () {
-        while (true) {
+        while (activated) {
             yield return new WaitForSeconds(timeGoingLeft);
-            move.modificationVec = new Vector2 (-Mathf.Abs(xForce), yForce); 
+            modVec = new Vector2 (-Mathf.Abs(xForce), yForce); 
             yield return new WaitForSeconds(timeGoingRight);
-            move.modificationVec = new Vector2(Mathf.Abs(xForce), yForce);
+            modVec = new Vector2(Mathf.Abs(xForce), yForce);
         }
+    }
+
+    void Update() {
+        if (activated) {
+            move.modificationVec = modVec;
+        } else
+        {
+            move.modificationVec = Vector2.zero;
+        }
+        print(modVec);
     }
 }
