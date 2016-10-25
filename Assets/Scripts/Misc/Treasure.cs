@@ -18,7 +18,8 @@ public class Treasure : MonoBehaviour {
 
 	public TreasureType _treasureType;
 
-	public TreasureState myState;
+	public TreasureState myState = TreasureState.notPickedUp;
+
 
 	public int MyIndex;
 
@@ -30,14 +31,15 @@ public class Treasure : MonoBehaviour {
 		TreasureManager.GetManager.AddTreasure (this);
 	}
 
-	void ChangeState(TreasureState newState){
+	public void ChangeState(TreasureState newState){
 		switch (newState){
 		case TreasureState.pickedUp:
 			myState = newState;
-
+			this.gameObject.SetActive (false);
 			break;
 		case TreasureState.lost:
 			myState = newState;
+			this.gameObject.SetActive (true);
 			break;
 		case TreasureState.notPickedUp:
 			myState = newState;

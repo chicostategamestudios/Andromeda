@@ -6,13 +6,18 @@ public class SpawnPlayer : MonoBehaviour {
 
 	public GameObject player;
 
-
+	public bool loadFromFile;
 	// Use this for initialization
 	void Start () {
 		//Transform spawnPoint = GameObject.FindGameObjectWithTag ("StartPoint").transform;
 
 		GameObject _player = (GameObject)Instantiate (player, transform.position, Quaternion.identity);
-		SetStartAbilities (_player);
+
+
+		if (loadFromFile) {
+			SetStartAbilities (_player);
+		}
+
 	}
 
 

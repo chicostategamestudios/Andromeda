@@ -26,7 +26,8 @@ public class LevelReset : MonoBehaviour {
 			if (plat is FragilePillar)
 			{
 				(plat as FragilePillar).Reset();
-			}if (plat is TestingLava) {
+			
+			}if (plat is TestingLava && ((plat as TestingLava).move)) {
 				(plat as TestingLava).Reset ();
 			}
 

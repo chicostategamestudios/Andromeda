@@ -26,6 +26,7 @@ namespace Assets.Scripts.Components
 				CurStuff += pointValue;
 				//collectedLoot.Add (col.gameObject);
 				TreasureManager.GetManager.AddTreasure(col.gameObject.GetComponent<Treasure>());
+				col.gameObject.GetComponent<Treasure> ().ChangeState (TreasureState.pickedUp);
 				//col.gameObject.SetActive (false);
 
 				int Active = 0;
@@ -39,6 +40,8 @@ namespace Assets.Scripts.Components
 
 		public void TakeDamage(float damage){
 			for (int relicsLost = 0; relicsLost < damage; relicsLost++) {
+
+				TreasureManager.GetManager.RespawnRelic ();
 			//	GameObject turnOn = collectedLoot [Random.Range (0, collectedLoot.Count)];
 			//	collectedLoot.Remove (turnOn);
 			//	turnOn.SetActive (true);
