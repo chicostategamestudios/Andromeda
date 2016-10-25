@@ -12,17 +12,19 @@ namespace Assets.Scripts.Components
         float pointValue;
         List<GameObject> collectedLoot;
         Death myDeathObj;
-        public BoxCollider playerCollider;
-        bool invincible;
+        [Tooltip("How many seconds is the player invunlerable for after taking damage?")]
+        public float iFrames;
+        [Tooltip("Is the player Invinsible for a specfic amount of frames (keep this false please)")]
+        public bool isInvinsible = false;
+
+        public static List<Transform> myLoot = new List<Transform>();
 
         public void TotalStuff()
         {
-            playerCollider = GetComponent<BoxCollider>();
-            GameObject[] tempList = GameObject.FindGameObjectsWithTag("Loot");
-            float maxStuff = tempList.Length;
+            //	GameObject[] tempList = GameObject.FindGameObjectsWithTag ("Loot");
+            float maxStuff = myLoot.Count;
             pointValue = 1f / maxStuff;
             collectedLoot = new List<GameObject>();
-
         }
 
         void OnTriggerEnter(Collider col)
@@ -32,22 +34,39 @@ namespace Assets.Scripts.Components
                 CurStuff += pointValue;
                 collectedLoot.Add(col.gameObject);
                 col.gameObject.SetActive(false);
+
+                int Active = 0;
+                for (int cube = 0; cube < myLoot.Count; cube++)
+                {
+                    if (myLoot[cube].gameObject.activeInHierarchy)
+                    {
+                        Active++;
+                    }
+                }
             }
 
         }
 
         public void TakeDamage(float damage)
         {
-            for (int relicsLost = 0; relicsLost < damage; relicsLost++)
+            if (!isInvinsible)
             {
-                //	GameObject turnOn = collectedLoot [Random.Range (0, collectedLoot.Count)];
-                //	collectedLoot.Remove (turnOn);
-                //	turnOn.SetActive (true);
-                CurStuff -= pointValue;
-
+                for (int relicsLost = 0; relicsLost < damage; relicsLost++)
+                {
+                    //	GameObject turnOn = collectedLoot [Random.Range (0, collectedLoot.Count)];
+                    //	collectedLoot.Remove (turnOn);
+                    //	turnOn.SetActive (true);
+                    CurStuff -= pointValue;
+                }
+                isInvinsible = true;
+                StartCoroutine("Stun");
             }
-            if (invincible == false)
-            StartCoroutine("Invincible");
+        }
+
+        IEnumerator Stun()
+        {
+            yield return new WaitForSeconds(iFrames);
+            isInvinsible = false;
         }
 
         public void Death()
@@ -60,24 +79,6 @@ namespace Assets.Scripts.Components
 
             myDeathObj.Respawn();
 
-        }
-
-        public void OnParticleCollision(GameObject particle)
-        {
-            if (particle.name == "LavaSpew")
-            {
-                TakeDamage(0);
-            }
-        }
-
-        IEnumerator Invincible()
-        {
-            invincible = true;
-            Debug.Log("yay");
-            playerCollider.enabled = false;
-            yield return new WaitForSeconds (3f);
-            playerCollider.enabled = true;
-            invincible = false;
         }
     }
 }

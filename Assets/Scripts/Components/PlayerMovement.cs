@@ -35,7 +35,7 @@ namespace Assets.Scripts.Components
         public float upRayLength = 0.9f;
         public float ceilingHitSpeed = -1f;
         [Tooltip("Time in seconds in which you wish the player to be stunned after taking damage. Can't jump, can't dash, can't move, can't slash.")]
-        public float stunnedLength;
+        public float stunnedLength = 1f;
         int celingmask = 1 << 8;
         public Vector2 modificationVec = Vector2.zero;
         int movingGround = 1 << 9;
@@ -62,6 +62,7 @@ namespace Assets.Scripts.Components
             if (Input.GetKey(KeyCode.X))
             {
                 modificationVec.x = 22f;
+            }
             else
             {
             }
@@ -169,6 +170,7 @@ namespace Assets.Scripts.Components
             }
 
         }
+
 
 
         public void JumpPlayer(float Direction)

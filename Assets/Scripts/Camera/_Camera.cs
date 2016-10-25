@@ -8,16 +8,18 @@ namespace Assets.Scripts.Components {
 		static public Transform focusLock;
 		static public int cameraEvent;
 		static public float eventSmooth;
-		static public float distanceAway;
+		static public float distanceAway = 35f;
 		public float lookAheadDistanceY;
 		public float lookSmoothTimeY;
 
-		public Vector2 focusAreaSize;
+		[HideInInspector]public Vector2 focusAreaSize = new Vector2(1,2);
 
-		public float verticalOffset;
+		[HideInInspector]
+		public float verticalOffset = -1;
 		public float lookAheadDistanceX;
-		public float lookSmoothTimeX;
-		public float verticalSmoothTime;
+		public float lookSmoothTimeX = .8f;
+		public float verticalSmoothTime = .02f;
+		public float zoomDistance = 20;
 
 		private float currentLookAheadX;
 		private float targetLookAheadX;
@@ -38,12 +40,12 @@ namespace Assets.Scripts.Components {
 		FocusArea focusArea;
 
 		// Use this for initialization
-		void Start () {
+		void Awake () {
 			focusArea = new FocusArea (CharController.Instance.transform.GetComponent<CharacterController>().bounds, focusAreaSize);
 			cameraEvent = 0;
 			playerFocused = true;
 			targetFocused = false;
-			distanceAway = 20;
+			//distanceAway = zoomDistance;
 		}
 
 		void LateUpdate () {
