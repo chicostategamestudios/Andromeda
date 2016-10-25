@@ -44,20 +44,20 @@ public class WheelPlatform : MonoBehaviour {
 
 		if (col.gameObject.tag == "Player") {
 			if (myType == platType.none) {
-                print("none");
+               
                 print(gameObject.transform.localPosition.z);
                 print("Y:" + gameObject.transform.localPosition.y);
                 return;
 			}
 			if (myType == platType.right) {
-				print ("right");
+				
 				myWheel.rotationSpeed -= addspeed;
 				return;
 			
 			}
 
 			if (myType == platType.left) {
-				print ("left");
+				
 				myWheel.rotationSpeed += addspeed;
 				return;
 			}

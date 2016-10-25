@@ -9,13 +9,11 @@ public class Autospin_Wheel_Platform : MonoBehaviour
     public platType myType;
 
     float breakPoint;
-    float addspeed;
     // Use this for initialization
     void Start()
     {
         myWheel = this.gameObject.transform.parent.GetComponent<Autospin_Wheel_Platforms>();
-        addspeed = myWheel.JumpSpeedAdded;
-        breakPoint = myWheel.WheelBreakpoint;
+        
 
     }
 
@@ -55,25 +53,6 @@ public class Autospin_Wheel_Platform : MonoBehaviour
                 print("Y:" + gameObject.transform.localPosition.y);
                 return;
             }
-            if (myType == platType.right)
-            {
-                print("right");
-                myWheel.rotationSpeed -= addspeed;
-                return;
-
-            }
-
-            if (myType == platType.left)
-            {
-                print("left");
-                myWheel.rotationSpeed += addspeed;
-                return;
-            }
-
-
-
-
-
         }
 
 

@@ -27,6 +27,14 @@ public class LevelReset : MonoBehaviour {
 			{
 				(plat as FragilePillar).Reset();
 			}
+            if (plat is Ice_Trigger)
+            {
+                (plat as Ice_Trigger).Reset();
+            }
+            if(plat is Autospin_Wheel_Platforms)
+            {
+                (plat as Autospin_Wheel_Platforms).Reset();
+            }
 
 
 		}
