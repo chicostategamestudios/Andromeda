@@ -12,10 +12,10 @@ using System.Collections.Generic;
 public enum LevelToUnlock //these will be used to decide what level we are unlocking, expand this if we need to unlock more stuff
 {
 	tutorial,
-	levelOne,
-	levelTwo,
-	levelThree,
-	levelFour
+	earthLevel,
+	fireLevel,
+	airLevel,
+	iceLevel
 }
 
 public enum LockMode //this is just the lockmode of the level. We can use this to relock a level or something like that.
@@ -189,8 +189,11 @@ public class SaveGame : MonoBehaviour { //This class will save the game.
 	public GameStats CreateNewSave() //this will create a new save. This creates a new game save object with 
 	{								//all values set to default values. There is probably a better way to achieve this
 		GameStats newGame = new GameStats();
-		LevelStats newGameStats = new LevelStats();
-
+		newGame.TutorialLevelStats.thisLevel = LevelToUnlock.tutorial;
+		newGame.AirLevelStats.thisLevel = LevelToUnlock.airLevel;
+		newGame.EarthLevelStats.thisLevel = LevelToUnlock.earthLevel;
+		newGame.FireLevelStats.thisLevel = LevelToUnlock.fireLevel;
+		newGame.WaterLevelStats.thisLevel = LevelToUnlock.iceLevel;
 		//newGame.existingFile = false;
 		newGame.PlayTime = 0f;
 		newGame.treasureCollected = 0f;
@@ -230,6 +233,46 @@ public class GameStats //this object holds all of our game stats. we can store t
 	public LevelStats FireLevelStats = new LevelStats();
 	public LevelStats WaterLevelStats = new LevelStats();
 	public LevelStats AirLevelStats = new LevelStats();
+
+	public LevelStats GetStats(LevelToUnlock GetLevel){
+		switch (GetLevel) {
+		case LevelToUnlock.tutorial:
+			return TutorialLevelStats;
+			break;
+		case LevelToUnlock.earthLevel:
+			return EarthLevelStats;
+			break;
+		case LevelToUnlock.airLevel:
+			return AirLevelStats;
+			break;
+		case LevelToUnlock.fireLevel:
+			return FireLevelStats;
+			break;
+		case LevelToUnlock.iceLevel:
+			return WaterLevelStats;
+		}
+			return null;
+		}
+	public void SetStats(LevelStats stats){
+		switch (stats.thisLevel) {
+		case LevelToUnlock.airLevel:
+			AirLevelStats = stats;
+			break;
+		case LevelToUnlock.earthLevel:
+			EarthLevelStats = stats;
+			break;
+		case LevelToUnlock.fireLevel:
+			FireLevelStats = stats;
+			break;
+		case LevelToUnlock.iceLevel:
+			WaterLevelStats = stats;
+			break;
+		case LevelToUnlock.tutorial:
+			TutorialLevelStats = stats;
+			break;
+		}
+	}
+
 }
 
 [Serializable]

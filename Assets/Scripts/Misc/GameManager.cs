@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour {
 
 	private static GameStats loadedGame; //static instance of the currently loaded Game File
 
+	private static LevelStats curLevel;
+
 	void Awake(){ //set our manager as a singleton/static/multi-scene object
 		if (_gameManager == null) {
 			_gameManager = this;
@@ -58,8 +60,27 @@ public class GameManager : MonoBehaviour {
 		loadedGame = SaveGame.GetGameSaver.GetGameStats; //set loaded game
 	}
 
+	public static void LoadLevel(LevelToUnlock level){ //run this when we load a level through the UI
+		curLevel = loadedGame.GetStats (level);
+	}
+
 	public static void UpdateSave(){ //call this when we need to update the save of a level or something
+		curLevel = updateFile(curLevel);
+		loadedGame.SetStats (curLevel);
 		SaveGame.GetGameSaver.UpdateSave (loadedGame); //pass the loaded game to the game saver, which saves it
+	}
+
+
+	static LevelStats updateFile(LevelStats input){ //run this to update the file
+		LevelStats returnFile = input;
+		/*place all the information updating here!!
+		 * 
+		 * 
+		 * 
+		 * 
+		 * */ 
+
+		return returnFile;
 	}
 
 

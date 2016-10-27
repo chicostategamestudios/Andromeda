@@ -30,8 +30,8 @@ public class TreasureManager : MonoBehaviour {
 
 	}
 	 
-	void Start(){
-		AssignValues ();
+	IEnumerator Start(){
+		yield return new WaitForSeconds (0.1f);
 		if (checkTreasures) {
 			for (int list = 0; list < treasureLists.Length; list++) {
 				CheckList (treasureLists [list]);
@@ -41,6 +41,7 @@ public class TreasureManager : MonoBehaviour {
 
 	void Update(){
 		if (assignValues) {
+			AssignValues ();
 			assignValues = false;
 
 		}
@@ -86,9 +87,29 @@ public class TreasureManager : MonoBehaviour {
 		}
 	}
 
+	public List<Treasure> getTreasureList(TreasureType color){
+		switch (color) {
+		case TreasureType.blue:
+			return blueTreasure;
+			break;
+		case TreasureType.green:
+			return greenTreasure;
+			break;
+		case TreasureType.red:
+			return redTreasure;
+			break;
+		case TreasureType.yellow:
+			return yellowTreasure;
+			break;
+		default:
+			Debug.LogError ("Trying to get an unset treasure list");
+			return null;
+			break;
+		}
+	}
 
 	public void CheckList(List<Treasure> TreasureList){ //This function can be with each treasure list as input, it will make sure 
-														//level design did not put in duplicate indexes of treausres, and if they did it will tell them what they did wrong
+											//level design did not put in duplicate indexes of treausres, and if they did it will tell them what they did wrong
 		for (int treasure = 0; treasure < TreasureList.Count; treasure++) {
 			for (int nestedTreasure = 0; nestedTreasure < TreasureList.Count; nestedTreasure++) {
 				if (TreasureList [nestedTreasure] != TreasureList [treasure]) {
@@ -120,4 +141,8 @@ public class TreasureManager : MonoBehaviour {
 			//nothin
 		}
 	}
+
+
+
+
 }

@@ -34,6 +34,10 @@ public class LoadGames : MonoBehaviour {
 		//filled and we can start grabbing game files from inside
 	}
 
+	public void testingSomething(LevelToUnlock myLevel){
+		GameManager.LoadLevel (myLevel);
+	}
+
 
 	void Update(){
 
