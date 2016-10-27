@@ -4,7 +4,9 @@ using System.Collections;
 public enum WheelType{
 	Still,
 	FreeSpinning,
-	momentum
+	momentum,
+
+
 }
 //this is the wheel platform holder
 public class WheelPlatforms : MonoBehaviour {
@@ -26,18 +28,26 @@ public class WheelPlatforms : MonoBehaviour {
 
 		StartingRot = wheel.rotation;
 
-		if (WheelBehavior == WheelType.Still) {
-			for (int plat = 0; plat < platforms.Length; plat++) {
-				platforms [plat].position = platformPoints [plat].position;
-			}
-			return;
-		} else if (WheelBehavior == WheelType.FreeSpinning) {
-			InvokeRepeating ("RotateWheel", 0.01f, 0.01f);
-			return;
-		} else if (WheelBehavior == WheelType.momentum) {
-			InvokeRepeating ("RotateWheel", 0.01f, 0.01f);
-			rotationSpeed = 0;
-		}
+        if (WheelBehavior == WheelType.Still)
+        {
+            for (int plat = 0; plat < platforms.Length; plat++)
+            {
+                platforms[plat].position = platformPoints[plat].position;
+            }
+            return;
+        }
+        else if (WheelBehavior == WheelType.FreeSpinning)
+        {
+            InvokeRepeating("RotateWheel", 0.01f, 0.01f);
+            return;
+        }
+        else if (WheelBehavior == WheelType.momentum)
+        {
+            InvokeRepeating("RotateWheel", 0.01f, 0.01f);
+            rotationSpeed = 0;
+        }
+        
+        
 
 		for (int plat = 0; plat < platforms.Length; plat++) {
 			//Debug.Log (plat);
