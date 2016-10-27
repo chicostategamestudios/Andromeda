@@ -14,20 +14,39 @@ public class Guide : MonoBehaviour
 {
 
     public GuideType GuideBehavior;
-    RelicManager myMan;
-    GameObject Player;
-    Light Lighton;
-
+    private RelicManager myMan;
+    private GameObject Player;
+    private Light Lighton;
 
     // Use this for initialization
-    void Start()
+    IEnumerator Start()
     {
+        yield return new WaitForSeconds(.05f);
         Lighton = GetComponent<Light>();
         Player = CharController.Instance.transform.gameObject;
         myMan = Player.GetComponent<RelicManager>();
 
-        Lighton.enabled = false;
+        if (GuideBehavior == GuideType.WallJump)
+        {
+            Lighton.color = Color.green;
+        }
+
+        if (GuideBehavior == GuideType.DoubleJump)
+        {
+            Lighton.color = Color.yellow;
+        }
+
+        if (GuideBehavior == GuideType.Dash)
+        {
+            Lighton.color = Color.red;
+        }
+
+        if (GuideBehavior == GuideType.Slash)
+        {
+            Lighton.color = Color.cyan;
+        }
     }
+
     void OnTriggerEnter(Collider col)
     {
         if (col.gameObject == Player)
@@ -36,8 +55,7 @@ public class Guide : MonoBehaviour
             {
                 if (myMan.jumpRelic == true)
                 {
-                    Lighton.enabled = true;
-                    GetComponent<Light>().color = Color.green;
+                    Lighton.range = 3;
                 }
             }
         
@@ -45,30 +63,27 @@ public class Guide : MonoBehaviour
             {
                 if (myMan.wallJumpRelic == true)
                 {
-                    Lighton.enabled = true;
-                    GetComponent<Light>().color = Color.yellow;
+                    Lighton.range = 3; ;
                 }
             }
             if (GuideBehavior == GuideType.Dash)
             {
                 if (myMan.dashRelic == true)
                 {
-                    Lighton.enabled = true;
-                    GetComponent<Light>().color = Color.red;
+                    Lighton.range = 3;
                 }
             }
             if (GuideBehavior == GuideType.Slash)
             {
                 if (myMan.slashRelic == true)
                 {
-                    Lighton.enabled = true;
-                    GetComponent<Light>().color = Color.cyan;
+                    Lighton.range = 3;
                 }
             }
         }
     }
     void OnTriggerExit(Collider col)
     {
-        Lighton.enabled = false;
+        Lighton.range = 2;
     }
 }
