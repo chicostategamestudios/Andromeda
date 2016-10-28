@@ -18,6 +18,7 @@ namespace Assets.Scripts.Components {
 		public float lookAheadDistanceX;
 		public float lookSmoothTimeX;
 		public float verticalSmoothTime;
+		public float zoomDistance = 20;
 
 		private float currentLookAheadX;
 		private float targetLookAheadX;
@@ -38,12 +39,12 @@ namespace Assets.Scripts.Components {
 		FocusArea focusArea;
 
 		// Use this for initialization
-		void Start () {
+		void Awake () {
 			focusArea = new FocusArea (CharController.Instance.transform.GetComponent<CharacterController>().bounds, focusAreaSize);
 			cameraEvent = 0;
 			playerFocused = true;
 			targetFocused = false;
-			distanceAway = 20;
+			distanceAway = zoomDistance;
 		}
 
 		void LateUpdate () {

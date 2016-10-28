@@ -10,7 +10,7 @@ namespace Assets.Scripts.Character
 		private static CharController _instance;
 		public static CharController Instance{
 			get{
-				_instance = _instance ?? GameObject.FindObjectOfType<CharController> ();
+				_instance = _instance ?? GameObject.FindGameObjectWithTag("Player").GetComponent<CharController> ();
 				if (_instance == null) {
 					Debug.LogWarning ("No CharController in scene but an object is attempted to access it");
 				}

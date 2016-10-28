@@ -10,10 +10,13 @@ namespace Assets.Scripts.Components{
 		public float distanceAway;
 		public float zoomSmooth;
 
+		private float defaultDist;
+
 		//private GameObject cameraMain;
 
-		void Awake () {
+		void Start () {
 			//cameraMain = GameObject.FindWithTag ("MainCamera");
+			defaultDist = _Camera.distanceAway;
 		}
 
 		void OnTriggerEnter (Collider col) {
@@ -21,19 +24,19 @@ namespace Assets.Scripts.Components{
 				if (cameraEvent == 0) {
 					_Camera.cameraEvent = cameraEvent;
 					_Camera.eventSmooth = eventSmooth;
-					_Camera.distanceAway = 20;
+					_Camera.distanceAway = defaultDist;
 				}
 				if (cameraEvent == 1) {
 					_Camera.cameraEvent = cameraEvent;
 					_Camera.focusLock = focusLock;
 					_Camera.eventSmooth = eventSmooth;
-					_Camera.distanceAway = 20;
+					_Camera.distanceAway = defaultDist;
 				}
 				if (cameraEvent == 2) {
 					_Camera.cameraEvent = cameraEvent;
 					_Camera.focusLock = focusLock;
 					_Camera.eventSmooth = eventSmooth;
-					_Camera.distanceAway = 20;
+					_Camera.distanceAway = defaultDist;
 				}
 				if (cameraEvent == 3) {
 					_Camera.cameraEvent = cameraEvent;
