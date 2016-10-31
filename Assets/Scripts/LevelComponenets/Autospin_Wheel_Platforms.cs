@@ -16,9 +16,11 @@ public class Autospin_Wheel_Platforms : MonoBehaviour
     public Transform[] platforms;
     public Transform[] platformPoints;
     public float rotationSpeed;
-    private float deceleration = 1f;
+    public float JumpSpeedAdded;
+    public float WheelBreakpoint;
+    public float deceleration;
     public Autospin_Wheel_Platform[] platformComp;
-    public float maxSpeed = 2f;
+    public float maxSpeed = 0.8f;
     Quaternion StartingRot;
     // Use this for initialization
     void Start()
@@ -31,13 +33,15 @@ public class Autospin_Wheel_Platforms : MonoBehaviour
        if (WheelBehavior == SpinType.clock)
         {
             InvokeRepeating("RotateWheel", 0.01f, 0.01f);
-
-            rotationSpeed *= -1f;
+            JumpSpeedAdded = 0.0f;
+            deceleration = 1;
+            rotationSpeed = -0.8f;
         } else if (WheelBehavior == SpinType.counter)
             {
             InvokeRepeating("RotateWheel", 0.01f, 0.01f);
-
-            rotationSpeed *= 1f;
+            JumpSpeedAdded = 0.0f;
+            deceleration = 1;
+            rotationSpeed = 0.8f;
         }
 
         for (int plat = 0; plat < platforms.Length; plat++)
@@ -57,6 +61,7 @@ public class Autospin_Wheel_Platforms : MonoBehaviour
     public void Reset()
     {
         wheel.rotation = StartingRot;
+        rotationSpeed = 0;
     }
 
 

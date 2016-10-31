@@ -4,57 +4,43 @@ using System.Collections;
 public class Ice_Trigger : MonoBehaviour {
 
     public bool icefalling = false;
+    public float fallTime = 1.0f;
     public float fallSpeed = 8.0f;
-    public RaycastHit hit;
-    public int dist;
-    private Vector3 dir;
+    public float spinSpeed = 250.0f;
 
-    public Vector3 startPosition;
-    public Quaternion startRotation;
-
-    // Use this for initialization
-    void Start () {
-        StoreStartPosition(ref startPosition, ref startRotation);
-        LevelReset.myLevelElements.Add(this);
-        dist = 10;
-        dir = new Vector3(0, -1, 0);
-    }
-
+	// Use this for initialization
+	void Start () {
+        
+	}
+	
     void Update()
     {
+
         if (icefalling)
         {
-            if (Physics.Raycast(transform.position, dir, dist))
-            {
-                transform.Translate(dir * fallSpeed * Time.deltaTime);
-                print("Works");
-                Debug.DrawRay(transform.position, dir * dist, Color.green);
-            }
+            Invoke("FallTimer", fallTime);
+            transform.Translate(Vector3.down * fallSpeed * Time.deltaTime, Space.World);
+            transform.Rotate(Vector3.down, spinSpeed * Time.deltaTime);
+        }else
+        {
+
         }
     }
-      
 
-    void OnTriggerEnter(Collider col)
-    {
-        if(col.gameObject.tag == "Player")
+
+	// Update is called once per frame
+	void OnTriggerEnter (Collider col) {
+
+        if (col.gameObject.tag == "Player")
         {
             icefalling = true;
         }
     }
 
-    public void Reset()
+    void FallTimer()
     {
+        Debug.Log("fall_timer_invoked");
         icefalling = false;
-        this.transform.position = startPosition;
-        this.transform.rotation = startRotation;
-
-    }
-
-    void StoreStartPosition(ref Vector3 startPos, ref Quaternion startRot)
-    {
-
-        startPos = this.transform.position;
-        startRot = this.transform.rotation;
-
+        GetComponent<BoxCollider>().enabled = false;
     }
 }
