@@ -8,17 +8,16 @@ namespace Assets.Scripts.Components {
 		static public Transform focusLock;
 		static public int cameraEvent;
 		static public float eventSmooth;
-		static public float distanceAway = 35f;
+		static public float distanceAway;
 		public float lookAheadDistanceY;
 		public float lookSmoothTimeY;
 
-		[HideInInspector]public Vector2 focusAreaSize = new Vector2(1,2);
+		public Vector2 focusAreaSize;
 
-		[HideInInspector]
-		public float verticalOffset = -1;
+		public float verticalOffset;
 		public float lookAheadDistanceX;
-		public float lookSmoothTimeX = .8f;
-		public float verticalSmoothTime = .02f;
+		public float lookSmoothTimeX;
+		public float verticalSmoothTime;
 		public float zoomDistance = 20;
 
 		private float currentLookAheadX;
@@ -45,7 +44,7 @@ namespace Assets.Scripts.Components {
 			cameraEvent = 0;
 			playerFocused = true;
 			targetFocused = false;
-			//distanceAway = zoomDistance;
+			distanceAway = zoomDistance;
 		}
 
 		void LateUpdate () {
