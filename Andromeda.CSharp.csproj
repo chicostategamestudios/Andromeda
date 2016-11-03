@@ -79,15 +79,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Andromeda.CSharp.Plugins.csproj">
-      <Project>{25217CCD-A7AF-83D7-9E6B-229A5D6AB879}</Project>
-      <Name>Andromeda.CSharp.Plugins</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Assets\Audio\Hidden Platforms\HiddenPlatform_Audio.cs" />
-    <Compile Include="Assets\Audio\Wheels\WheelPlatform_Audio.cs" />
-    <Compile Include="Assets\Guide.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\CameraControls.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\IcoBumpin.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Misc\HueCube.cs" />
@@ -96,23 +87,6 @@
     <Compile Include="Assets\ProCore\ProGrids\Classes\pg_Enum.cs" />
     <Compile Include="Assets\ProCore\ProGrids\Classes\pg_SceneMeshRender.cs" />
     <Compile Include="Assets\ProCore\ProGrids\Classes\pg_Util.cs" />
-    <Compile Include="Assets\Scripts\AI\AICharController.cs" />
-    <Compile Include="Assets\Scripts\AI\AIControllerBase.cs" />
-    <Compile Include="Assets\Scripts\AI\AICustomComponenetBase.cs" />
-    <Compile Include="Assets\Scripts\AI\AIDash.cs" />
-    <Compile Include="Assets\Scripts\AI\AIHealth.cs" />
-    <Compile Include="Assets\Scripts\AI\AIInputs.cs" />
-    <Compile Include="Assets\Scripts\AI\AIJumping.cs" />
-    <Compile Include="Assets\Scripts\AI\AIPlayerMovement.cs" />
-    <Compile Include="Assets\Scripts\AI\AIRegression.cs" />
-    <Compile Include="Assets\Scripts\AI\AIRelicManager.cs" />
-    <Compile Include="Assets\Scripts\AI\AISlash.cs" />
-    <Compile Include="Assets\Scripts\AI\AIStatesBase.cs" />
-    <Compile Include="Assets\Scripts\AI\AIWallGrab.cs" />
-    <Compile Include="Assets\Scripts\AI\AIWallJumping.cs" />
-    <Compile Include="Assets\Scripts\AI\ContAIInput.cs" />
-    <Compile Include="Assets\Scripts\AI\PlatDetect.cs" />
-    <Compile Include="Assets\Scripts\Animation\PlayerAnimationController.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraEvent.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Camera\ChangeCamera.cs" />
@@ -131,14 +105,13 @@
     <Compile Include="Assets\Scripts\Components\Slash.cs" />
     <Compile Include="Assets\Scripts\Components\StatesBase.cs" />
     <Compile Include="Assets\Scripts\Components\WallGrab.cs" />
-    <Compile Include="Assets\Scripts\LevelComponenets\Autospin_Wheel_Platform.cs" />
-    <Compile Include="Assets\Scripts\LevelComponenets\Autospin_Wheel_Platforms.cs" />
+    <Compile Include="Assets\Scripts\Destroy.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\BatBehavior.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\BatNest.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\BreakingBridge.cs" />
+    <Compile Include="Assets\Scripts\LevelComponenets\BridgeEnergy.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\BurningBridge.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\CheckPoint.cs" />
-    <Compile Include="Assets\Scripts\LevelComponenets\Crusher.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\Dragon Statues\BeamDragonStatue.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\Dragon Statues\DragonHeadRelic.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\Dragon Statues\DrippingDragonStatue.cs" />
@@ -152,16 +125,13 @@
     <Compile Include="Assets\Scripts\LevelComponenets\FragilePillar.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\GasPlume.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\GasPlumePlat.cs" />
-    <Compile Include="Assets\Scripts\LevelComponenets\Ice_Trigger.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\Lava.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\Lava\LavaChunk.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\Lava\TestingLava.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\LavaMonster.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\Lava_Stream.cs" />
-    <Compile Include="Assets\Scripts\LevelComponenets\Lavguanas.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\LevelReset.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\MoltenCrab.cs" />
-    <Compile Include="Assets\Scripts\LevelComponenets\MoltenCrabV2.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\Pellet.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\Pillar.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\RollingPillar.cs" />
@@ -178,6 +148,7 @@
     <Compile Include="Assets\Scripts\LevelComponenets\rubble.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\swingingplatform.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\turret.cs" />
+    <Compile Include="Assets\Scripts\LevelComponenets\turretActivator.cs" />
     <Compile Include="Assets\Scripts\Misc\DealDamage.cs" />
     <Compile Include="Assets\Scripts\Misc\HideSprite.cs" />
     <Compile Include="Assets\Scripts\Misc\LevelStateManager.cs" />
@@ -186,8 +157,6 @@
     <Compile Include="Assets\Scripts\Misc\SaveGame.cs" />
     <Compile Include="Assets\Scripts\Misc\SetSection.cs" />
     <Compile Include="Assets\Scripts\Misc\SpawnPlayer.cs" />
-    <Compile Include="Assets\Scripts\Misc\Teleport.cs" />
-    <Compile Include="Assets\Scripts\Misc\WindyArea.cs" />
     <Compile Include="Assets\Scripts\Relics\AbilityUIManager.cs" />
     <Compile Include="Assets\Scripts\Relics\CanDestroy.cs" />
     <Compile Include="Assets\Scripts\Relics\RelicGUI.cs" />
@@ -195,12 +164,6 @@
     <Compile Include="Assets\Scripts\Relics\UpgradeRelic.cs" />
     <Compile Include="Assets\Scripts\UI\Healthbar.cs" />
     <Compile Include="Assets\Scripts\UI\InGameScripts\AbilityImagesActiveInactive.cs" />
-    <Compile Include="Assets\Scripts\UI\InGameScripts\PauseGame.cs" />
-    <Compile Include="Assets\Scripts\UI\InGameScripts\PauseMenuSelect.cs" />
-    <Compile Include="Assets\Scripts\UI\InGameScripts\PauseMenuYesNo.cs" />
-    <Compile Include="Assets\Scripts\UI\InGameScripts\TimerDisplay.cs" />
-    <Compile Include="Assets\Scripts\UI\LevelSelectMenu\EnterSelectedLevel.cs" />
-    <Compile Include="Assets\Scripts\UI\LevelSelectMenu\LevelSelectController.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenuScripts\AssignCursorIndices.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenuScripts\CreditMenuController.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenuScripts\CreditTextBehavior.cs" />
@@ -239,10 +202,6 @@
     <None Include="Assets\ProCore\ProGrids\About\changelog.txt" />
     <None Include="Assets\ProCore\ProGrids\About\pc_AboutEntry_ProGrids.txt" />
     <None Include="Assets\ProCore\ProGrids\Shader\pg_GridShader.shader" />
-    <None Include="Assets\Scenes\Air\cameraSettings&amp;CharacterSize.txt" />
-    <None Include="Assets\Scenes\Fire\cameraSettings&amp;CharacterSize.txt" />
-    <None Include="Assets\Scenes\Ice\cameraSettings&amp;CharacterSize.txt" />
-    <None Include="Assets\Scenes\Tutorial\cameraSettings&amp;CharacterSize.txt" />
     <None Include="Assets\Scripts\LevelComponenets\Lava\LavaWallBehavior.txt" />
     <None Include="Assets\Scripts\UI\MainMenuScripts\creditsTextTest.txt" />
   </ItemGroup>

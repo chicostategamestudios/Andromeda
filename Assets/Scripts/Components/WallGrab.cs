@@ -84,8 +84,8 @@ namespace Assets.Scripts.Components
 			//	int whatisWall = 1 << 8;
 		//	}
 			//Debug.Log (whatisWall.value);
-			bool rightwalled = false;
-			bool leftwalled = false;
+		//	bool rightwalled = false;
+		//	bool leftwalled = false;
 
 			Ray rightRay = new Ray (transform.position , Vector3.right); 
 			Ray leftRay = new Ray (transform.position, Vector3.right * (-1));
@@ -95,7 +95,7 @@ namespace Assets.Scripts.Components
 
 				if (hit.transform.gameObject.layer == 8) {
 					return 1f;
-					rightwalled = true;
+		//			rightwalled = true;
 				}else if (hit.transform.gameObject.layer == 10) {
 					notWall = 1;
 					return 0f;
@@ -108,7 +108,7 @@ namespace Assets.Scripts.Components
 			{
 				if (hit.transform.gameObject.layer == 8) {
 					return -1f;
-					leftwalled = true;
+		//			leftwalled = true;
 				}else if (hit.transform.gameObject.layer == 10) {
 					notWall = -1;
 					return 0f;

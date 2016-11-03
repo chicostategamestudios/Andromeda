@@ -24,7 +24,7 @@ public class TestingLava : MonoBehaviour {
 	//public float curHeight;
 	//public float newHeight;
 	float ChunkDistance =0f;
-	bool move = false;
+	[HideInInspector]public bool move = false;
 	void Awake () {
 		LavaWall = this;
 		LevelReset.myLevelElements.Add (this); //I add this to the LevelReset to the monobehavior, this will call the reset
