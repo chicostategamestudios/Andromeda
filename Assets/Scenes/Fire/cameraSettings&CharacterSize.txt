@@ -1,0 +1,10 @@
+character import scale factor = 1.3
+
+
+Projection = Perspective
+Field of View = 35
+Focus Area Size = As small as possible So 1-2
+Vertical Offset = -1
+Vertical Smooth Time = .02
+Look Smooth Time X = .8
+Dist_z = 35

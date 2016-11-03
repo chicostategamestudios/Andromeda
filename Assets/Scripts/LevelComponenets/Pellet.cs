@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Pellet : MonoBehaviour {
 
+    public int moveDirection;
+
 	// Use this for initialization
 	void Start () {
 
@@ -11,7 +13,8 @@ public class Pellet : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        transform.Translate(Vector3.forward * Time.deltaTime * 20);
+        
+        transform.Translate(new Vector3(moveDirection * Time.deltaTime * 20, 0, 0));
 
     }
     IEnumerator destroy()
@@ -20,4 +23,10 @@ public class Pellet : MonoBehaviour {
         Destroy(gameObject);
 
     }
+
+    void OnTriggerEnter(Collider col)
+    {
+        Destroy(gameObject);
+    }
+
 }

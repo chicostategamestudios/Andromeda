@@ -19,7 +19,9 @@ public class Fireball : MonoBehaviour {
 
         void Awake()
     {
-        Destroy(gameObject, lifetime);
+        if (lifetime != 0) {
+            Destroy(gameObject, lifetime);
+        }
     }
 
     void Start()
@@ -54,12 +56,12 @@ public class Fireball : MonoBehaviour {
         FireMesh.Rotate(Vector3.up * rotSpeed * rayDir * Time.deltaTime);
 
         //move vector determines speed of the verticle jump
-        moveVector = new Vector3(speed * rayDir, 0, verticleSpeed);
+        moveVector = new Vector3(speed, verticleSpeed, 0);
         //transforming object for movement
         transform.Translate(moveVector * Time.deltaTime);
 
         
-        if (Physics.Raycast(transform.position, Vector3.right * rayDir, rayDist, 8))
+        if (Physics.Raycast(transform.position, Vector3.right * rayDir, rayDist, 0))
         {
 
             rayDir *= -1f;
@@ -73,9 +75,15 @@ public class Fireball : MonoBehaviour {
 
         if (col.gameObject.name == "CubeDeath")
         {
-            Debug.Log("fuck");
-            Destroy(this.gameObject);
+             Destroy(gameObject);
         }
+        
+        if (col.gameObject.tag == "Player")
+        {
+            Destroy(gameObject);
+        }
+
+        
 
     }
 

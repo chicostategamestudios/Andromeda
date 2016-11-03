@@ -30,7 +30,10 @@ public class LevelReset : MonoBehaviour {
 			}if (plat is TestingLava && ((plat as TestingLava).move)) {
 				(plat as TestingLava).Reset ();
 			}
-
+            if(plat is WheelPlatform_Audio)
+            {
+                (plat as WheelPlatform_Audio).Reset();
+            }
 
 		}
 

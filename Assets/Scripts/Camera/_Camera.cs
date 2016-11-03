@@ -8,6 +8,9 @@ namespace Assets.Scripts.Components {
 		static public Transform focusLock;
 		static public int cameraEvent;
 		static public float eventSmooth;
+		static public float distanceAway;
+		public float lookAheadDistanceY;
+		public float lookSmoothTimeY;
 
 		public Vector2 focusAreaSize;
 
@@ -15,14 +18,19 @@ namespace Assets.Scripts.Components {
 		public float lookAheadDistanceX;
 		public float lookSmoothTimeX;
 		public float verticalSmoothTime;
-		public float distanceAway;
+		public float zoomDistance = 20;
 
 		private float currentLookAheadX;
 		private float targetLookAheadX;
 		private float lookAheadDirectionX;
 		private float smoothLookVelocityX;
+		private float currentLookAheadY;
+		private float targetLookAheadY;
+		private float lookAheadDirectionY;
 		private float smoothVelocityY;
+		private float smoothLookVelocityY;
 		private float checkDistance;
+		private float currentDistanceAway;
 		private bool lookAheadStopped;
 		private bool targetFocused;
 		private bool playerFocused;
@@ -31,12 +39,12 @@ namespace Assets.Scripts.Components {
 		FocusArea focusArea;
 
 		// Use this for initialization
-		void Start () {
+		void Awake () {
 			focusArea = new FocusArea (CharController.Instance.transform.GetComponent<CharacterController>().bounds, focusAreaSize);
 			cameraEvent = 0;
 			playerFocused = true;
 			targetFocused = false;
-			distanceAway = 10;
+			distanceAway = zoomDistance;
 		}
 
 		void LateUpdate () {
@@ -62,7 +70,7 @@ namespace Assets.Scripts.Components {
 				focusArea.Update (CharController.Instance.transform.GetComponent<CharacterController>().bounds);
 				//sets the vertical offset of the camera relative to player
 				Vector2 focusPosition = focusArea.center + Vector2.up * verticalOffset;
-
+				currentDistanceAway = distanceAway;
 
 				//Checks the look ahead depending on focus velocity
 				//if the focusArea is moving in x, continue looking ahead
@@ -86,6 +94,7 @@ namespace Assets.Scripts.Components {
 
 				focusPosition.y = Mathf.SmoothDamp (transform.position.y, focusPosition.y, ref smoothVelocityY, verticalSmoothTime);
 				focusPosition += Vector2.right * currentLookAheadX; //Executes LookAhead
+
 				if (!playerFocused) {
 					targetPosition = (Vector3)focusPosition + Vector3.forward * -distanceAway; //Transforms Camera position
 					Vector3 smoothVel = Vector3.zero;
@@ -156,26 +165,25 @@ namespace Assets.Scripts.Components {
 
 				//Checks the look ahead depending on focus velocity
 				//if the focusArea is moving in x, continue looking ahead
-				if (focusArea.velocity.x != 0) {
-					lookAheadDirectionX = Mathf.Sign (focusArea.velocity.x);
-					if ((Mathf.Sign (PlayerMovement.moveVector.x) == Mathf.Sign (focusArea.velocity.x)) && PlayerMovement.moveVector.x != 0) {
+				if (focusArea.velocity.y != 0) {
+					lookAheadDirectionY = Mathf.Sign (focusArea.velocity.y);
+					if ((Mathf.Sign (PlayerMovement.moveVector.y) == Mathf.Sign (focusArea.velocity.y)) && PlayerMovement.moveVector.y != 0) {
 						lookAheadStopped = false;
-						targetLookAheadX = lookAheadDirectionX * lookAheadDistanceX;
+						targetLookAheadY = lookAheadDirectionY * lookAheadDistanceY;
 					}  
 				}
 				//if the focusArea is not moving in x, ease into movement
 				else {
 					if (!lookAheadStopped) {
 						lookAheadStopped = true;
-						targetLookAheadX = currentLookAheadX + (lookAheadDirectionX * lookAheadDistanceX - currentLookAheadX) / 4;
+						targetLookAheadY = currentLookAheadY + (lookAheadDirectionY * lookAheadDistanceY - currentLookAheadY) / 4;
 					}
 				}
 
 				//sets the look ahead depending on direction moving and distance set
-				currentLookAheadX = Mathf.SmoothDamp (currentLookAheadX, targetLookAheadX, ref smoothLookVelocityX, lookSmoothTimeX);
-
-				focusPosition.y = Mathf.SmoothDamp (transform.position.y, focusPosition.y, ref smoothVelocityY, verticalSmoothTime);
+				currentLookAheadY = Mathf.SmoothDamp (currentLookAheadY, targetLookAheadY, ref smoothLookVelocityY, lookSmoothTimeY);				
 				focusPosition.x = Mathf.SmoothDamp (transform.position.x, focusLock.position.x, ref smoothVelocityY, verticalSmoothTime);
+				focusPosition += Vector2.up * currentLookAheadY; //Executes LookAhead
 				if (!targetFocused) {
 					targetPosition = (Vector3)focusPosition + Vector3.forward * -distanceAway; //Transforms Camera position
 					Vector3 smoothVel = Vector3.zero;

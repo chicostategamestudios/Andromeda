@@ -53,6 +53,22 @@
      <Compile Include="Assets\ProCore\ProGrids\Classes\pg_Enum.cs" />
      <Compile Include="Assets\ProCore\ProGrids\Classes\pg_SceneMeshRender.cs" />
      <Compile Include="Assets\ProCore\ProGrids\Classes\pg_Util.cs" />
+     <Compile Include="Assets\Scripts\AI\AICharController.cs" />
+     <Compile Include="Assets\Scripts\AI\AIControllerBase.cs" />
+     <Compile Include="Assets\Scripts\AI\AICustomComponenetBase.cs" />
+     <Compile Include="Assets\Scripts\AI\AIDash.cs" />
+     <Compile Include="Assets\Scripts\AI\AIHealth.cs" />
+     <Compile Include="Assets\Scripts\AI\AIInputs.cs" />
+     <Compile Include="Assets\Scripts\AI\AIJumping.cs" />
+     <Compile Include="Assets\Scripts\AI\AIPlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\AI\AIRegression.cs" />
+     <Compile Include="Assets\Scripts\AI\AIRelicManager.cs" />
+     <Compile Include="Assets\Scripts\AI\AISlash.cs" />
+     <Compile Include="Assets\Scripts\AI\AIStatesBase.cs" />
+     <Compile Include="Assets\Scripts\AI\AIWallGrab.cs" />
+     <Compile Include="Assets\Scripts\AI\AIWallJumping.cs" />
+     <Compile Include="Assets\Scripts\AI\ContAIInput.cs" />
+     <Compile Include="Assets\Scripts\AI\PlatDetect.cs" />
      <Compile Include="Assets\Scripts\Camera\CameraEvent.cs" />
      <Compile Include="Assets\Scripts\Camera\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\Camera\ChangeCamera.cs" />
@@ -134,6 +150,12 @@
      <Compile Include="Assets\Scripts\Relics\UpgradeRelic.cs" />
      <Compile Include="Assets\Scripts\UI\Healthbar.cs" />
      <Compile Include="Assets\Scripts\UI\InGameScripts\AbilityImagesActiveInactive.cs" />
+     <Compile Include="Assets\Scripts\UI\InGameScripts\PauseGame.cs" />
+     <Compile Include="Assets\Scripts\UI\InGameScripts\PauseMenuSelect.cs" />
+     <Compile Include="Assets\Scripts\UI\InGameScripts\PauseMenuYesNo.cs" />
+     <Compile Include="Assets\Scripts\UI\InGameScripts\TimerDisplay.cs" />
+     <Compile Include="Assets\Scripts\UI\LevelSelectMenu\EnterSelectedLevel.cs" />
+     <Compile Include="Assets\Scripts\UI\LevelSelectMenu\LevelSelectController.cs" />
      <Compile Include="Assets\Scripts\UI\MainMenuScripts\AssignCursorIndices.cs" />
      <Compile Include="Assets\Scripts\UI\MainMenuScripts\CreditMenuController.cs" />
      <Compile Include="Assets\Scripts\UI\MainMenuScripts\CreditTextBehavior.cs" />
@@ -179,16 +201,16 @@
  <HintPath>C:/Program Files/Unity Versions/Unity5_3/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
  <Reference Include="ProBuilderCore-Unity5">
- <HintPath>C:/Users/CAGD Student/Desktop/Andromeda/Assets/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
+ <HintPath>D:/CAGD 495/Andromeda/Assets/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
  </Reference>
  <Reference Include="ProBuilderMeshOps-Unity5">
- <HintPath>C:/Users/CAGD Student/Desktop/Andromeda/Assets/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
+ <HintPath>D:/CAGD 495/Andromeda/Assets/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
  </Reference>
  <Reference Include="KDTree">
- <HintPath>C:/Users/CAGD Student/Desktop/Andromeda/Assets/ProCore/ProBuilder/Classes/ClassesLib/KDTree.dll</HintPath>
+ <HintPath>D:/CAGD 495/Andromeda/Assets/ProCore/ProBuilder/Classes/ClassesLib/KDTree.dll</HintPath>
  </Reference>
  <Reference Include="Triangle">
- <HintPath>C:/Users/CAGD Student/Desktop/Andromeda/Assets/ProCore/ProBuilder/Classes/ClassesLib/Triangle.dll</HintPath>
+ <HintPath>D:/CAGD 495/Andromeda/Assets/ProCore/ProBuilder/Classes/ClassesLib/Triangle.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

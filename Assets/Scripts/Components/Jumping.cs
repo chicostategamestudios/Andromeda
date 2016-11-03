@@ -100,6 +100,26 @@ namespace Assets.Scripts.Components
 			}
 		}
 
+		public bool GetCanDoubleJump(){
+			if (jumpStage > 1) {
+				return false;
+			} else {
+				return true;
+			}
+			Debug.Log ("In Jumping class DoubleJumpGetter. I should not reach this line of code");
+			return false;
+		}
+
+		public bool GetCanWallJump(){
+			if (wallJumps < maxWallJumps) {
+				return true;
+			} else {
+				return false;
+			}
+			Debug.Log ("In Jumping class WallJumpGetter. I should not reach this line of code");
+			return false;
+		}
+
 
 		IEnumerator wallJumpCD(){ //this is invoked when the player wall jumps
 			JustwallJumped = true;

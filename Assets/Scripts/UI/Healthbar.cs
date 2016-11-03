@@ -4,13 +4,13 @@ using Assets.Scripts.Components;
 using UnityEngine.UI;
 
 public class Healthbar : MonoBehaviour {
-	Health health;
+	/*Health health;
 	public Image HealthFillBG;
 	public Image HealthFill;
 
 	// Use this for initialization
 	void Start () {
-		health = GameObject.FindGameObjectWithTag ("Player").GetComponent<Health> ();
+		health = FindObjectOfType<Health> ();
 		HealthFill.fillAmount = 0f;
 		HealthFillBG.fillAmount = 0f;
 	}
@@ -24,5 +24,5 @@ public class Healthbar : MonoBehaviour {
 			HealthFillBG.fillAmount = HealthFill.fillAmount;
 		}
 
-	}
+	}*/
 }
