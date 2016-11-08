@@ -14,11 +14,17 @@ public class FireballDragonStatue : MonoBehaviour {
     public float speedOfFireball;
     Quaternion spawnQ = Quaternion.Euler(0, 0, 0);
 
+	public Transform launchPoint;
+	Vector3 launchFrom;
+
     bool activated = false;
     public GameObject fireball_;
     // Use this for initialization
     void Start()
     {
+		if (!launchPoint) {
+			launchFrom = this.transform.position;
+		}
 
     }
 
@@ -36,12 +42,13 @@ public class FireballDragonStatue : MonoBehaviour {
     void SpawnFireball()
     {
         //Start Instantiating fireballs with the user defined values
-        GameObject fireball = (GameObject) Instantiate(fireball_, fireball_.GetComponent<Transform>().position, spawnQ);
-        fireball.GetComponent<Fireball>().lifetime = lifetimeOfFireball;
-        fireball.GetComponent<Fireball>().speed = speedOfFireball;
-        fireball.GetComponent<Fireball>().jumpheight = 10;
-        fireball.GetComponent<Fireball>().gravityRate = 10;
-        fireball.GetComponent<Fireball>().rotSpeed = .1f;
+		GameObject fireball = (GameObject) Instantiate(fireball_, launchFrom, spawnQ);
+		Fireball _fireBall = fireball.GetComponent<Fireball> ();
+		_fireBall.lifetime = lifetimeOfFireball;
+		_fireBall.speed = speedOfFireball;
+		_fireBall.jumpheight = 10;
+		_fireBall.gravityRate = 10;
+		_fireBall.rotSpeed = .1f;
         fireball.gameObject.SetActive(true);
     }
 }

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Assets.Scripts.Components;
 
 public class SpawnPlayer : MonoBehaviour {
 
@@ -9,6 +10,11 @@ public class SpawnPlayer : MonoBehaviour {
 		//Transform spawnPoint = GameObject.FindGameObjectWithTag ("StartPoint").transform;
 
 		Instantiate (player, transform.position, Quaternion.Euler(0, 120, 0));
+		if (player.gameObject.GetComponent<RelicManager> () != null) {
+
+		} else {
+		//	Debug.LogError("Player 
+		}
 
 	}
 	
