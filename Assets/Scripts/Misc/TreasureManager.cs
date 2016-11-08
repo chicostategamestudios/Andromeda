@@ -87,6 +87,48 @@ public class TreasureManager : MonoBehaviour {
 		}
 	}
 
+	public int getCollectedTreasureAmount(TreasureType color){
+		int collectedAmount = 0;
+		switch (color) {
+		case TreasureType.blue:
+			for (int i = 0; i < blueTreasure.Count; i++) {
+				if (blueTreasure [i].IsCollected) {
+					collectedAmount++;
+				}
+			}
+			return collectedAmount;
+			break;
+		case TreasureType.green:
+			for (int i = 0; i < greenTreasure.Count; i++) {
+				if (greenTreasure [i].IsCollected) {
+					collectedAmount++;
+				}
+			}
+			return collectedAmount;
+			break;
+		case TreasureType.red:
+			for (int i = 0; i < redTreasure.Count; i++) {
+				if (redTreasure [i].IsCollected) {
+					collectedAmount++;
+				}
+			}
+			return collectedAmount;
+			break;
+		case TreasureType.yellow:
+			for (int i = 0; i < yellowTreasure.Count; i++) {
+				if (yellowTreasure [i].IsCollected) {
+					collectedAmount++;
+				}
+			}
+			return collectedAmount;
+			break;
+		default:
+			Debug.LogError ("Trying to get an unset treasure list");
+			return 0;
+			break;
+		}
+	}
+
 	public List<Treasure> getTreasureList(TreasureType color){
 		switch (color) {
 		case TreasureType.blue:
@@ -107,6 +149,8 @@ public class TreasureManager : MonoBehaviour {
 			break;
 		}
 	}
+
+
 
 	public void CheckList(List<Treasure> TreasureList){ //This function can be with each treasure list as input, it will make sure 
 											//level design did not put in duplicate indexes of treausres, and if they did it will tell them what they did wrong

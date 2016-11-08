@@ -1,10 +1,15 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\LevelComponenets\CheckPoint.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Misc\TreasureManager.cs">
     <Files>
-      <File FileName="Assets\Scripts\LevelComponenets\Lava\TestingLava.cs" Line="116" Column="52" />
+      <File FileName="Assets\Scripts\Relics\CanDestroy.cs" Line="1" Column="1" />
+      <File FileName="Assets\Guide.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\LevelComponenets\Lava\TestingLava.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\LevelComponenets\Lava\LavaChunk.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\LevelComponenets\CheckPoint.cs" Line="24" Column="85" />
+      <File FileName="Assets\Scripts\LevelComponenets\CheckPoint.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Misc\Treasure.cs" Line="24" Column="5" />
+      <File FileName="Assets\Scripts\Misc\TreasureManager.cs" Line="109" Column="25" />
+      <File FileName="Assets\Scripts\Misc\DisplayTreasureCollected.cs" Line="46" Column="31" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
