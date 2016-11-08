@@ -31,6 +31,7 @@ public class MainMenuController : MonoBehaviour {
 		canMoveCursor = true;
 		GetAllMainMenuObjects ();
 	
+	
 	}
 
 	void Update () {

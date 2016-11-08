@@ -19,6 +19,10 @@ public class TestingLava : MonoBehaviour {
 	float rotSpeedModifier = 0.1f;
 	public float scalingRate = 2f;
 
+	public float minHeight = 10f;
+
+	public float startDelay = 1f;
+
 	//public Vector3 diffVec = Vector3.zero;
 	Vector3 startingVec = Vector3.zero;
 	//public float curHeight;
@@ -47,10 +51,16 @@ public class TestingLava : MonoBehaviour {
 	public void StartLavaWall(){
 
 		//This is ran by the relic, it just starts the lava wall
+		StartCoroutine("TimedLavaWall");
+	}
+
+	IEnumerator TimedLavaWall(){
+		yield return new WaitForSeconds (startDelay);
 		checkPoint = myTargetPoints [0];  //I set my initial checkpoint to the first lava chunk
 		myLavaWall.transform.position = myTargetPoints [0].transform.position; //set my position to the start position
 		myLavaWall.LookAt (myTargetPoints [1].transform.position ); //look at my next position
 		move = true; //start moving forward
+
 	}
 
 
@@ -75,6 +85,10 @@ public class TestingLava : MonoBehaviour {
 				if (currentPos < (myTargetPoints.Count - 1)) { //if we are not at the end of our list
 					float curHeight = myTargetPoints [currentPos].transform.GetComponentInChildren<MeshFilter> ().mesh.bounds.max.y * scalingRate; //get the height of the mesh of this lava chunk
 					//ChunkDistance = Vector3.Distance (myTargetPoints [currentPos].transform.position, myTargetPoints [currentPos + 1].transform.position);
+					if (curHeight < minHeight) {
+						curHeight = minHeight;
+					}
+
 					myLavaWall.localScale = new Vector3 (myLavaWall.localScale.x, curHeight, myLavaWall.localScale.z); //set our lava walls scale to the height of the mesh of the chunk (ideally this would happen over time between the two poitns)		
 					currentPos++; //set current pos(this current chunk we're operating on) to one position forward
 				}
@@ -85,6 +99,11 @@ public class TestingLava : MonoBehaviour {
 	public void Reset(){ //this is ran by the LevelReset script
 						//it goes and disables all meshses, and then moves to wall forward to the last checkpoint,
 						//enabling all chunks behind it
+		if (!move) {
+			return;
+		}
+
+
 		for (int check = 0; check < myTargetPoints.Count; check++) { 
 			myTargetPoints [check].DisableRenderer (); //re disable all renderers
 		}

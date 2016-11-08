@@ -19,9 +19,12 @@ public class DisplayGameFiles : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
-		List<GameStats> mygames = LoadGames.myLoadedGames;
-	
+		SaveGame.GetGameSaver.LoadGames ();
+		//List<GameStats> mygames = LoadGames.myLoadedGames;
+
+		MyGames _GameFiles = SaveGame.GetGameSaver.GetMyGames ();
+		List<GameStats> mygames = _GameFiles.GetGames ();
+
 		for (int game = 0; game < mygames.Count; game++) {
 
 			//Assigning treasure percent

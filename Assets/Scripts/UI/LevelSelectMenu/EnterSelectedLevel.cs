@@ -28,31 +28,36 @@ public class EnterSelectedLevel : MonoBehaviour {
 			//Starter Level
 			case 0:
 				{
+					GameManager.LoadLevel (LevelToUnlock.tutorial);
 					SceneManager.LoadScene (starterSceneIndex, LoadSceneMode.Single);
 					break;
 				}
 			//Earth Level
 			case 1:
 				{
-					SceneManager.LoadScene (earthSceneIndex, LoadSceneMode.Single);
+					GameManager.LoadLevel (LevelToUnlock.earthLevel);
+					SceneManager.LoadScene (earthSceneIndex, LoadSceneMode.Single);	
 					break;
 				}
 			//Wind Level
 			case 2:
 				{
-					SceneManager.LoadScene (windSceneIndex, LoadSceneMode.Single);
+					GameManager.LoadLevel (LevelToUnlock.airLevel);
+					SceneManager.LoadScene (windSceneIndex, LoadSceneMode.Single);				
 					break;
 				}
 			//Fire Level
 			case 3:
 				{
-					SceneManager.LoadScene (fireSceneIndex, LoadSceneMode.Single);
+					GameManager.LoadLevel (LevelToUnlock.fireLevel);
+					SceneManager.LoadScene (fireSceneIndex, LoadSceneMode.Single);				
 					break;
 				}
 			//Ice Level
 			case 4:
 				{
-					SceneManager.LoadScene (iceSceneIndex, LoadSceneMode.Single);
+					GameManager.LoadLevel (LevelToUnlock.iceLevel);
+					SceneManager.LoadScene (iceSceneIndex, LoadSceneMode.Single);				
 					break;
 				}
 			default:

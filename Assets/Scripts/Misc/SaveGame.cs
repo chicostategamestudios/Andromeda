@@ -55,7 +55,8 @@ public class SaveGame : MonoBehaviour { //This class will save the game.
 		}
 		else
 		{
-			//   Destroy(this.gameObject);
+
+			   Destroy(this.gameObject);
 		}
 		DontDestroyOnLoad(this.gameObject);
 
@@ -217,6 +218,15 @@ public class MyGames //My Games is the parent object that is being saved, it con
 	public GameStats GameOne;
 	public GameStats GameTwo;
 	public GameStats GameThree;
+
+	public List<GameStats> GetGames(){
+		List<GameStats> mygames = new List<GameStats> ();
+		mygames.Add (GameOne);
+		mygames.Add (GameTwo);
+		mygames.Add (GameThree);
+		return mygames;
+	}
+
 }
 
 [Serializable]

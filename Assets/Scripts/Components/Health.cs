@@ -8,9 +8,9 @@ namespace Assets.Scripts.Components
 
     public class Health : CustomComponentBase
     {
-        public float CurStuff = 0f;
-        float pointValue;
-        List<GameObject> collectedLoot;
+      //  public float CurStuff = 0f;
+      //  float pointValue;
+     //   List<GameObject> collectedLoot;
         Death myDeathObj;
         [Tooltip("How many seconds is the player invunlerable for after taking damage?")]
         public float iFrames;
@@ -22,30 +22,28 @@ namespace Assets.Scripts.Components
         public void TotalStuff()
         {
             //	GameObject[] tempList = GameObject.FindGameObjectsWithTag ("Loot");
-            float maxStuff = myLoot.Count;
-            pointValue = 1f / maxStuff;
-            collectedLoot = new List<GameObject>();
+			//float maxStuff = myLoot.Count;
+       //     pointValue = 1f / maxStuff;
+         //   collectedLoot = new List<GameObject>();
         }
 
-        void OnTriggerEnter(Collider col)
-        {
-            if (col.gameObject.tag == "Loot")
-            {
-                CurStuff += pointValue;
-                collectedLoot.Add(col.gameObject);
-                col.gameObject.SetActive(false);
+   	void OnTriggerEnter(Collider col){
+			if (col.gameObject.GetComponent<Treasure>() != null) {
+			//	CurStuff += pointValue;
+				//collectedLoot.Add (col.gameObject);
+				TreasureManager.GetManager.AddTreasure(col.gameObject.GetComponent<Treasure>());
+				col.gameObject.GetComponent<Treasure> ().ChangeState (TreasureState.pickedUp);
+				//col.gameObject.SetActive (false);
 
-                int Active = 0;
-                for (int cube = 0; cube < myLoot.Count; cube++)
-                {
-                    if (myLoot[cube].gameObject.activeInHierarchy)
-                    {
-                        Active++;
-                    }
-                }
-            }
+				int Active = 0;
+				for (int cube = 0; cube < myLoot.Count; cube++) {
+					if (myLoot [cube].gameObject.activeInHierarchy) {
+						Active++;
+					}
+				}
+			}
+		}
 
-        }
 
         public void TakeDamage(float damage)
         {
@@ -53,10 +51,11 @@ namespace Assets.Scripts.Components
             {
                 for (int relicsLost = 0; relicsLost < damage; relicsLost++)
                 {
+						TreasureManager.GetManager.RespawnRelic ();
                     //	GameObject turnOn = collectedLoot [Random.Range (0, collectedLoot.Count)];
                     //	collectedLoot.Remove (turnOn);
                     //	turnOn.SetActive (true);
-                    CurStuff -= pointValue;
+             //       CurStuff -= pointValue;
                 }
                 isInvinsible = true;
                 StartCoroutine("Stun");
@@ -76,7 +75,6 @@ namespace Assets.Scripts.Components
             {
                 myDeathObj = this.gameObject.GetComponent<Death>();
             }
-
             myDeathObj.Respawn();
 
         }
