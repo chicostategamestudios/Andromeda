@@ -4,6 +4,9 @@ using UnityEngine.UI;
 
 public class DisplayTreasureCollected : MonoBehaviour {
 
+
+	private static DisplayTreasureCollected TreasureUI;
+
 	private Text greenTreasureText, redTreasureText, blueTreasureText, yellowTreasureText;
 	private TreasureManager myTManager;
 	private int greenTreasureAmount, redTreasureAmount, blueTreasureAmount, yellowTreasureAmount;
@@ -12,6 +15,10 @@ public class DisplayTreasureCollected : MonoBehaviour {
 	private string yellow = "Yellow";
 	private string red = "Red";
 	private string blue = "Blue";
+
+	void Awake(){
+		TreasureUI = this.gameObject.GetComponent<DisplayTreasureCollected> ();
+	}
 
 
 	void Start () {
@@ -38,10 +45,20 @@ public class DisplayTreasureCollected : MonoBehaviour {
 
 	}
 	
-
-	void Update () {
-		
+	public static DisplayTreasureCollected getUi{
+		get{
+			if (TreasureUI == null) {
+				TreasureUI = FindObjectOfType<DisplayTreasureCollected> ();
+			}
+			if (TreasureUI == null) {
+				Debug.LogError ("An object is trying to get DisplayTreasureCollected but it is not in the scene");
+				return null;
+			} else {					
+				return TreasureUI;
+			}
+		}
 	}
+
 
 	public void UpdateTreasureCollected(){
 		greenTreasureAmount = myTManager.getCollectedTreasureAmount (TreasureType.green);

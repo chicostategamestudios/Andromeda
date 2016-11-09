@@ -15,7 +15,7 @@ public class AbilityUIManager : MonoBehaviour {
 	GameObject Dash;
 
 	void Start () {
-		Manager = FindObjectOfType<RelicManager> ();
+		Manager = CharController.Instance.gameObject.GetComponent<RelicManager> ();
 		Player = CharController.Instance.transform;
 		Slash = transform.FindChild ("Canvas/Base/Slash").gameObject;
 		DoubleJump = transform.FindChild ("Canvas/Base/Double_Jump").gameObject;
@@ -23,14 +23,18 @@ public class AbilityUIManager : MonoBehaviour {
 		Dash = transform.FindChild ("Canvas/Base/Dash").gameObject;
 	}
 		
-	void Update () {
+	void FixedUpdate () {
 
 		//Still need to add in the bool that tells whether the ability is available during escape phase
 		//Or may need to control this in the actual ability script
-		AbilityActiveInactive (Slash, Player.GetComponent<Slash>().GetCanSlash(), Manager.slashRelic, true);
-		AbilityActiveInactive (DoubleJump, Player.GetComponent<Jumping>().GetCanDoubleJump(), Manager.jumpRelic, true);
-		AbilityActiveInactive (WallJump, Player.GetComponent<Jumping>().GetCanWallJump(), true);
-		AbilityActiveInactive (Dash, Player.GetComponent<Dash>().GetCanDash(), Manager.dashRelic, true);
+
+		if (Manager != null) {
+			AbilityActiveInactive (Slash, Player.GetComponent<Slash> ().GetCanSlash (), Manager.slashRelic, true);
+			AbilityActiveInactive (DoubleJump, Player.GetComponent<Jumping> ().GetCanDoubleJump (), Manager.jumpRelic, true);
+			AbilityActiveInactive (WallJump, Player.GetComponent<Jumping> ().GetCanWallJump (), true);
+			AbilityActiveInactive (Dash, Player.GetComponent<Dash> ().GetCanDash (), Manager.dashRelic, true);
+	
+		}
 	}
 
 	void AbilityActiveInactive(GameObject abilityIcon, bool isActive, bool abilityUnlocked, bool usableOnThisPhase){
