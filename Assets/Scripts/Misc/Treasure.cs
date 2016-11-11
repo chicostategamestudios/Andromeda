@@ -10,22 +10,26 @@ public enum TreasureType{ //different types
 	yellow
 }
 
+
 public enum TreasureState{ //different states
 	pickedUp,
 	lost,
 	notPickedUp
 }
 
+
+
+
 [Serializable]
 public class Treasure : MonoBehaviour {
 
-
+	[SerializeField]
 	public TreasureType _treasureType; //this is my type (color)
 
-
+	[SerializeField]
 	private TreasureState myState = TreasureState.notPickedUp; //this is my state
 
-
+	[SerializeField]
 	public int MyIndex; //this is my index, we will be saving treasures by index so we can not load in collected treasures
 
 	void Start(){
