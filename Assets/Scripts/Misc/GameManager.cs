@@ -64,14 +64,14 @@ public class GameManager : MonoBehaviour {
 		curLevel = loadedGame.GetStats (level);
 	}
 
-	public static void UpdateSave(){ //call this when we need to update the save of a level or something
-		curLevel = updateFile(curLevel);
+	public static void UpdateSave(LevelData myNewData){ //call this when we need to update the save of a level or something
+		curLevel = updateFile(curLevel, myNewData);
 		loadedGame.SetStats (curLevel);
 		SaveGame.GetGameSaver.UpdateSave (loadedGame); //pass the loaded game to the game saver, which saves it
 	}
 
 
-	static LevelStats updateFile(LevelStats input){ //run this to update the file
+	static LevelStats updateFile(LevelStats input, LevelData newData){ //run this to update the file
 		LevelStats returnFile = input;
 		/*place all the information updating here!!
 		 * 
@@ -79,7 +79,13 @@ public class GameManager : MonoBehaviour {
 		 * 
 		 * 
 		 * */ 
-		  
+		returnFile.completionTime = newData.getFinaltime;
+	//	returnFile.RedTreasuresRemaining = newData.getTreasure (TreasureType.red);
+	//	returnFile.BlueTreasuresRemaining = newData.getTreasure (TreasureType.blue);
+	//	returnFile.GreenTreasuresRemaining = newData.getTreasure (TreasureType.green);
+	//	returnFile.YellowTreasuresRemaining = newData.getTreasure (TreasureType.yellow);
+		returnFile.locked = false;	 
+
 		return returnFile;
 	}
 
