@@ -69,3 +69,23 @@ public class Treasure : MonoBehaviour {
 
 
 }
+
+[Serializable]
+public class SerializableTreasure{
+
+	[SerializeField]
+	public TreasureType _treasureType; //this is my type (color)
+
+	[SerializeField]
+	private TreasureState myState = TreasureState.notPickedUp; //this is my state
+
+	[SerializeField]
+	public int MyIndex;
+
+	public SerializableTreasure(Treasure inputTreasure){
+
+	}
+
+
+}
+
