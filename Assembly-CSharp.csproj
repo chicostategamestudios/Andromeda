@@ -92,6 +92,7 @@
      <Compile Include="Assets\Scripts\Components\WallGrab.cs" />
      <Compile Include="Assets\Scripts\LevelComponenets\BatBehavior.cs" />
      <Compile Include="Assets\Scripts\LevelComponenets\BatNest.cs" />
+     <Compile Include="Assets\Scripts\LevelComponenets\CandleIgnite.cs" />
      <Compile Include="Assets\Scripts\LevelComponenets\ElevatorPlat.cs" />
      <Compile Include="Assets\Scripts\LevelComponenets\FragilePillar.cs" />
      <Compile Include="Assets\Scripts\LevelComponenets\Lava.cs" />

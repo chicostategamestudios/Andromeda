@@ -96,6 +96,7 @@
     <Compile Include="Assets\Scripts\AI\AIWallGrab.cs" />
     <Compile Include="Assets\Scripts\AI\AIWallJumping.cs" />
     <Compile Include="Assets\Scripts\AI\ContAIInput.cs" />
+    <Compile Include="Assets\Scripts\AI\PlatDetect.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraEvent.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Camera\ChangeCamera.cs" />
@@ -119,6 +120,7 @@
     <Compile Include="Assets\Scripts\Components\WallGrab.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\BatBehavior.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\BatNest.cs" />
+    <Compile Include="Assets\Scripts\LevelComponenets\CandleIgnite.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\ElevatorPlat.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\FragilePillar.cs" />
     <Compile Include="Assets\Scripts\LevelComponenets\Lava.cs" />
