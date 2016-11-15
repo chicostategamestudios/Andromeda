@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using System;
 //This is the new treasure object, it will store the treasure type, state, and index.
 
 public enum TreasureType{ //different types
@@ -10,14 +10,20 @@ public enum TreasureType{ //different types
 	yellow
 }
 
+
 public enum TreasureState{ //different states
 	pickedUp,
 	lost,
 	notPickedUp
 }
 
+
+
+
+[Serializable]
 public class Treasure : MonoBehaviour {
 
+	[SerializeField]
 	public TreasureType _treasureType; //this is my type (color)
 
 	[SerializeField]
@@ -63,3 +69,23 @@ public class Treasure : MonoBehaviour {
 
 
 }
+
+[Serializable]
+public class SerializableTreasure{
+
+	[SerializeField]
+	public TreasureType _treasureType; //this is my type (color)
+
+	[SerializeField]
+	private TreasureState myState = TreasureState.notPickedUp; //this is my state
+
+	[SerializeField]
+	public int MyIndex;
+
+	public SerializableTreasure(Treasure inputTreasure){
+
+	}
+
+
+}
+

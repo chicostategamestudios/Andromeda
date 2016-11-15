@@ -4,22 +4,45 @@ using UnityEngine.UI;
 
 public class TimerDisplay : MonoBehaviour {
 
+	private static TimerDisplay myTimer;
+
 	public Text MyTimerText;
 
 	private float timer = 0.0f;
 
+	bool UpdateTime = true;
+
 	// Use this for initialization
 	void Start () {
-
+		myTimer = this;
 		MyTimerText = this.GetComponent<Text>();
 	
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		timer += Time.deltaTime;
-		MyTimerText.text = TimeToString ();
+		if (UpdateTime) {
+			timer += Time.deltaTime;
+			if (MyTimerText != null) {
+				MyTimerText.text = TimeToString ();
+			}
+		}
 	}
+
+	public static TimerDisplay getTimer {
+		get {
+			if (myTimer == null) {
+				myTimer = FindObjectOfType<TimerDisplay> ();
+			}
+			if (myTimer == null) {
+				Debug.LogError ("cannot find the TimerDisplay");
+				return null;
+			} else {
+				return myTimer;
+			}
+		}
+	}
+
 
 	private string TimeToString(){
 		int minutes = Mathf.FloorToInt (timer / 60f);
@@ -31,4 +54,11 @@ public class TimerDisplay : MonoBehaviour {
 		return displayedTimer;
 
 	}
+
+	public string GetFinalTime(){
+		UpdateTime = false;
+		return TimeToString ();
+	}
+
+
 }

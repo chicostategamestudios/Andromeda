@@ -5,6 +5,8 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using System.Collections.Generic;
 
+
+
 //This is our save game tool. The save game tool holds the level stats class (the stats that each level can have) as well as the game stats class (the stats that
 //the game can have). This class can be used to load the game stats from a file, update gamestats from a file, as well as save those game stats back to the 
 //original file. 
@@ -296,10 +298,12 @@ public class LevelStats //level stats is used to save attriubtes of levels. righ
 
 	public LevelGrade grade;
 
-	public float completionTime;
+	public string completionTime;
 
-	public List<Vector3> TreasuresRemaining = new List<Vector3>();
-
+	public List<Treasure> RedTreasuresRemaining = new List<Treasure>();
+//	public List<Treasure> GreenTreasuresRemaining = new List<Treasure>();
+//	public List<Treasure> BlueTreasuresRemaining = new List<Treasure>();
+//	public List<Treasure> YellowTreasuresRemaining = new List<Treasure>();
 
 
 }

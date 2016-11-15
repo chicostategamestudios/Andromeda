@@ -53,7 +53,7 @@ public class LoadGames : MonoBehaviour {
 
 		} else if (Input.GetKeyDown (KeyCode.F3)) {
 
-			LoadLevel ();
+			//LoadLevel ();
 			//Load Level is an example of actually loading a game level
 			//right now im just displaying what loading in the treasure will look like
 			//because loading the treasure is kind of weird 
@@ -125,15 +125,15 @@ public class LoadGames : MonoBehaviour {
 		//This will work fine for final versions, but could run into some issues
 		//when we are doing itirations with Level Design, particularly if we are saving games, moving treaurses,
 		//and then loading games, things won't be consistant. 
-		_gamesInstance.GameOne.AirLevelStats.TreasuresRemaining.Clear ();
+		//_gamesInstance.GameOne.AirLevelStats.TreasuresRemaining.Clear ();
 		for (int treasure = 0; treasure < Health.myLoot.Count; treasure++) {
-			_gamesInstance.GameOne.AirLevelStats.TreasuresRemaining.Add (Health.myLoot [treasure].position);
+		//	_gamesInstance.GameOne.AirLevelStats.TreasuresRemaining.Add (Health.myLoot [treasure].position);
 		}
 
 
 	}
 
-
+	/*
 	public void LoadLevel(){ //This is an exmaple of loading the treasures in a level, this function should not actually be 
 		//here, and should be ran in some sort of Level or Scene manager 
 
@@ -157,4 +157,5 @@ public class LoadGames : MonoBehaviour {
 			}
 		}
 	}
+	*/
 }
