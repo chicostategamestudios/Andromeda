@@ -30,9 +30,9 @@ namespace Assets.Scripts.Components
 		float direction;
 		private bool walled = false;
 		private bool midWallJump;
-		//private float totalWallJumps = 0f;
+        //private float totalWallJumps = 0f;
 
-
+        private bool hasJumped;
 
 
 
@@ -41,11 +41,18 @@ namespace Assets.Scripts.Components
 			if ((jumpStage < maxJumps)) {
 				PlayerMovement.verticleSpeed = jumpHeight;
 				jumpStage++;
+                if (jumpStage == 1)
+                {
+                    //play jump animation
+                }
+                if (jumpStage == 2)
+                {
+                    //play double jump
+                }
+            }
 
-			}
-		
 
-		}
+        }
 
 
 		public void WallJump (float playerDir,float wallDir){
@@ -96,7 +103,7 @@ namespace Assets.Scripts.Components
 				return;
 			} else {
 				jumpStage = 0;
-
+                hasJumped = false;
 			}
 		}
 

@@ -19,7 +19,7 @@ namespace Assets.Scripts.Components
 		float dashPhase = 0f;
 		float dashSpeedIncrease = 30f;
 		float dashJumpHeight = 15f;
-		bool Dashing;
+		public bool Dashing;
 		bool facingRight = true;
 		float dashDir;
 		float lockedDashDur = 0.5f;
@@ -44,7 +44,7 @@ namespace Assets.Scripts.Components
 			}
 
 			if (currentPhase == DashPhase.resting) { //dashPhase handles which stage of dashing I am in, with 0 being not dashing at all
-
+                
 				//PlayerMovement.speed += realspeed; //if I am not dashing, make sure that speed is set to my regular speed
 
 				return;
@@ -58,7 +58,7 @@ namespace Assets.Scripts.Components
 				}
 				//grounded = false; 
 				PlayerMovement.overrideInput = true;
-
+                Dashing = true;
 
 				//StartCoroutine ("SetBoost"); //dashing speed is reset upon touching the ground, set boost prevents 
 				PlayerMovement.verticleSpeed = dashJumpHeight; //the ground check from checking if we are grounded until a small amount of time has passed
@@ -72,10 +72,9 @@ namespace Assets.Scripts.Components
 			}
 			if (currentPhase == DashPhase.lockedDash) { //we just hang out here with our speed boosted until the player hits something or changes directions
 				PlayerMovement.moveVector = new Vector2(dashDir * dashSpeedIncrease, PlayerMovement.verticleSpeed);
-
-				//keep at it yo
-			}
-			if (currentPhase == DashPhase.unlockedDash) {
+                //keep at it yo
+            }
+            if (currentPhase == DashPhase.unlockedDash) {
 				if (playerDir != dashDir) {
 					PlayerMovement.speed = PlayerMovement.normalSpeed;
 				}
@@ -93,7 +92,8 @@ namespace Assets.Scripts.Components
 
 			StopCoroutine ("SetDashing");
 			currentPhase = DashPhase.resting;
-			PlayerMovement.overrideInput = false;
+            Dashing = false;
+            PlayerMovement.overrideInput = false;
 			PlayerMovement.speed = PlayerMovement.normalSpeed;
 		}
 
@@ -118,14 +118,10 @@ namespace Assets.Scripts.Components
 
 			PlayerMovement.speed = PlayerMovement.normalSpeed;
 			currentPhase = DashPhase.resting;
+            Dashing = false;
+        }
 
-		}
-
-		public bool GetCanDash(){
-			return canDash;
-		}
-
-		IEnumerator SetDashing(){
+        IEnumerator SetDashing(){
 
 
 			yield return new WaitForSeconds (lockedDashDur); //this controls how long the player has their input locked  while dashing

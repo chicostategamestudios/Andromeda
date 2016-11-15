@@ -34,19 +34,24 @@ namespace Assets.Scripts.Components
         public static bool checkforground = true;
         public float upRayLength = 0.9f;
         public float ceilingHitSpeed = -1f;
-        [Tooltip("Time in seconds in which you wish the player to be stunned after taking damage. Can't jump, can't dash, can't move, can't slash.")]
-        public float stunnedLength = 1f;
-        int celingmask = 1 << 8;
-        public Vector2 modificationVec = Vector2.zero;
-        int movingGround = 1 << 9;
+        public static int celingmask = 1 << 8;
+        public static int movingGround = 1 << 9;
+        int ceilingAndGround = celingmask | movingGround;
+        //int ceilingAndGround =
         public float maxVertSpeed = -40;
-        public bool isStunned = false;
+        public bool moving;
+        public GameObject upRayPos;
+
+        public bool jumping;
+        public bool hitCeiling;
+
         // Use this for initialization
         void Awake()
         {
             _jump = gameObject.AddComponent<Jumping>();
             _dash = gameObject.AddComponent<Dash>();
             _wallGrab = gameObject.AddComponent<WallGrab>();
+            upRayPos = transform.Find("UprayPos").gameObject;
 
             charCont = this.gameObject.GetComponent<CharacterController>();
         }
@@ -58,16 +63,6 @@ namespace Assets.Scripts.Components
 
         public void MovePlayer(float playerDirection)
         {
-
-            if (Input.GetKey(KeyCode.X))
-            {
-                modificationVec.x = 22f;
-            }
-            else
-            {
-            }
-
-
             RaycastHit hit;
             Ray downRay = new Ray(transform.position, -Vector3.up);
             if (Physics.Raycast(downRay, out hit, 1f))
@@ -75,7 +70,6 @@ namespace Assets.Scripts.Components
                 if (hit.transform.gameObject.layer == 9)
                 {
                     this.gameObject.transform.SetParent(hit.transform);
-
                 }
                 else
                 {
@@ -93,6 +87,7 @@ namespace Assets.Scripts.Components
             }
             else
             {
+
                 grounded = false;
             }
             playerDir = playerDirection;
@@ -133,6 +128,7 @@ namespace Assets.Scripts.Components
                 }
                 if (!grounded)
                 {
+                    
                     if (verticleSpeed > maxVertSpeed)
                     {
                         verticleSpeed -= gravity * Time.deltaTime;
@@ -149,18 +145,17 @@ namespace Assets.Scripts.Components
             if (!overrideInput)
             {
 
+                moveVector = new Vector2(playerDirection * speed * speedModifier, verticleSpeed); //calculate movement in the x and y 
 
-                if (isStunned)
-                {
-                    moveVector = new Vector2(0, verticleSpeed);
-                    StartCoroutine("Stun");
-                }
-                else
-                {
-                    moveVector = new Vector2(playerDirection * speed * speedModifier, verticleSpeed); //calculate movement in the x and y 
-                }
             }
-            moveVector += modificationVec;
+            if (moveVector.x != 0)
+            {
+                moving = true;
+            }
+            else
+            {
+                moving = false;
+            }
 
             charCont.Move(moveVector * Time.deltaTime); //apply movement in the x and y
 
@@ -172,13 +167,8 @@ namespace Assets.Scripts.Components
         }
 
 
-
         public void JumpPlayer(float Direction)
         {
-            if (isStunned)
-            {
-                return;
-            }
             if (_wallGrab.notWall != 0)
             {
                 return;
@@ -217,7 +207,7 @@ namespace Assets.Scripts.Components
 
         public void DashPlayer()
         {
-            if (walled != 0 || isStunned)
+            if (walled != 0)
             {
                 return;
             }
@@ -234,10 +224,12 @@ namespace Assets.Scripts.Components
         public void Upray()
         {
 
-            //Ray UpRay = new Ray (transform.position , transform.up); 
-            if (Physics.Raycast(transform.position, transform.up, upRayLength, celingmask))
+            //Ray UpRay = new Ray (transform.position , transform.up);
+            if (Physics.Raycast(upRayPos.transform.position, transform.up, upRayLength, ceilingAndGround))
             {
                 verticleSpeed = ceilingHitSpeed;
+                hitCeiling = true;
+                StartCoroutine("notHittingCeiling");
             }
         }
 
@@ -262,8 +254,8 @@ namespace Assets.Scripts.Components
             waitForJump = true;
             checkforground = false;
             //applyGravity = false;
-
             _jump.BasicJump(jumpHeight);
+
             yield return new WaitForSeconds(0.05f);
 
             checkforground = true;
@@ -272,15 +264,12 @@ namespace Assets.Scripts.Components
             //	yield return new WaitForSeconds (0.1f);
             checkforwalls = true;
 
-
-
-
         }
 
-        IEnumerator Stun()
+        IEnumerator notHittingCeiling()
         {
-            yield return new WaitForSeconds(stunnedLength);
-            isStunned = false;
+            yield return new WaitForSeconds(.05f);
+            hitCeiling = false;
         }
     }
 }

@@ -9,7 +9,12 @@ public class PlayerAnimationController : MonoBehaviour {
     Animator animController;
     AnimatorControllerParameter[] animParams;
     CharController charController;
-    CharacterController charCont;
+    Dash dash;
+    PlayerMovement playerMovement;
+    Jumping jumping;
+    CharacterController _characterController;
+    Animator anim; 
+
 
     // Use this for initialization
     void Awake()
@@ -17,8 +22,11 @@ public class PlayerAnimationController : MonoBehaviour {
         animController = GetComponent<Animator>();
         animParams = animController.parameters;
         charController = gameObject.AddComponent<Assets.Scripts.Character.CharController>();
-        charCont = this.gameObject.GetComponent<CharacterController>();
-
+        dash = this.gameObject.GetComponent<Dash>();
+        playerMovement = this.gameObject.GetComponent<PlayerMovement>();
+        jumping = this.gameObject.GetComponent<Jumping>();
+        _characterController = gameObject.GetComponent<CharacterController>();
+        anim = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -28,33 +36,55 @@ public class PlayerAnimationController : MonoBehaviour {
 
     void DetermineAnimatorParams()
     {
-
-        if (charController.dashing == true)
+        animController.SetBool("Moving", playerMovement.moving);
+        Debug.DrawRay(transform.position + (new Vector3(0, 1, 0)), -transform.up * 1f);
+        if (Physics.Raycast(transform.position + (new Vector3( 0,1,0)), -transform.up, 1f))
         {
-        animController.SetBool("Dash", true);
-        SetAllBoolParams("Dash", false);
-        }
-
-        else if (charController.jumping == true)
-        {
-            if (charCont.isGrounded != true)
-            {
-                animController.SetBool("Jump", true);
-                SetAllBoolParams("Jump", false);
-            }
+            animController.SetBool("Grounded", true);
         }
         else
         {
-            animController.SetBool("Idle", true);
-            SetAllBoolParams("Idle", false);
+            animController.SetBool("Grounded", false);
         }
-
-        if (charController.lastDir < 0)
+        animController.SetBool("Dashing", dash.Dashing);
+        if (dash.Dashing)
         {
-            animController.SetBool("Right", true);
+            animController.SetBool("HasDashed", true);
         }
+        else
+        {
+            animController.SetBool("HasDashed", false);
+        }
+        animController.SetFloat("JumpStage", jumping.jumpStage);
+        animController.SetBool("HitCeiling", playerMovement.hitCeiling);
 
+        if (charController.lastDir > 0)
+        {
+            animController.SetBool("Mirror", true);
+        }
+        else
+        {
+            animController.SetBool("Mirror", false);
+        }
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Left Jump"))
+        {
+            animController.SetBool("SingleJump", true);
+        }
+        else if (anim.GetCurrentAnimatorStateInfo(0).IsName("Left Landing"))
+        {
+            animController.SetBool("SingleJump", false);
+        }
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Left Double Jump"))
+        {
+            animController.SetBool("DoubleJump", true);
+        }
+        else if (anim.GetCurrentAnimatorStateInfo(0).IsName("Left Landing"))
+        {
+            animController.SetBool("DoubleJump", false);
+        }
     }
+
+
 
     void SetAllBoolParams (string exempt, bool flag)
     {
@@ -69,4 +99,7 @@ public class PlayerAnimationController : MonoBehaviour {
     }
 
     //check Dash script for the enum. when enum is in startingLock
+
+
+
 }
