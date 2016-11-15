@@ -4,7 +4,7 @@ using System;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using System.Collections.Generic;
-
+using Assets.Scripts.Components;
 
 
 //This is our save game tool. The save game tool holds the level stats class (the stats that each level can have) as well as the game stats class (the stats that
@@ -285,6 +285,18 @@ public class GameStats //this object holds all of our game stats. we can store t
 		}
 	}
 
+	public RelicManager assignAbilities(RelicManager inMan){
+		RelicManager myMan = inMan;
+
+		myMan.dashRelic = !AirLevelStats.locked;
+		myMan.jumpRelic = !FireLevelStats.locked;
+		myMan.wallJumpRelic = !WaterLevelStats.locked;
+		myMan.slashRelic = !EarthLevelStats.locked;
+		return myMan;
+	}
+
+
+
 }
 
 [Serializable]
@@ -300,10 +312,10 @@ public class LevelStats //level stats is used to save attriubtes of levels. righ
 
 	public string completionTime;
 
-	public List<Treasure> RedTreasuresRemaining = new List<Treasure>();
-//	public List<Treasure> GreenTreasuresRemaining = new List<Treasure>();
-//	public List<Treasure> BlueTreasuresRemaining = new List<Treasure>();
-//	public List<Treasure> YellowTreasuresRemaining = new List<Treasure>();
+	public List<SerializableTreasure> RedTreasuresRemaining = new List<SerializableTreasure>();
+	public List<SerializableTreasure> GreenTreasuresRemaining = new List<SerializableTreasure>();
+	public List<SerializableTreasure> BlueTreasuresRemaining = new List<SerializableTreasure>();
+	public List<SerializableTreasure> YellowTreasuresRemaining = new List<SerializableTreasure>();
 
 
 }

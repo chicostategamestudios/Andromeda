@@ -80,10 +80,28 @@ public class GameManager : MonoBehaviour {
 		 * 
 		 * */ 
 		returnFile.completionTime = newData.getFinaltime;
+
+		for (int tres = 0; tres < newData.getTreasure(TreasureType.red).Count; tres++) {
+			returnFile.RedTreasuresRemaining.Add (new SerializableTreasure (newData.getTreasure (TreasureType.red) [tres]));
+		}
+		for (int tres = 0; tres < newData.getTreasure(TreasureType.blue).Count; tres++) {
+			returnFile.BlueTreasuresRemaining.Add (new SerializableTreasure (newData.getTreasure (TreasureType.blue) [tres]));
+		}
+		for (int tres = 0; tres < newData.getTreasure(TreasureType.green).Count; tres++) {
+			returnFile.GreenTreasuresRemaining.Add (new SerializableTreasure (newData.getTreasure (TreasureType.green) [tres]));
+		}
+		for (int tres = 0; tres < newData.getTreasure(TreasureType.yellow).Count; tres++) {
+			returnFile.YellowTreasuresRemaining.Add (new SerializableTreasure (newData.getTreasure (TreasureType.yellow) [tres]));
+		}
+
+
 	//	returnFile.RedTreasuresRemaining = newData.getTreasure (TreasureType.red);
-	//	returnFile.BlueTreasuresRemaining = newData.getTreasure (TreasureType.blue);
-	//	returnFile.GreenTreasuresRemaining = newData.getTreasure (TreasureType.green);
-	//	returnFile.YellowTreasuresRemaining = newData.getTreasure (TreasureType.yellow);
+
+
+
+//		returnFile.BlueTreasuresRemaining = newData.getTreasure (TreasureType.blue);
+//		returnFile.GreenTreasuresRemaining = newData.getTreasure (TreasureType.green);
+//		returnFile.YellowTreasuresRemaining = newData.getTreasure (TreasureType.yellow);
 		returnFile.locked = false;	 
 
 		return returnFile;

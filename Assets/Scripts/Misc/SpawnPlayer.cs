@@ -9,9 +9,16 @@ public class SpawnPlayer : MonoBehaviour {
 	void Awake () {
 		//Transform spawnPoint = GameObject.FindGameObjectWithTag ("StartPoint").transform;
 
-		Instantiate (player, transform.position, Quaternion.Euler(0, 120, 0));
+		//Instantiate (player, transform.position, Quaternion.Euler(0, 120, 0));
 		if (player.gameObject.GetComponent<RelicManager> () != null) {
-
+			if (GameManager.GetGameStats != null) {
+				RelicManager newValues = GameManager.GetGameStats.assignAbilities (player.gameObject.GetComponent<RelicManager> ());
+				RelicManager playerValues = player.gameObject.GetComponent<RelicManager> ();
+				playerValues.dashRelic = newValues.dashRelic;
+				playerValues.jumpRelic = newValues.jumpRelic;
+				playerValues.slashRelic = newValues.slashRelic;
+				playerValues.wallJumpRelic = newValues.wallJumpRelic;
+			}
 		} else {
 		//	Debug.LogError("Player 
 		}

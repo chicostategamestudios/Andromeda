@@ -1,19 +1,28 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\UI\InGameScripts\DisplayEndLevelStats.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Components\PlayerMovement.cs">
     <Files>
-      <File FileName="Assets\Scripts\Misc\EndZone.cs" Line="18" Column="1" />
-      <File FileName="Assets\Scripts\LevelComponenets\Lava\TestingLava.cs" Line="116" Column="52" />
+      <File FileName="Assets\Scripts\Components\PlayerMovement.cs" Line="221" Column="14" />
+      <File FileName="Assets\Scripts\Misc\EndZone.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\LevelComponenets\Lava\TestingLava.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\LevelComponenets\Lava\LavaChunk.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\LevelComponenets\CheckPoint.cs" Line="24" Column="85" />
-      <File FileName="Assets\Scripts\UI\InGameScripts\DisplayEndLevelStats.cs" Line="83" Column="32" />
-      <File FileName="Assets\Scripts\Misc\Treasure.cs" Line="86" Column="3" />
+      <File FileName="Assets\Scripts\LevelComponenets\CheckPoint.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\UI\InGameScripts\DisplayEndLevelStats.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Misc\Treasure.cs" Line="89" Column="3" />
       <File FileName="Assets\Scripts\Character\CharController.cs" Line="13" Column="1" />
-      <File FileName="Assets\Scripts\Misc\SpawnPlayer.cs" Line="12" Column="1" />
-      <File FileName="Assets\Scripts\Misc\GameManager.cs" Line="82" Column="1" />
-      <File FileName="Assets\Scripts\Components\Health.cs" Line="56" Column="1" />
-      <File FileName="Assets\Scripts\Misc\DisplayTreasureCollected.cs" Line="54" Column="1" />
+      <File FileName="Assets\Scripts\Misc\SpawnPlayer.cs" Line="20" Column="58" />
+      <File FileName="Assets\Scripts\Components\Health.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Misc\DisplayTreasureCollected.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Misc\SceneRef.cs" Line="8" Column="33" />
+      <File FileName="Assets\Scripts\Misc\GameManager.cs" Line="64" Column="1" />
+      <File FileName="Assets\Scripts\AI\AIPlayerMovement.cs" Line="122" Column="4" />
+      <File FileName="Assets\Scripts\Relics\AbilityUIManager.cs" Line="18" Column="1" />
+      <File FileName="Assets\Scripts\Components\Dash.cs" Line="124" Column="2" />
+      <File FileName="Assets\Scripts\Misc\SaveGame.cs" Line="294" Column="46" />
+      <File FileName="Assets\Scripts\UI\MainMenuScripts\AssignCursorIndices.cs" Line="9" Column="2" />
+      <File FileName="Assets\Scripts\UI\MainMenuScripts\DisplayGameFiles.cs" Line="50" Column="1" />
+      <File FileName="Assets\Scripts\Camera\_Camera.cs" Line="43" Column="1" />
+      <File FileName="Assets\Scripts\Components\Jumping.cs" Line="169" Column="72" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
