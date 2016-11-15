@@ -121,12 +121,20 @@ namespace Assets.Scripts.Components
             Dashing = false;
         }
 
-        IEnumerator SetDashing(){
+       
+		public bool GetCanDash()
+		{
+			return canDash;
+		}
+
+		IEnumerator SetDashing()
+		{
 
 
-			yield return new WaitForSeconds (lockedDashDur); //this controls how long the player has their input locked  while dashing
-			if (currentPhase != DashPhase.resting) {
-				currentPhase = DashPhase.unlockedDash; 
+			yield return new WaitForSeconds(lockedDashDur); //this controls how long the player has their input locked  while dashing
+			if (currentPhase != DashPhase.resting)
+			{
+				currentPhase = DashPhase.unlockedDash;
 			}
 		}
 

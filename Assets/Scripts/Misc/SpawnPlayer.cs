@@ -8,8 +8,8 @@ public class SpawnPlayer : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
 		//Transform spawnPoint = GameObject.FindGameObjectWithTag ("StartPoint").transform;
-
-		Instantiate (player, transform.position, Quaternion.Euler(0, 120, 0));
+		//who the *&^
+		Instantiate (player, transform.position, Quaternion.Euler(0, 0, 0));
 		if (player.gameObject.GetComponent<RelicManager> () != null) {
 
 		} else {

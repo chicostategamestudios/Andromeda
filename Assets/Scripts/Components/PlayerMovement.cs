@@ -37,12 +37,15 @@ namespace Assets.Scripts.Components
         public static int celingmask = 1 << 8;
         public static int movingGround = 1 << 9;
         int ceilingAndGround = celingmask | movingGround;
-        //int ceilingAndGround =
-        public float maxVertSpeed = -40;
+		[Tooltip("Time in seconds in which you wish the player to be stunned after taking damage. Can't jump, can't dash, can't move, can't slash.")]
+		public float stunnedLength = 1f;
+		public bool isStunned = false;
+		//int ceilingAndGround =
+		public float maxVertSpeed = -40;
         public bool moving;
         public GameObject upRayPos;
-
-        public bool jumping;
+		public Vector2 modificationVec = Vector2.zero;
+		public bool jumping;
         public bool hitCeiling;
 
         // Use this for initialization
@@ -148,7 +151,16 @@ namespace Assets.Scripts.Components
                 moveVector = new Vector2(playerDirection * speed * speedModifier, verticleSpeed); //calculate movement in the x and y 
 
             }
-            if (moveVector.x != 0)
+			if (isStunned)
+			{
+				moveVector = new Vector2(0, verticleSpeed);
+				StartCoroutine("Stun");
+			}
+			else
+			{
+				moveVector = new Vector2(playerDirection * speed * speedModifier, verticleSpeed); //calculate movement in the x and y 
+			}
+			if (moveVector.x != 0)
             {
                 moving = true;
             }
@@ -156,8 +168,8 @@ namespace Assets.Scripts.Components
             {
                 moving = false;
             }
-
-            charCont.Move(moveVector * Time.deltaTime); //apply movement in the x and y
+			moveVector += modificationVec;
+			charCont.Move(moveVector * Time.deltaTime); //apply movement in the x and y
 
             if (transform.position.z != 0)
             {
@@ -169,7 +181,11 @@ namespace Assets.Scripts.Components
 
         public void JumpPlayer(float Direction)
         {
-            if (_wallGrab.notWall != 0)
+			if (isStunned)
+			{
+				return;
+			}
+			if (_wallGrab.notWall != 0)
             {
                 return;
             }
@@ -207,7 +223,11 @@ namespace Assets.Scripts.Components
 
         public void DashPlayer()
         {
-            if (walled != 0)
+			if (walled != 0 || isStunned)
+			{
+				return;
+			}
+			if (walled != 0)
             {
                 return;
             }
@@ -271,5 +291,10 @@ namespace Assets.Scripts.Components
             yield return new WaitForSeconds(.05f);
             hitCeiling = false;
         }
-    }
+		IEnumerator Stun()
+		{
+			yield return new WaitForSeconds(stunnedLength);
+			isStunned = false;
+		}
+	}
 }

@@ -300,7 +300,7 @@ public class LevelStats //level stats is used to save attriubtes of levels. righ
 
 	public string completionTime;
 
-	public List<Treasure> RedTreasuresRemaining = new List<Treasure>();
+//	public List<Treasure> RedTreasuresRemaining = new List<Treasure>();
 //	public List<Treasure> GreenTreasuresRemaining = new List<Treasure>();
 //	public List<Treasure> BlueTreasuresRemaining = new List<Treasure>();
 //	public List<Treasure> YellowTreasuresRemaining = new List<Treasure>();

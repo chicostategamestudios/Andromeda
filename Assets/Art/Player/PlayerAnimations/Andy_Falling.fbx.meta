@@ -1,0 +1,1215 @@
+fileFormatVersion: 2
+guid: cb3e564c483381b408dec53c76318a5f
+timeCreated: 1477605849
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Andromeda_Dash_24:Andromeda_Dash_11:Ankle_L
+    100002: Andromeda_Dash_24:Andromeda_Dash_11:Ankle_R
+    100004: Andromeda_Dash_24:Andromeda_Dash_11:Chest_M
+    100006: Andromeda_Dash_24:Andromeda_Dash_11:Cup_L
+    100008: Andromeda_Dash_24:Andromeda_Dash_11:Cup_R
+    100010: Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem
+    100012: Andromeda_Dash_24:Andromeda_Dash_11:Elbow_L
+    100014: Andromeda_Dash_24:Andromeda_Dash_11:Elbow_R
+    100016: Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_L
+    100018: Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_R
+    100020: Andromeda_Dash_24:Andromeda_Dash_11:Export
+    100022: Andromeda_Dash_24:Andromeda_Dash_11:Head_M
+    100024: Andromeda_Dash_24:Andromeda_Dash_11:HeadEnd_M
+    100026: Andromeda_Dash_24:Andromeda_Dash_11:Hip_L
+    100028: Andromeda_Dash_24:Andromeda_Dash_11:Hip_R
+    100030: Andromeda_Dash_24:Andromeda_Dash_11:HipPart1_L
+    100032: Andromeda_Dash_24:Andromeda_Dash_11:HipPart1_R
+    100034: Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger1_L
+    100036: Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger1_R
+    100038: Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger2_L
+    100040: Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger2_R
+    100042: Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger3_L
+    100044: Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger3_R
+    100046: Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger4_L
+    100048: Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger4_R
+    100050: Andromeda_Dash_24:Andromeda_Dash_11:Knee_L
+    100052: Andromeda_Dash_24:Andromeda_Dash_11:Knee_R
+    100054: Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger1_L
+    100056: Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger1_R
+    100058: Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger2_L
+    100060: Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger2_R
+    100062: Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger3_L
+    100064: Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger3_R
+    100066: Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger4_L
+    100068: Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger4_R
+    100070: Andromeda_Dash_24:Andromeda_Dash_11:Neck_M
+    100072: Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger1_L
+    100074: Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger1_R
+    100076: Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger2_L
+    100078: Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger2_R
+    100080: Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger3_L
+    100082: Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger3_R
+    100084: Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger4_L
+    100086: Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger4_R
+    100088: Andromeda_Dash_24:Andromeda_Dash_11:RingFinger1_L
+    100090: Andromeda_Dash_24:Andromeda_Dash_11:RingFinger1_R
+    100092: Andromeda_Dash_24:Andromeda_Dash_11:RingFinger2_L
+    100094: Andromeda_Dash_24:Andromeda_Dash_11:RingFinger2_R
+    100096: Andromeda_Dash_24:Andromeda_Dash_11:RingFinger3_L
+    100098: Andromeda_Dash_24:Andromeda_Dash_11:RingFinger3_R
+    100100: Andromeda_Dash_24:Andromeda_Dash_11:RingFinger4_L
+    100102: Andromeda_Dash_24:Andromeda_Dash_11:RingFinger4_R
+    100104: Andromeda_Dash_24:Andromeda_Dash_11:Root_M
+    100106: Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M
+    100108: Andromeda_Dash_24:Andromeda_Dash_11:Scapula_L
+    100110: Andromeda_Dash_24:Andromeda_Dash_11:Scapula_R
+    100112: Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_L
+    100114: Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_R
+    100116: Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_L
+    100118: Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_R
+    100120: Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M
+    100122: Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M
+    100124: Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger1_L
+    100126: Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger1_R
+    100128: Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger2_L
+    100130: Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger2_R
+    100132: Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger3_L
+    100134: Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger3_R
+    100136: Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger4_L
+    100138: Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger4_R
+    100140: Andromeda_Dash_24:Andromeda_Dash_11:Toes_L
+    100142: Andromeda_Dash_24:Andromeda_Dash_11:Toes_R
+    100144: Andromeda_Dash_24:Andromeda_Dash_11:ToesEnd_L
+    100146: Andromeda_Dash_24:Andromeda_Dash_11:ToesEnd_R
+    100148: Andromeda_Dash_24:Andromeda_Dash_11:Wrist_L
+    100150: Andromeda_Dash_24:Andromeda_Dash_11:Wrist_R
+    100152: //RootNode
+    400000: Andromeda_Dash_24:Andromeda_Dash_11:Ankle_L
+    400002: Andromeda_Dash_24:Andromeda_Dash_11:Ankle_R
+    400004: Andromeda_Dash_24:Andromeda_Dash_11:Chest_M
+    400006: Andromeda_Dash_24:Andromeda_Dash_11:Cup_L
+    400008: Andromeda_Dash_24:Andromeda_Dash_11:Cup_R
+    400010: Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem
+    400012: Andromeda_Dash_24:Andromeda_Dash_11:Elbow_L
+    400014: Andromeda_Dash_24:Andromeda_Dash_11:Elbow_R
+    400016: Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_L
+    400018: Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_R
+    400020: Andromeda_Dash_24:Andromeda_Dash_11:Export
+    400022: Andromeda_Dash_24:Andromeda_Dash_11:Head_M
+    400024: Andromeda_Dash_24:Andromeda_Dash_11:HeadEnd_M
+    400026: Andromeda_Dash_24:Andromeda_Dash_11:Hip_L
+    400028: Andromeda_Dash_24:Andromeda_Dash_11:Hip_R
+    400030: Andromeda_Dash_24:Andromeda_Dash_11:HipPart1_L
+    400032: Andromeda_Dash_24:Andromeda_Dash_11:HipPart1_R
+    400034: Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger1_L
+    400036: Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger1_R
+    400038: Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger2_L
+    400040: Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger2_R
+    400042: Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger3_L
+    400044: Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger3_R
+    400046: Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger4_L
+    400048: Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger4_R
+    400050: Andromeda_Dash_24:Andromeda_Dash_11:Knee_L
+    400052: Andromeda_Dash_24:Andromeda_Dash_11:Knee_R
+    400054: Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger1_L
+    400056: Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger1_R
+    400058: Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger2_L
+    400060: Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger2_R
+    400062: Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger3_L
+    400064: Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger3_R
+    400066: Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger4_L
+    400068: Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger4_R
+    400070: Andromeda_Dash_24:Andromeda_Dash_11:Neck_M
+    400072: Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger1_L
+    400074: Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger1_R
+    400076: Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger2_L
+    400078: Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger2_R
+    400080: Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger3_L
+    400082: Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger3_R
+    400084: Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger4_L
+    400086: Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger4_R
+    400088: Andromeda_Dash_24:Andromeda_Dash_11:RingFinger1_L
+    400090: Andromeda_Dash_24:Andromeda_Dash_11:RingFinger1_R
+    400092: Andromeda_Dash_24:Andromeda_Dash_11:RingFinger2_L
+    400094: Andromeda_Dash_24:Andromeda_Dash_11:RingFinger2_R
+    400096: Andromeda_Dash_24:Andromeda_Dash_11:RingFinger3_L
+    400098: Andromeda_Dash_24:Andromeda_Dash_11:RingFinger3_R
+    400100: Andromeda_Dash_24:Andromeda_Dash_11:RingFinger4_L
+    400102: Andromeda_Dash_24:Andromeda_Dash_11:RingFinger4_R
+    400104: Andromeda_Dash_24:Andromeda_Dash_11:Root_M
+    400106: Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M
+    400108: Andromeda_Dash_24:Andromeda_Dash_11:Scapula_L
+    400110: Andromeda_Dash_24:Andromeda_Dash_11:Scapula_R
+    400112: Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_L
+    400114: Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_R
+    400116: Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_L
+    400118: Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_R
+    400120: Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M
+    400122: Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M
+    400124: Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger1_L
+    400126: Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger1_R
+    400128: Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger2_L
+    400130: Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger2_R
+    400132: Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger3_L
+    400134: Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger3_R
+    400136: Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger4_L
+    400138: Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger4_R
+    400140: Andromeda_Dash_24:Andromeda_Dash_11:Toes_L
+    400142: Andromeda_Dash_24:Andromeda_Dash_11:Toes_R
+    400144: Andromeda_Dash_24:Andromeda_Dash_11:ToesEnd_L
+    400146: Andromeda_Dash_24:Andromeda_Dash_11:ToesEnd_R
+    400148: Andromeda_Dash_24:Andromeda_Dash_11:Wrist_L
+    400150: Andromeda_Dash_24:Andromeda_Dash_11:Wrist_R
+    400152: //RootNode
+    7400000: Andy_Falling
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'Andy_Dash' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
+      improve retargeting quality.\n\t'Andromeda_Dash_24:Andromeda_Dash_11:HipPart1_R'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Andromeda_Dash_24:Andromeda_Dash_11:Chest_M'
+      has translation animation that will be discarded.\n\t'Andromeda_Dash_24:Andromeda_Dash_11:Chest_M'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Andromeda_Dash_24:Andromeda_Dash_11:Scapula_R'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_R'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Andromeda_Dash_24:Andromeda_Dash_11:Scapula_L'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_L'
+      has translation animation that will be discarded.\n\t'Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_L'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Andromeda_Dash_24:Andromeda_Dash_11:Cup_L'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Andromeda_Dash_24:Andromeda_Dash_11:HipPart1_L'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Andy_Falling
+      takeName: Andy_Dash
+      firstFrame: 10.7
+      lastFrame: 10.9
+      wrapMode: 0
+      orientationOffsetY: 45
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:Hip_L
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:Hip_L/Andromeda_Dash_24:Andromeda_Dash_11:HipPart1_L
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:Hip_L/Andromeda_Dash_24:Andromeda_Dash_11:HipPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Knee_L
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:Hip_L/Andromeda_Dash_24:Andromeda_Dash_11:HipPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Knee_L/Andromeda_Dash_24:Andromeda_Dash_11:Ankle_L
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:Hip_L/Andromeda_Dash_24:Andromeda_Dash_11:HipPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Knee_L/Andromeda_Dash_24:Andromeda_Dash_11:Ankle_L/Andromeda_Dash_24:Andromeda_Dash_11:Toes_L
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:Hip_L/Andromeda_Dash_24:Andromeda_Dash_11:HipPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Knee_L/Andromeda_Dash_24:Andromeda_Dash_11:Ankle_L/Andromeda_Dash_24:Andromeda_Dash_11:Toes_L/Andromeda_Dash_24:Andromeda_Dash_11:ToesEnd_L
+        weight: 0
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:Hip_R
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:Hip_R/Andromeda_Dash_24:Andromeda_Dash_11:HipPart1_R
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:Hip_R/Andromeda_Dash_24:Andromeda_Dash_11:HipPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Knee_R
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:Hip_R/Andromeda_Dash_24:Andromeda_Dash_11:HipPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Knee_R/Andromeda_Dash_24:Andromeda_Dash_11:Ankle_R
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:Hip_R/Andromeda_Dash_24:Andromeda_Dash_11:HipPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Knee_R/Andromeda_Dash_24:Andromeda_Dash_11:Ankle_R/Andromeda_Dash_24:Andromeda_Dash_11:Toes_R
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:Hip_R/Andromeda_Dash_24:Andromeda_Dash_11:HipPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Knee_R/Andromeda_Dash_24:Andromeda_Dash_11:Ankle_R/Andromeda_Dash_24:Andromeda_Dash_11:Toes_R/Andromeda_Dash_24:Andromeda_Dash_11:ToesEnd_R
+        weight: 0
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Neck_M
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Neck_M/Andromeda_Dash_24:Andromeda_Dash_11:Head_M
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Neck_M/Andromeda_Dash_24:Andromeda_Dash_11:Head_M/Andromeda_Dash_24:Andromeda_Dash_11:HeadEnd_M
+        weight: 0
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_L
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_L/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_L
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_L/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_L/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_L
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_L/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_L/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Elbow_L
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_L/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_L/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Elbow_L/Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_L
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_L/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_L/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Elbow_L/Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Wrist_L
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_L/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_L/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Elbow_L/Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Wrist_L/Andromeda_Dash_24:Andromeda_Dash_11:Cup_L
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_L/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_L/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Elbow_L/Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Wrist_L/Andromeda_Dash_24:Andromeda_Dash_11:Cup_L/Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger1_L
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_L/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_L/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Elbow_L/Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Wrist_L/Andromeda_Dash_24:Andromeda_Dash_11:Cup_L/Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger1_L/Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger2_L
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_L/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_L/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Elbow_L/Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Wrist_L/Andromeda_Dash_24:Andromeda_Dash_11:Cup_L/Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger1_L/Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger2_L/Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger3_L
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_L/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_L/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Elbow_L/Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Wrist_L/Andromeda_Dash_24:Andromeda_Dash_11:Cup_L/Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger1_L/Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger2_L/Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger3_L/Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger4_L
+        weight: 0
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_L/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_L/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Elbow_L/Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Wrist_L/Andromeda_Dash_24:Andromeda_Dash_11:Cup_L/Andromeda_Dash_24:Andromeda_Dash_11:RingFinger1_L
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_L/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_L/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Elbow_L/Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Wrist_L/Andromeda_Dash_24:Andromeda_Dash_11:Cup_L/Andromeda_Dash_24:Andromeda_Dash_11:RingFinger1_L/Andromeda_Dash_24:Andromeda_Dash_11:RingFinger2_L
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_L/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_L/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Elbow_L/Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Wrist_L/Andromeda_Dash_24:Andromeda_Dash_11:Cup_L/Andromeda_Dash_24:Andromeda_Dash_11:RingFinger1_L/Andromeda_Dash_24:Andromeda_Dash_11:RingFinger2_L/Andromeda_Dash_24:Andromeda_Dash_11:RingFinger3_L
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_L/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_L/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Elbow_L/Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Wrist_L/Andromeda_Dash_24:Andromeda_Dash_11:Cup_L/Andromeda_Dash_24:Andromeda_Dash_11:RingFinger1_L/Andromeda_Dash_24:Andromeda_Dash_11:RingFinger2_L/Andromeda_Dash_24:Andromeda_Dash_11:RingFinger3_L/Andromeda_Dash_24:Andromeda_Dash_11:RingFinger4_L
+        weight: 0
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_L/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_L/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Elbow_L/Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Wrist_L/Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger1_L
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_L/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_L/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Elbow_L/Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Wrist_L/Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger1_L/Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger2_L
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_L/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_L/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Elbow_L/Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Wrist_L/Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger1_L/Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger2_L/Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger3_L
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_L/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_L/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Elbow_L/Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Wrist_L/Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger1_L/Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger2_L/Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger3_L/Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger4_L
+        weight: 0
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_L/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_L/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Elbow_L/Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Wrist_L/Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger1_L
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_L/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_L/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Elbow_L/Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Wrist_L/Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger1_L/Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger2_L
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_L/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_L/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Elbow_L/Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Wrist_L/Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger1_L/Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger2_L/Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger3_L
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_L/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_L/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Elbow_L/Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Wrist_L/Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger1_L/Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger2_L/Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger3_L/Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger4_L
+        weight: 0
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_L/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_L/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Elbow_L/Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Wrist_L/Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger1_L
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_L/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_L/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Elbow_L/Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Wrist_L/Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger1_L/Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger2_L
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_L/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_L/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Elbow_L/Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Wrist_L/Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger1_L/Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger2_L/Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger3_L
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_L/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_L/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Elbow_L/Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_L/Andromeda_Dash_24:Andromeda_Dash_11:Wrist_L/Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger1_L/Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger2_L/Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger3_L/Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger4_L
+        weight: 0
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_R
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_R/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_R
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_R/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_R/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_R
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_R/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_R/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Elbow_R
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_R/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_R/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Elbow_R/Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_R
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_R/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_R/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Elbow_R/Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Wrist_R
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_R/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_R/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Elbow_R/Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Wrist_R/Andromeda_Dash_24:Andromeda_Dash_11:Cup_R
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_R/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_R/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Elbow_R/Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Wrist_R/Andromeda_Dash_24:Andromeda_Dash_11:Cup_R/Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger1_R
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_R/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_R/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Elbow_R/Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Wrist_R/Andromeda_Dash_24:Andromeda_Dash_11:Cup_R/Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger1_R/Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger2_R
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_R/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_R/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Elbow_R/Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Wrist_R/Andromeda_Dash_24:Andromeda_Dash_11:Cup_R/Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger1_R/Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger2_R/Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger3_R
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_R/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_R/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Elbow_R/Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Wrist_R/Andromeda_Dash_24:Andromeda_Dash_11:Cup_R/Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger1_R/Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger2_R/Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger3_R/Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger4_R
+        weight: 0
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_R/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_R/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Elbow_R/Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Wrist_R/Andromeda_Dash_24:Andromeda_Dash_11:Cup_R/Andromeda_Dash_24:Andromeda_Dash_11:RingFinger1_R
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_R/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_R/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Elbow_R/Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Wrist_R/Andromeda_Dash_24:Andromeda_Dash_11:Cup_R/Andromeda_Dash_24:Andromeda_Dash_11:RingFinger1_R/Andromeda_Dash_24:Andromeda_Dash_11:RingFinger2_R
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_R/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_R/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Elbow_R/Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Wrist_R/Andromeda_Dash_24:Andromeda_Dash_11:Cup_R/Andromeda_Dash_24:Andromeda_Dash_11:RingFinger1_R/Andromeda_Dash_24:Andromeda_Dash_11:RingFinger2_R/Andromeda_Dash_24:Andromeda_Dash_11:RingFinger3_R
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_R/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_R/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Elbow_R/Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Wrist_R/Andromeda_Dash_24:Andromeda_Dash_11:Cup_R/Andromeda_Dash_24:Andromeda_Dash_11:RingFinger1_R/Andromeda_Dash_24:Andromeda_Dash_11:RingFinger2_R/Andromeda_Dash_24:Andromeda_Dash_11:RingFinger3_R/Andromeda_Dash_24:Andromeda_Dash_11:RingFinger4_R
+        weight: 0
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_R/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_R/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Elbow_R/Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Wrist_R/Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger1_R
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_R/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_R/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Elbow_R/Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Wrist_R/Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger1_R/Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger2_R
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_R/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_R/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Elbow_R/Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Wrist_R/Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger1_R/Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger2_R/Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger3_R
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_R/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_R/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Elbow_R/Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Wrist_R/Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger1_R/Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger2_R/Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger3_R/Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger4_R
+        weight: 0
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_R/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_R/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Elbow_R/Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Wrist_R/Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger1_R
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_R/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_R/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Elbow_R/Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Wrist_R/Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger1_R/Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger2_R
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_R/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_R/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Elbow_R/Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Wrist_R/Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger1_R/Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger2_R/Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger3_R
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_R/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_R/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Elbow_R/Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Wrist_R/Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger1_R/Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger2_R/Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger3_R/Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger4_R
+        weight: 0
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_R/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_R/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Elbow_R/Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Wrist_R/Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger1_R
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_R/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_R/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Elbow_R/Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Wrist_R/Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger1_R/Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger2_R
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_R/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_R/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Elbow_R/Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Wrist_R/Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger1_R/Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger2_R/Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger3_R
+        weight: 1
+      - path: Andromeda_Dash_24:Andromeda_Dash_11:Export/Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem/Andromeda_Dash_24:Andromeda_Dash_11:Root_M/Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M/Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M/Andromeda_Dash_24:Andromeda_Dash_11:Chest_M/Andromeda_Dash_24:Andromeda_Dash_11:Scapula_R/Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_R/Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Elbow_R/Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_R/Andromeda_Dash_24:Andromeda_Dash_11:Wrist_R/Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger1_R/Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger2_R/Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger3_R/Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger4_R
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0.96
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human:
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:Root_M
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:Hip_L
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:Hip_R
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:Knee_L
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:Knee_R
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:Ankle_L
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:Ankle_R
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:Neck_M
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:Head_M
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_L
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_R
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_L
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_R
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:Elbow_L
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:Elbow_R
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:Wrist_L
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:Wrist_R
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:Toes_L
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:Toes_R
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger1_L
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger2_L
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger3_L
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger1_L
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger2_L
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger3_L
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger1_L
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger2_L
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger3_L
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:RingFinger1_L
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:RingFinger2_L
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:RingFinger3_L
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger1_L
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger2_L
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger3_L
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger1_R
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger2_R
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger3_R
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger1_R
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger2_R
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger3_R
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger1_R
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger2_R
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger3_R
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:RingFinger1_R
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:RingFinger2_R
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:RingFinger3_R
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger1_R
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger2_R
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger3_R
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Andy_Dash(Clone)
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:Export
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:DeformationSystem
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:Root_M
+      position: {x: 2.308362e-16, y: 0.92265266, z: -0.008412442}
+      rotation: {x: 0.5124777, y: -0.48720285, z: -0.5124777, w: 0.48720285}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:Hip_L
+      position: {x: 0.020797068, y: -0.008946099, z: 0.11445599}
+      rotation: {x: 0.99510336, y: 0.018892096, z: 0.025812827, w: -0.09352087}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:HipPart1_L
+      position: {x: 0.2007315, y: -3.8025138e-16, z: 1.4210849e-16}
+      rotation: {x: -0.029774442, y: 0, z: -0, w: 0.99955666}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:Knee_L
+      position: {x: 0.2007315, y: -3.8191667e-16, z: 1.065814e-16}
+      rotation: {x: -0.029738773, y: 0.0014569412, z: 0.048910916, w: 0.99835926}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:Ankle_L
+      position: {x: 0.377929, y: 3.197442e-16, z: 0}
+      rotation: {x: 0.06293937, y: -0.031505447, z: -0.053984232, w: 0.9960581}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:Toes_L
+      position: {x: 0.1069725, y: -0.1492564, z: -2.842171e-16}
+      rotation: {x: -0.034464195, y: -0.0146291135, z: -0.60523283, w: 0.7951676}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:ToesEnd_L
+      position: {x: 0.09021807, y: -1.687539e-16, z: 1.776357e-16}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:Hip_R
+      position: {x: 0.020797068, y: -0.008946099, z: -0.11445599}
+      rotation: {x: -0.02087872, y: 0.99500746, z: -0.09349569, w: -0.027979525}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:HipPart1_R
+      position: {x: -0.2007315, y: 5.082393e-15, z: -1.918465e-15}
+      rotation: {x: 0.00024706716, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:Knee_R
+      position: {x: -0.2007315, y: 5.075662e-15, z: -1.953993e-15}
+      rotation: {x: 0.0002467192, y: -0.000013108454, z: 0.053056248, w: 0.99859154}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:Ankle_R
+      position: {x: -0.377929, y: 8.668621e-15, z: -3.801404e-15}
+      rotation: {x: 0.0017025976, y: -0.022607502, z: -0.054341655, w: 0.99826497}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:Toes_R
+      position: {x: -0.1069725, y: 0.1492564, z: 5.3290707e-16}
+      rotation: {x: -0.034464195, y: -0.0146291135, z: -0.60523283, w: 0.7951676}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:ToesEnd_R
+      position: {x: -0.09021807, y: 3.1086242e-16, z: -5.684342e-16}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:RootPart1_M
+      position: {x: -0.107775494, y: 6.217249e-17, z: -1.317647e-16}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:Spine1_M
+      position: {x: -0.107775494, y: -8.881784e-18, z: -2.1566749e-16}
+      rotation: {x: 0, y: 0, z: 0.053133395, w: 0.9985874}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:Spine1Part1_M
+      position: {x: -0.088641115, y: -1.24345e-16, z: 1.466517e-17}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:Chest_M
+      position: {x: -0.098449364, y: 0.01018815, z: 0.01}
+      rotation: {x: 0.00856573, y: -0.008883778, z: -0.018146202, w: 0.9997592}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:Neck_M
+      position: {x: -0.104497604, y: 2.2204459e-17, z: 4.884981e-16}
+      rotation: {x: 0, y: -0, z: -0.037465513, w: 0.9992979}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:Head_M
+      position: {x: -0.080738045, y: 8.8817837e-17, z: -1.021405e-16}
+      rotation: {x: 0.023355631, y: 0.009202254, z: 0.027451789, w: 0.9993079}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:HeadEnd_M
+      position: {x: -0.2620374, y: 6.217249e-17, z: -1.66631e-16}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:Scapula_L
+      position: {x: -0.0887018, y: 0.03954246, z: 0.052170638}
+      rotation: {x: 0.6522804, y: -0.05368145, z: 0.7323895, w: -0.18776101}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_L
+      position: {x: 0.138375, y: 4.263256e-16, z: -5.684342e-16}
+      rotation: {x: -0.009654967, y: -0.0715694, z: -0.14596236, w: 0.9866507}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_L
+      position: {x: 0.1368807, y: -5.684342e-16, z: -3.6948217e-15}
+      rotation: {x: 0.0041224966, y: -0, z: -0, w: 0.99999154}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:Elbow_L
+      position: {x: 0.1368807, y: -6.0396133e-16, z: -4.2632557e-15}
+      rotation: {x: 0.0041199285, y: 0.00014546784, z: -0.03528605, w: 0.9993687}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_L
+      position: {x: 0.1289578, y: 7.1054265e-17, z: 5.684342e-16}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:Wrist_L
+      position: {x: 0.1289578, y: 0, z: 5.684342e-16}
+      rotation: {x: -0.100360036, y: -0.086165, z: -0.042606756, w: 0.990297}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:Cup_L
+      position: {x: 0.027421948, y: 0.02802499, z: 0.004530694}
+      rotation: {x: -0.0010894327, y: 0.011172237, z: -0.097046055, w: 0.9952166}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger1_L
+      position: {x: 0.0562001, y: 0.03361825, z: 0.002475871}
+      rotation: {x: -0.06340689, y: -0.0825868, z: 0.14427604, w: 0.98404443}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger2_L
+      position: {x: 0.03792313, y: 6.3948854e-16, z: -8.5265126e-16}
+      rotation: {x: 0.0023558105, y: 0.030545585, z: 0.0013904915, w: 0.99952966}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger3_L
+      position: {x: 0.03117799, y: -4.618528e-16, z: -2.842171e-16}
+      rotation: {x: 0.018693453, y: 0.02365708, z: 0.00057814625, w: 0.9995452}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger4_L
+      position: {x: 0.02389925, y: 0, z: -5.4001247e-15}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:RingFinger1_L
+      position: {x: 0.07235923, y: 0.012818039, z: 0.00282566}
+      rotation: {x: -0.01490911, y: -0.0604762, z: 0.16767976, w: 0.9838719}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:RingFinger2_L
+      position: {x: 0.03288511, y: -1.24345e-16, z: -5.4001247e-15}
+      rotation: {x: -0.0024698372, y: 0.00018047426, z: 0.00000081244553, w: 0.99999696}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:RingFinger3_L
+      position: {x: 0.03343061, y: -3.552714e-17, z: 3.126388e-15}
+      rotation: {x: 0.0049422076, y: 0.020376112, z: 0.000041328538, w: 0.9997802}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:RingFinger4_L
+      position: {x: 0.03598215, y: 8.881784e-16, z: -3.126388e-15}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger1_L
+      position: {x: 0.106874906, y: -0.02843782, z: 0.01073171}
+      rotation: {x: 0.041613832, y: -0.06414354, z: 0.05198342, w: 0.99571663}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger2_L
+      position: {x: 0.03771133, y: 1.24345e-16, z: -1.4210851e-15}
+      rotation: {x: -0.00000679608, y: 0.024356315, z: -0.00027894464, w: 0.99970335}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger3_L
+      position: {x: 0.03513504, y: 3.765876e-15, z: 1.25055495e-14}
+      rotation: {x: -0.014286553, y: 0.02590216, z: 0.000073729934, w: 0.9995624}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger4_L
+      position: {x: 0.033750687, y: -9.094947e-15, z: -1.42108505e-14}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger1_L
+      position: {x: 0.1033224, y: -3.1086242e-16, z: 5.684342e-16}
+      rotation: {x: -0.0011885463, y: -0.063012406, z: 0.051980875, w: 0.9966575}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger2_L
+      position: {x: 0.042693462, y: 3.1086238e-17, z: 2.273737e-15}
+      rotation: {x: 0.0003194905, y: 0.035331693, z: 0.000024761966, w: 0.9993756}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger3_L
+      position: {x: 0.039325356, y: -3.4638957e-16, z: 2.273737e-15}
+      rotation: {x: 0.00046592232, y: 0.01440431, z: -0.0000012217448, w: 0.99989617}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger4_L
+      position: {x: 0.040675648, y: -5.3290707e-17, z: -2.1600499e-14}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger1_L
+      position: {x: 0.02305071, y: -0.02507888, z: 0.0125699}
+      rotation: {x: -0.38587573, y: 0.0794464, z: -0.35177687, w: 0.84914154}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger2_L
+      position: {x: 0.053900525, y: 1.1368679e-15, z: -4.263256e-16}
+      rotation: {x: -0.4233114, y: -0.033258684, z: -0.0004652961, w: 0.9053735}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger3_L
+      position: {x: 0.03115318, y: 1.4210851e-15, z: 9.947598e-16}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger4_L
+      position: {x: 0.039742067, y: 0.00000003813666, z: 0.000000024370879}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:Scapula_R
+      position: {x: -0.0887018, y: 0.03954246, z: -0.052170638}
+      rotation: {x: -0.05368145, y: -0.6522804, z: 0.18776101, w: 0.7323895}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:Shoulder_R
+      position: {x: -0.138375, y: -4.973799e-16, z: 2.8421708e-15}
+      rotation: {x: -0.0077027357, y: -0.051466014, z: -0.132168, w: 0.98986036}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:ShoulderPart1_R
+      position: {x: -0.1368807, y: -1.811884e-15, z: 2.273737e-15}
+      rotation: {x: 0.004514186, y: -0, z: -0, w: 0.9999898}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:Elbow_R
+      position: {x: -0.1368807, y: -1.811884e-15, z: 2.5579542e-15}
+      rotation: {x: 0.0045113745, y: 0.00015928916, z: -0.03528599, w: 0.99936706}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:ElbowPart1_R
+      position: {x: -0.1289578, y: 1.065814e-16, z: 1.4210851e-15}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:Wrist_R
+      position: {x: -0.1289578, y: 7.1054265e-17, z: 1.1368679e-15}
+      rotation: {x: -0.10035993, y: -0.08615771, z: -0.042603057, w: 0.9902978}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:Cup_R
+      position: {x: -0.027421948, y: -0.02802499, z: -0.004530694}
+      rotation: {x: -0.0010894327, y: 0.011172237, z: -0.097046055, w: 0.9952166}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger1_R
+      position: {x: -0.0562001, y: -0.03361825, z: -0.002475871}
+      rotation: {x: -0.06340685, y: -0.08258838, z: 0.14427656, w: 0.9840442}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger2_R
+      position: {x: -0.03792313, y: 3.552714e-17, z: -8.5265126e-16}
+      rotation: {x: 0.0023558105, y: 0.030545585, z: 0.0013904915, w: 0.99952966}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger3_R
+      position: {x: -0.03117799, y: 3.907985e-16, z: 0}
+      rotation: {x: 0.018693453, y: 0.02365708, z: 0.00057814625, w: 0.9995452}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:PinkyFinger4_R
+      position: {x: -0.02389925, y: -2.842171e-16, z: 9.094947e-15}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:RingFinger1_R
+      position: {x: -0.07235923, y: -0.012818039, z: -0.00282566}
+      rotation: {x: -0.01490911, y: -0.0604762, z: 0.16767976, w: 0.9838719}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:RingFinger2_R
+      position: {x: -0.03288511, y: 2.131628e-16, z: 2.8421708e-15}
+      rotation: {x: -0.0024698372, y: 0.00018047426, z: 0.00000081244553, w: 0.99999696}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:RingFinger3_R
+      position: {x: -0.03343061, y: 5.3290707e-17, z: -6.536993e-15}
+      rotation: {x: 0.0049422076, y: 0.020376112, z: 0.000041328538, w: 0.9997802}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:RingFinger4_R
+      position: {x: -0.03598215, y: -7.81597e-16, z: 1.4210851e-15}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger1_R
+      position: {x: -0.106874906, y: 0.02843782, z: -0.01073171}
+      rotation: {x: 0.041613907, y: -0.0641434, z: 0.05198345, w: 0.9957167}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger2_R
+      position: {x: -0.03771133, y: -5.3290707e-16, z: -1.98952e-15}
+      rotation: {x: -0.000006796081, y: 0.024356315, z: -0.00027894464, w: 0.99970335}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger3_R
+      position: {x: -0.03513504, y: -8.260059e-15, z: -2.5579542e-15}
+      rotation: {x: -0.014286553, y: 0.02590216, z: 0.000073729934, w: 0.9995624}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:IndexFinger4_R
+      position: {x: -0.033750687, y: -7.01661e-16, z: 5.968559e-15}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger1_R
+      position: {x: -0.1033224, y: 2.9309892e-16, z: 5.684342e-16}
+      rotation: {x: -0.0011885167, y: -0.06301437, z: 0.051982265, w: 0.99665725}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger2_R
+      position: {x: -0.042693462, y: -2.04281e-16, z: -5.1159083e-15}
+      rotation: {x: 0.0003194905, y: 0.035331693, z: 0.000024761966, w: 0.9993756}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger3_R
+      position: {x: -0.039325356, y: 2.6645348e-16, z: 1.1368679e-15}
+      rotation: {x: 0.00046592232, y: 0.01440431, z: -0.0000012217448, w: 0.99989617}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:MiddleFinger4_R
+      position: {x: -0.040675648, y: -6.217249e-17, z: 1.3073989e-14}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger1_R
+      position: {x: -0.02305071, y: 0.02507888, z: -0.0125699}
+      rotation: {x: -0.38594264, y: 0.079211995, z: -0.35184085, w: 0.84910643}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger2_R
+      position: {x: -0.053900525, y: 1.4210851e-15, z: 2.842171e-16}
+      rotation: {x: -0.42331165, y: -0.03326246, z: -0.00046527386, w: 0.9053732}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger3_R
+      position: {x: -0.03115318, y: -1.4210851e-15, z: -7.1054264e-16}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Andromeda_Dash_24:Andromeda_Dash_11:ThumbFinger4_R
+      position: {x: -0.039742067, y: -0.00000003813666, z: -0.000000024370879}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

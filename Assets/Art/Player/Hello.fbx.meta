@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: ae082c4961b29f041be74d20e369a825
-timeCreated: 1475188580
+timeCreated: 1477437041
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -1481,7 +1481,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: RootPart1_M
+    - boneName: Spine1_M
       humanName: Spine
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -1489,7 +1489,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: Spine1Part1_M
+    - boneName: Chest_M
       humanName: Chest
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -2066,7 +2066,7 @@ ModelImporter:
       transformModified: 1
     - name: ThumbFinger1_L
       position: {x: 0.023050712, y: -0.025078883, z: 0.0125699015}
-      rotation: {x: -0.38590947, y: 0.07932898, z: -0.35180908, w: 0.8491237}
+      rotation: {x: -0.3859095, y: 0.079328984, z: -0.3518091, w: 0.8491238}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: ThumbFinger2_L

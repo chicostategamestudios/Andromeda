@@ -191,10 +191,10 @@ ModelImporter:
     - serializedVersion: 16
       name: AndyIdle
       takeName: Idle
-      firstFrame: 2
+      firstFrame: 3
       lastFrame: 57
       wrapMode: 0
-      orientationOffsetY: 0
+      orientationOffsetY: 280
       level: 0
       cycleOffset: 0
       loop: 0
@@ -208,7 +208,7 @@ ModelImporter:
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
       heightFromFeet: 0
-      mirror: 0
+      mirror: 1
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events: []
