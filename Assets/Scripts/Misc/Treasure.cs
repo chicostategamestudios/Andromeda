@@ -71,13 +71,13 @@ public class Treasure : MonoBehaviour {
 }
 
 [Serializable]
-public class SerializableTreasure{
+public class SerializableTreasure : IEquatable<Treasure>{
 
 	[SerializeField]
 	public TreasureType _treasureType; //this is my type (color)
 
 	[SerializeField]
-	private TreasureState myState = TreasureState.notPickedUp; //this is my state
+	public TreasureState myState = TreasureState.notPickedUp; //this is my state
 
 	[SerializeField]
 	public int MyIndex;
@@ -88,6 +88,22 @@ public class SerializableTreasure{
 		MyIndex = inputTreasure.MyIndex;
 
 	}
+
+	public SerializableTreasure returnTreasure{
+		get{
+			return this;
+		}
+	}
+
+
+	public bool Equals(Treasure myTreas){
+		if (MyIndex == myTreas.MyIndex) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	//curUnit.unitStaticData = unitBase.Find(UnitBaseData => UnitBaseData.unit_id == curUnit.unitClassID).unitStats;
 
 
 }

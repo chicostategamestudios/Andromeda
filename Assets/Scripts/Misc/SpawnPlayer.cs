@@ -9,7 +9,7 @@ public class SpawnPlayer : MonoBehaviour {
 	void Awake () {
 		//Transform spawnPoint = GameObject.FindGameObjectWithTag ("StartPoint").transform;
 
-		//Instantiate (player, transform.position, Quaternion.Euler(0, 120, 0));
+		Instantiate (player, transform.position, Quaternion.Euler(0, 0, 0));
 		if (player.gameObject.GetComponent<RelicManager> () != null) {
 			if (GameManager.GetGameStats != null) {
 				RelicManager newValues = GameManager.GetGameStats.assignAbilities (player.gameObject.GetComponent<RelicManager> ());

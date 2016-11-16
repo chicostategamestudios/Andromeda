@@ -42,6 +42,10 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
+	public static LevelStats getCurLevel{
+		get{ return curLevel; }
+	}
+
 	public static void LoadGame(int gameToLoad){ //this will go to my gamesaver and set my currently loaded game file
 		switch (gameToLoad) { //this is ran by the UI
 		case 0:

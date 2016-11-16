@@ -317,6 +317,32 @@ public class LevelStats //level stats is used to save attriubtes of levels. righ
 	public List<SerializableTreasure> BlueTreasuresRemaining = new List<SerializableTreasure>();
 	public List<SerializableTreasure> YellowTreasuresRemaining = new List<SerializableTreasure>();
 
+	public TreasureState getMyState(TreasureType color, int myIndex){
+		TreasureState returnState = TreasureState.notPickedUp;
+		List<SerializableTreasure> myTreasureList = null;
+
+		switch (color) {
+		case(TreasureType.blue):
+			myTreasureList = BlueTreasuresRemaining;
+			break;
+		case(TreasureType.red):
+			myTreasureList = RedTreasuresRemaining;
+			break;
+		case(TreasureType.green):
+			myTreasureList = GreenTreasuresRemaining;
+			break;
+		case(TreasureType.yellow):
+			myTreasureList = YellowTreasuresRemaining;
+			break;
+		}
+		for (int tres = 0; tres < myTreasureList.Count; tres++) {
+			if (myIndex == myTreasureList [tres].MyIndex) {
+				returnState = myTreasureList [tres].myState;
+			}
+		}
+		return returnState;
+	}
+
 
 }
 

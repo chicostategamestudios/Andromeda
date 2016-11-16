@@ -71,20 +71,39 @@ public class TreasureManager : MonoBehaviour {
 
 
 	public void AddTreasure(Treasure myTreasure){ //Ran by anything with the Treasure componenet, this will sort them and add them to the appropriate scripts
+
+
+
 		switch (myTreasure._treasureType){
 		case TreasureType.blue:
 			blueTreasure.Add (myTreasure);
+			if (GameManager.GetGameStats != null) {
+				myTreasure.ChangeState (GameManager.getCurLevel.getMyState (TreasureType.blue, myTreasure.MyIndex));
+			}
 		break;
 		case TreasureType.red:
 			redTreasure.Add (myTreasure);
+			if (GameManager.GetGameStats != null) {
+				myTreasure.ChangeState (GameManager.getCurLevel.getMyState (TreasureType.red, myTreasure.MyIndex));
+			}
 		break;
 		case TreasureType.green:
 			greenTreasure.Add (myTreasure);
+			if (GameManager.GetGameStats != null) {
+				myTreasure.ChangeState (GameManager.getCurLevel.getMyState (TreasureType.green, myTreasure.MyIndex));
+			}
 		break;
 		case TreasureType.yellow:
 			yellowTreasure.Add (myTreasure);
+			if (GameManager.GetGameStats != null) {
+				myTreasure.ChangeState (GameManager.getCurLevel.getMyState (TreasureType.yellow, myTreasure.MyIndex));
+			}
 		break;
 		}
+
+
+
+
 	}
 
 	public int getCollectedTreasureAmount(TreasureType color){
