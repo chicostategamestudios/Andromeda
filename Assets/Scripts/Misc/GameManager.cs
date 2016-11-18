@@ -61,7 +61,20 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public static void LoadLevel(LevelToUnlock level){ //run this when we load a level through the UI
-		curLevel = loadedGame.GetStats (level);
+		
+
+
+		if (level == LevelToUnlock.tutorial)
+		{
+			curLevel = loadedGame.TutorialLevelStats;
+
+		}
+		else
+		{
+			curLevel = loadedGame.GetStats(level);
+		}
+
+	
 	}
 
 	public static void UpdateSave(LevelData myNewData){ //call this when we need to update the save of a level or something
@@ -72,6 +85,8 @@ public class GameManager : MonoBehaviour {
 
 
 	static LevelStats updateFile(LevelStats input, LevelData newData){ //run this to update the file
+		Debug.Log(input == null);
+		Debug.Log(newData == null);
 		LevelStats returnFile = input;
 		/*place all the information updating here!!
 		 * 
@@ -94,3 +109,4 @@ public class GameManager : MonoBehaviour {
 
 
 }
+

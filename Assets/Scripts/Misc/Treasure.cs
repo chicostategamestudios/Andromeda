@@ -27,7 +27,7 @@ public class Treasure : MonoBehaviour {
 	public TreasureType _treasureType; //this is my type (color)
 
 	[SerializeField]
-	private TreasureState myState = TreasureState.notPickedUp; //this is my state
+	public TreasureState myState = TreasureState.notPickedUp; //this is my state
 
 	[SerializeField]
 	public int MyIndex; //this is my index, we will be saving treasures by index so we can not load in collected treasures
@@ -71,20 +71,39 @@ public class Treasure : MonoBehaviour {
 }
 
 [Serializable]
-public class SerializableTreasure{
+public class SerializableTreasure : IEquatable<Treasure>{
 
 	[SerializeField]
 	public TreasureType _treasureType; //this is my type (color)
 
 	[SerializeField]
-	private TreasureState myState = TreasureState.notPickedUp; //this is my state
+	public TreasureState myState = TreasureState.notPickedUp; //this is my state
 
 	[SerializeField]
 	public int MyIndex;
 
 	public SerializableTreasure(Treasure inputTreasure){
+		_treasureType = inputTreasure._treasureType;
+		myState = inputTreasure.myState;
+		MyIndex = inputTreasure.MyIndex;
 
 	}
+
+	public SerializableTreasure returnTreasure{
+		get{
+			return this;
+		}
+	}
+
+
+	public bool Equals(Treasure myTreas){
+		if (MyIndex == myTreas.MyIndex) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	//curUnit.unitStaticData = unitBase.Find(UnitBaseData => UnitBaseData.unit_id == curUnit.unitClassID).unitStats;
 
 
 }

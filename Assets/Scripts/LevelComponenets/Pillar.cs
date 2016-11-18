@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using FMODUnity;
 
 public class Pillar : MonoBehaviour {
 	public Transform pillarRoot;
@@ -7,6 +8,8 @@ public class Pillar : MonoBehaviour {
 	public Transform platformPoint;
 	float fallspeed;
 	public float fallAngle;
+    public StudioEventEmitter target;
+    bool startedPlaying = false;
 
 	bool resetting = false;
 
@@ -45,7 +48,11 @@ public class Pillar : MonoBehaviour {
 
 		if(col.gameObject.tag == ("Player")){
 			InvokeRepeating("Fall", 0.01f,0.01f);
-				
+            if (!startedPlaying)
+            {
+                target.Play();
+                startedPlaying = true;
+            }
 			myTrigger.enabled = false;
 		
 		}

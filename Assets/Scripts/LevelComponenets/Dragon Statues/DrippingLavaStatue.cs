@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using FMODUnity;
 
 public class DrippingLavaStatue : MonoBehaviour {
     [Tooltip("Override for playtesting (or other reasons). Make this true if you want to activate it before the relic is grabbed")]
@@ -11,7 +12,7 @@ public class DrippingLavaStatue : MonoBehaviour {
     [Tooltip("How fast does the drip go? 10 is slow, 20 is fast. Anything lower is super slow anything higher is super fast. 17 is a good middle.")]
     public float gravityInfluence;
     Quaternion spawnQ = Quaternion.Euler(0, 0, 0);
-
+    public StudioEventEmitter target;
     bool activated = false;
     public GameObject firedrip_;
 
@@ -33,7 +34,8 @@ public class DrippingLavaStatue : MonoBehaviour {
     void SpawnLava()
     {
         //Start Instantiating drips with the user defined values
-        GameObject firedrip = (GameObject)Instantiate(firedrip_, firedrip_.GetComponent<Transform>().position, spawnQ);
+        target.Play();
+        GameObject firedrip = (GameObject)Instantiate(firedrip_, this.transform.position, this.transform.rotation);
         firedrip.GetComponent<FireDrip>().gravityRate = gravityInfluence;
         firedrip.gameObject.SetActive(true);
     }

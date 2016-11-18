@@ -17,21 +17,44 @@ public class PlayerAnimationController : MonoBehaviour {
 
 
     // Use this for initialization
-    void Awake()
+    void Start()
     {
-        animController = GetComponent<Animator>();
-        animParams = animController.parameters;
-        charController = gameObject.AddComponent<Assets.Scripts.Character.CharController>();
-        dash = this.gameObject.GetComponent<Dash>();
-        playerMovement = this.gameObject.GetComponent<PlayerMovement>();
-        jumping = this.gameObject.GetComponent<Jumping>();
-        _characterController = gameObject.GetComponent<CharacterController>();
-        anim = gameObject.GetComponent<Animator>();
+		Init();
     }
 
     // Update is called once per frame
     void FixedUpdate () {
-        DetermineAnimatorParams();
+		Debug.Log(CharController.Instance);
+		if(CharController.Instance == null)
+		{
+
+		}
+		else
+		{
+			if(charController == null)
+			{
+				Init();
+				charController = CharController.Instance;
+			}
+
+			DetermineAnimatorParams();
+		}
+
+     
+	}
+
+	void Init()
+	{
+		animController = GetComponent<Animator>();
+		animParams = animController.parameters;
+		//charController = gameObject.AddComponent<Assets.Scripts.Character.CharController>();
+		charController = CharController.Instance;
+		dash = this.gameObject.GetComponent<Dash>();
+		playerMovement = this.gameObject.GetComponent<PlayerMovement>();
+		jumping = this.gameObject.GetComponent<Jumping>();
+		_characterController = gameObject.GetComponent<CharacterController>();
+		anim = gameObject.GetComponent<Animator>();
+
 	}
 
     void DetermineAnimatorParams()

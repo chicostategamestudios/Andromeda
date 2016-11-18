@@ -10,12 +10,13 @@ public class PauseMenuYesNo : MonoBehaviour {
 	private CursorIndexTracker myCursorIndex;
 	private float selectedValue;
 
-	[SerializeField]
+	
 	private int mainMenuSceneIndex, levelSelectSceneIndex;
 
 	// Use this for initialization
 	void Start () {
-
+		mainMenuSceneIndex = SceneRef.getMainMenu;
+		levelSelectSceneIndex = SceneRef.getLevelSelect;
 		myCursorIndex = this.GetComponent<CursorIndexTracker> ();
 	
 	}

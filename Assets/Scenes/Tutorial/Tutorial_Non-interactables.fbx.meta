@@ -1,15 +1,42 @@
 fileFormatVersion: 2
-guid: 440f36b7cf7c30448a355026bcb050c1
-timeCreated: 1473199410
+guid: 057b9e73055f36246a01ebc17c74de45
+timeCreated: 1479252521
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: bridgeWooden_ropeBend_01_lod0_mesh
+    100000: Non_Interactable1
+    100002: Non_Interactable2
+    100004: Non_Interactable3
+    100006: Non_Interactable4
+    100008: Non_Interactable5
+    100010: Non_Interactable6
+    100012: //RootNode
+    400000: Non_Interactable1
+    400002: Non_Interactable2
+    400004: Non_Interactable3
+    400006: Non_Interactable4
+    400008: Non_Interactable5
+    400010: Non_Interactable6
+    400012: //RootNode
+    2300000: Non_Interactable1
+    2300002: Non_Interactable2
+    2300004: Non_Interactable3
+    2300006: Non_Interactable4
+    2300008: Non_Interactable5
+    2300010: Non_Interactable6
+    3300000: Non_Interactable1
+    3300002: Non_Interactable2
+    3300004: Non_Interactable3
+    3300006: Non_Interactable4
+    3300008: Non_Interactable5
+    3300010: Non_Interactable6
+    4300000: Non_Interactable1
+    4300002: Non_Interactable2
+    4300004: Non_Interactable3
+    4300006: Non_Interactable4
+    4300008: Non_Interactable5
+    4300010: Non_Interactable6
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -18,7 +45,7 @@ ModelImporter:
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    resampleCurves: 1
+    resampleRotations: 1
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 

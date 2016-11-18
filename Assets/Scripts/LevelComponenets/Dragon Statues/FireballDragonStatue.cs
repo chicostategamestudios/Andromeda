@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using FMODUnity;
 
 public class FireballDragonStatue : MonoBehaviour {
     [Tooltip("Override for playtesting (or other reasons). Make this true if you want to activate it before the relic is grabbed")]
@@ -13,6 +14,7 @@ public class FireballDragonStatue : MonoBehaviour {
     [Tooltip("How fast does the fireball go? 5 is slow, 15 is fast. Anything lower is super slow anything higher is super fast. 10 is a good middle. Negative numbers go left.")]
     public float speedOfFireball;
     Quaternion spawnQ = Quaternion.Euler(0, 0, 0);
+    public StudioEventEmitter target;
 
 	public Transform launchPoint;
 	Vector3 launchFrom;
@@ -42,6 +44,7 @@ public class FireballDragonStatue : MonoBehaviour {
     void SpawnFireball()
     {
         //Start Instantiating fireballs with the user defined values
+        target.Play();
 		GameObject fireball = (GameObject) Instantiate(fireball_, launchFrom, spawnQ);
 		Fireball _fireBall = fireball.GetComponent<Fireball> ();
 		_fireBall.lifetime = lifetimeOfFireball;
