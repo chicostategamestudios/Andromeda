@@ -42,10 +42,6 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
-	public static LevelStats getCurLevel{
-		get{ return curLevel; }
-	}
-
 	public static void LoadGame(int gameToLoad){ //this will go to my gamesaver and set my currently loaded game file
 		switch (gameToLoad) { //this is ran by the UI
 		case 0:
@@ -65,7 +61,20 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public static void LoadLevel(LevelToUnlock level){ //run this when we load a level through the UI
-		curLevel = loadedGame.GetStats (level);
+		
+
+
+		if (level == LevelToUnlock.tutorial)
+		{
+			curLevel = loadedGame.TutorialLevelStats;
+
+		}
+		else
+		{
+			curLevel = loadedGame.GetStats(level);
+		}
+
+	
 	}
 
 	public static void UpdateSave(LevelData myNewData){ //call this when we need to update the save of a level or something
@@ -76,6 +85,8 @@ public class GameManager : MonoBehaviour {
 
 
 	static LevelStats updateFile(LevelStats input, LevelData newData){ //run this to update the file
+		Debug.Log(input == null);
+		Debug.Log(newData == null);
 		LevelStats returnFile = input;
 		/*place all the information updating here!!
 		 * 
@@ -84,28 +95,10 @@ public class GameManager : MonoBehaviour {
 		 * 
 		 * */ 
 		returnFile.completionTime = newData.getFinaltime;
-
-		for (int tres = 0; tres < newData.getTreasure(TreasureType.red).Count; tres++) {
-			returnFile.RedTreasuresRemaining.Add (new SerializableTreasure (newData.getTreasure (TreasureType.red) [tres]));
-		}
-		for (int tres = 0; tres < newData.getTreasure(TreasureType.blue).Count; tres++) {
-			returnFile.BlueTreasuresRemaining.Add (new SerializableTreasure (newData.getTreasure (TreasureType.blue) [tres]));
-		}
-		for (int tres = 0; tres < newData.getTreasure(TreasureType.green).Count; tres++) {
-			returnFile.GreenTreasuresRemaining.Add (new SerializableTreasure (newData.getTreasure (TreasureType.green) [tres]));
-		}
-		for (int tres = 0; tres < newData.getTreasure(TreasureType.yellow).Count; tres++) {
-			returnFile.YellowTreasuresRemaining.Add (new SerializableTreasure (newData.getTreasure (TreasureType.yellow) [tres]));
-		}
-
-
 	//	returnFile.RedTreasuresRemaining = newData.getTreasure (TreasureType.red);
-
-
-
-//		returnFile.BlueTreasuresRemaining = newData.getTreasure (TreasureType.blue);
-//		returnFile.GreenTreasuresRemaining = newData.getTreasure (TreasureType.green);
-//		returnFile.YellowTreasuresRemaining = newData.getTreasure (TreasureType.yellow);
+	//	returnFile.BlueTreasuresRemaining = newData.getTreasure (TreasureType.blue);
+	//	returnFile.GreenTreasuresRemaining = newData.getTreasure (TreasureType.green);
+	//	returnFile.YellowTreasuresRemaining = newData.getTreasure (TreasureType.yellow);
 		returnFile.locked = false;	 
 
 		return returnFile;
@@ -116,3 +109,4 @@ public class GameManager : MonoBehaviour {
 
 
 }
+

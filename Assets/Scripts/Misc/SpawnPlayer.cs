@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Assets.Scripts.Components;
+using Assets.Scripts.Character;
 
 public class SpawnPlayer : MonoBehaviour {
 
@@ -8,17 +9,17 @@ public class SpawnPlayer : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
 		//Transform spawnPoint = GameObject.FindGameObjectWithTag ("StartPoint").transform;
+		//who the *&^
+		Time.timeScale = 1;
+		GameObject newPlayr =(GameObject)Instantiate (player, transform.position, Quaternion.Euler(0, 0, 0));
 
-		Instantiate (player, transform.position, Quaternion.Euler(0, 0, 0));
+		newPlayr.GetComponent<CharController>().Init();
+		
+	//	CharController.Instance.Init();
+		
+		
 		if (player.gameObject.GetComponent<RelicManager> () != null) {
-			if (GameManager.GetGameStats != null) {
-				RelicManager newValues = GameManager.GetGameStats.assignAbilities (player.gameObject.GetComponent<RelicManager> ());
-				RelicManager playerValues = player.gameObject.GetComponent<RelicManager> ();
-				playerValues.dashRelic = newValues.dashRelic;
-				playerValues.jumpRelic = newValues.jumpRelic;
-				playerValues.slashRelic = newValues.slashRelic;
-				playerValues.wallJumpRelic = newValues.wallJumpRelic;
-			}
+
 		} else {
 		//	Debug.LogError("Player 
 		}

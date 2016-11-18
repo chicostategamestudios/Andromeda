@@ -6,12 +6,17 @@ public class EnterSelectedLevel : MonoBehaviour {
 
 	private CursorIndexTracker myCursorIndex;
 
-	[SerializeField]
+	
 	private int starterSceneIndex, earthSceneIndex, windSceneIndex,
 	fireSceneIndex, iceSceneIndex;
 
 	void Start(){
 		myCursorIndex = this.GetComponent<CursorIndexTracker> ();
+		starterSceneIndex = SceneRef.getTutorial;
+		earthSceneIndex = SceneRef.getEarthLevel;//does not exist yet, temp holder
+		windSceneIndex = SceneRef.getWindLevel;
+		fireSceneIndex = SceneRef.getFireLevel;
+		iceSceneIndex = SceneRef.getIcelevel;
 	}
 
 	void Update () {

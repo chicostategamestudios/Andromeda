@@ -18,8 +18,19 @@ public class GameSelectCursorBehavior : MonoBehaviour {
 
 	void LoadLevels (int whichLevel){
 		if (Input.GetButtonDown ("Submit")) {
-			SceneManager.LoadScene (whichLevel);
-			GameManager.LoadGame (myCursor.currentCursorIndex);
+		
+			GameManager.LoadGame(myCursor.currentCursorIndex);
+
+			if (GameManager.GetGameStats.TutorialLevelStats.locked)
+			{
+				GameManager.LoadLevel(LevelToUnlock.tutorial);
+				SceneManager.LoadScene(SceneRef.getTutorial);
+			}
+			else
+			{
+				SceneManager.LoadScene(SceneRef.getLevelSelect);
+			}		
+		
 		}
 	}
 }

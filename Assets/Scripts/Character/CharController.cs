@@ -10,11 +10,16 @@ namespace Assets.Scripts.Character
 		private static CharController _instance;
 		public static CharController Instance{
 			get{
-				_instance = _instance ?? GameObject.FindGameObjectWithTag("Player").GetComponent<CharController> ();
+				_instance = _instance ?? GameObject.FindObjectOfType<CharController> ();
 				if (_instance == null) {
 					Debug.LogWarning ("No CharController in scene but an object is attempted to access it");
 				}
 				return _instance;
+			}
+
+			set
+			{
+			//	_instance = value;
 			}
 		}
 		Components.PlayerMovement _movement;
@@ -25,8 +30,22 @@ namespace Assets.Scripts.Character
 
 		float playerDirection;
 		public float lastDir =1f;
-        public bool dashing = false;
         public bool jumping = false;
+
+		public void endScene()
+		{
+
+		//	_instance = null;
+		//	Instance = null;
+		}
+
+		public  void Init()
+		{
+			_instance = this.gameObject.GetComponent<CharController>();
+			return;
+		}
+
+
 		void Awake(){
 			_movement = gameObject.AddComponent<Components.PlayerMovement> ();
 			_relics = gameObject.AddComponent<Components.RelicManager> ();
@@ -60,50 +79,42 @@ namespace Assets.Scripts.Character
 			if (Mathf.Abs (horzInput) > 0.15f) {
 				if (horzInput > 0) {
 					playerDirection = 1f;
-                    if (lastDir != 1f)
-                    {
-                        transform.rotation = Quaternion.Euler(new Vector3(0, transform.rotation.eulerAngles.y * -1, 0));
+                    if (lastDir != 1f) {
+                        transform.rotation = Quaternion.Euler(new Vector3(0, transform.rotation.eulerAngles.y * lastDir, 0)); 
                     }
                     lastDir = 1f;
-
-                }
-                if (horzInput < 0) {
+                    
+				}
+				if (horzInput < 0) {
 					playerDirection = -1f;
                     if (lastDir != -1f)
                     {
-                        transform.rotation = Quaternion.Euler(new Vector3(0, transform.rotation.eulerAngles.y * -1, 0));
+                        transform.rotation = Quaternion.Euler(new Vector3(0, transform.rotation.eulerAngles.y * -lastDir, 0));
                     }
                     lastDir = -1f;
-
-                }
-            } else {
+				}
+			} else {
 				playerDirection = 0f;
 			}
 
 
 				//if ((Input.GetKeyDown(KeyCode.Space))
-				if(Input.GetButtonDown("Fire1"))
+					if(Input.GetButtonDown("Fire1"))
 				{
 				    _movement.JumpPlayer(playerDirection);
                     jumping = true;
-				}
-                else
-                {
+				} else {
                     jumping = false;
                 }
 			
 				//if (Input.GetKeyDown (KeyCode.LeftShift)) {
-			if(Input.GetButtonDown("Fire2")){
-                dashing = true;
+					if(Input.GetButtonDown("Fire2")){
 				_movement.DashPlayer();
-				}
-            else
-            {
-                dashing = false;
-            }
+				} 
 
-            if (Input.GetButtonDown ("Fire3")) {
-				_slash.SlashAttack (lastDir);
+			if (Input.GetButtonDown ("Fire3")) {
+                _slash.SlashAttack(lastDir);
+                Debug.Log("Fire3 pressed");
 			}
 		
 

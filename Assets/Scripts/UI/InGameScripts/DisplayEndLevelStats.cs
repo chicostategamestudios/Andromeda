@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Assets.Scripts.Character;
 
 public class DisplayEndLevelStats : MonoBehaviour {
 
@@ -67,7 +68,12 @@ public class DisplayEndLevelStats : MonoBehaviour {
 	void Update () {
 
 		if (Input.GetButton ("Start")) {
-			SceneManager.LoadScene (SceneRef.LevelSelect);
+			CharController myCont = CharController.Instance;
+			myCont.endScene();
+
+			//CharController.endScene();
+			SceneManager.LoadScene (SceneRef.getLevelSelect);
+			
 		}
 
 
