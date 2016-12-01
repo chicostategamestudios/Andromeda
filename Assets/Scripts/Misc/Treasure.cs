@@ -63,9 +63,10 @@ public class Treasure : MonoBehaviour {
 			myState = newState;
 			break;
 		}
-
-
 	}
+
+
+
 
 
 }

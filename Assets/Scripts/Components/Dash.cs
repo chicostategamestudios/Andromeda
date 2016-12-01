@@ -4,7 +4,7 @@ using System.Collections;
 
 namespace Assets.Scripts.Components
 {
-	
+
 
 	public class Dash: CustomComponentBase {
 		public enum DashPhase{
@@ -19,7 +19,7 @@ namespace Assets.Scripts.Components
 		float dashPhase = 0f;
 		float dashSpeedIncrease = 30f;
 		float dashJumpHeight = 15f;
-		bool Dashing;
+		public bool Dashing;
 		bool facingRight = true;
 		float dashDir;
 		float lockedDashDur = 0.5f;
@@ -39,7 +39,7 @@ namespace Assets.Scripts.Components
 			}
 
 			if (grounded) {
-				
+
 				ResetDashing ();
 			}
 
@@ -51,6 +51,7 @@ namespace Assets.Scripts.Components
 			}
 
 			if (currentPhase == DashPhase.startingLock) { //inputted the dash button, now start timers for locked dash and checking to reset dash
+
 				if (facingRight) { //we use playerDirection to decide which direction we dash										//
 					dashDir = 1f;
 				} else {
@@ -58,11 +59,12 @@ namespace Assets.Scripts.Components
 				}
 				//grounded = false; 
 				PlayerMovement.overrideInput = true;
+				Dashing = true;
 
 
 				//StartCoroutine ("SetBoost"); //dashing speed is reset upon touching the ground, set boost prevents 
 				PlayerMovement.verticleSpeed = dashJumpHeight; //the ground check from checking if we are grounded until a small amount of time has passed
-			
+
 				PlayerMovement.speed = dashSpeedIncrease; //speed up the character to boosted speed 
 				PlayerMovement.moveVector = new Vector2(dashDir *dashSpeedIncrease, PlayerMovement.verticleSpeed);
 
@@ -88,11 +90,12 @@ namespace Assets.Scripts.Components
 			//dashPhase = 0f;
 			canDash = true;
 			if (currentPhase == DashPhase.resting) {
-			//	return;
+				//	return;
 			}
 
 			StopCoroutine ("SetDashing");
 			currentPhase = DashPhase.resting;
+			Dashing = false;
 			PlayerMovement.overrideInput = false;
 			PlayerMovement.speed = PlayerMovement.normalSpeed;
 		}
@@ -101,7 +104,7 @@ namespace Assets.Scripts.Components
 			if (!canDash || (currentPhase != DashPhase.resting)) {
 				return;
 			}
-	
+
 			if (currentPhase == DashPhase.resting) {
 				canDash = false;
 				currentPhase = DashPhase.startingLock;
@@ -118,6 +121,7 @@ namespace Assets.Scripts.Components
 
 			PlayerMovement.speed = PlayerMovement.normalSpeed;
 			currentPhase = DashPhase.resting;
+			Dashing = false;
 
 		}
 

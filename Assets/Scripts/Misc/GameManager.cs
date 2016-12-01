@@ -30,6 +30,9 @@ public class GameManager : MonoBehaviour {
 			}
 		}
 	}
+	public static LevelStats getCurLevel{
+				get{ return curLevel; }
+			}
 
 	public static GameStats GetGameStats{ //getter for our game file to ref for stats
 		get { 

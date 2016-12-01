@@ -75,28 +75,44 @@ public class TreasureManager : MonoBehaviour {
 
 
 		switch (myTreasure._treasureType){
-		case TreasureType.blue:
-			blueTreasure.Add (myTreasure);
+		case TreasureType.blue:			
 			if (GameManager.GetGameStats != null) {
-				myTreasure.ChangeState (GameManager.getCurLevel.getMyState (TreasureType.blue, myTreasure.MyIndex));
+				if (GameManager.getCurLevel.getMyState (TreasureType.blue, myTreasure.MyIndex) != TreasureState.pickedUp) {
+					blueTreasure.Add (myTreasure);
+				} else {
+					myTreasure.gameObject.SetActive (false);
+					myTreasure.gameObject.transform.position = new Vector3 (0, 0, -20f); //we're going to disable and move all of the used treasures that way there's no way the player encounters them
+				//	myTreasure.ChangeState (GameManager.getCurLevel.getMyState (TreasureType.blue, myTreasure.MyIndex));
+				}
 			}
 		break;
 		case TreasureType.red:
-			redTreasure.Add (myTreasure);
 			if (GameManager.GetGameStats != null) {
-				myTreasure.ChangeState (GameManager.getCurLevel.getMyState (TreasureType.red, myTreasure.MyIndex));
+				if (GameManager.getCurLevel.getMyState (TreasureType.red, myTreasure.MyIndex) != TreasureState.pickedUp) {
+					redTreasure.Add (myTreasure);
+				} else {
+					myTreasure.gameObject.SetActive (false);
+					myTreasure.gameObject.transform.position = new Vector3 (0, 0, -20f); //we're going to disable and move all of the used treasures that way there's no way the player encounters them
+				}
 			}
 		break;
 		case TreasureType.green:
-			greenTreasure.Add (myTreasure);
 			if (GameManager.GetGameStats != null) {
-				myTreasure.ChangeState (GameManager.getCurLevel.getMyState (TreasureType.green, myTreasure.MyIndex));
+				if (GameManager.getCurLevel.getMyState (TreasureType.green, myTreasure.MyIndex) != TreasureState.pickedUp) {
+					greenTreasure.Add (myTreasure);
+				} else {
+					myTreasure.gameObject.SetActive (false);
+					myTreasure.gameObject.transform.position = new Vector3 (0, 0, -20f); //we're going to disable and move all of the used treasures that way there's no way the player encounters them
+				}
+
 			}
 		break;
 		case TreasureType.yellow:
-			yellowTreasure.Add (myTreasure);
-			if (GameManager.GetGameStats != null) {
-				myTreasure.ChangeState (GameManager.getCurLevel.getMyState (TreasureType.yellow, myTreasure.MyIndex));
+			if (GameManager.getCurLevel.getMyState (TreasureType.yellow, myTreasure.MyIndex) != TreasureState.pickedUp) {
+				yellowTreasure.Add (myTreasure);
+			} else {
+				myTreasure.gameObject.SetActive (false);
+				myTreasure.gameObject.transform.position = new Vector3 (0, 0, -20f); //we're going to disable and move all of the used treasures that way there's no way the player encounters them
 			}
 		break;
 		}
