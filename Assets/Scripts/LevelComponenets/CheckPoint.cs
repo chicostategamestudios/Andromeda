@@ -5,15 +5,20 @@ using Assets.Scripts.Components;
 public class CheckPoint : MonoBehaviour {
 	Transform myChild;
 
+	Object myObj;
+
 	public LavaChunk SnapToThisLava;
 		//Set this lava chunk if you want to have the lava wall to snap to this chunks location when
 		//the player passes through this checkpoint
 
 
 	void Start(){
-		if (this.gameObject.transform.childCount > 1) {
+        /*
+        if (this.gameObject.transform.childCount > 1) {
 			Debug.LogError ("For some reason the checkpoint: " + this.transform.name + "has way too many children");
 		}
+        */
+
 
 		myChild = this.gameObject.transform.GetChild (0);
 

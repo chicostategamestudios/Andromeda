@@ -14,8 +14,8 @@ public class Lava : MonoBehaviour {
 	void OnTriggerEnter(Collider col){
 		if (col.gameObject.tag == "Player") {
 			col.GetComponent<Health> ().TakeDamage (LavaDamage);
-	
-			col.GetComponent<Death> ().PlayerDeath () ;
+            Debug.Log("begining to die (on the inside)");
+            col.GetComponent<Death> ().PlayerDeath () ;
 		
 
 		}

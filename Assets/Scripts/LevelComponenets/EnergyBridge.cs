@@ -21,7 +21,7 @@ public class EnergyBridge : MonoBehaviour {
     [Tooltip("An excellent tip may be, that this here varible will stay the way that you currently see...")]
     public GameObject bridge;
     // Use this for initialization
-    void Start()
+    void asdfStart()
     {
         //If bridge is on, leave the collider on
         //If it's off, turn the collider off,
@@ -52,7 +52,7 @@ public class EnergyBridge : MonoBehaviour {
         //If the bridge type changes for whatever reason, then change the behavior of this bridge
         if(bridgeType != privateBridgeType)
         {
-            ChangeBehavoir();
+         //   ChangeBehavoir();
         }
     }
     
@@ -60,7 +60,7 @@ public class EnergyBridge : MonoBehaviour {
         //Cancels any invokes that could be happening and then calls start again where it will reinstance the bridge type
         CancelInvoke("BridgeOn");
         CancelInvoke("BridgeOff");
-        Start();
+       // Start();
     }
 
     void BridgeOn() {

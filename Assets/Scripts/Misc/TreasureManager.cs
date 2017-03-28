@@ -71,21 +71,73 @@ public class TreasureManager : MonoBehaviour {
 
 
 	public void AddTreasure(Treasure myTreasure){ //Ran by anything with the Treasure componenet, this will sort them and add them to the appropriate scripts
-		switch (myTreasure._treasureType){
-		case TreasureType.blue:
-			blueTreasure.Add (myTreasure);
-		break;
-		case TreasureType.red:
-			redTreasure.Add (myTreasure);
-		break;
-		case TreasureType.green:
-			greenTreasure.Add (myTreasure);
-		break;
-		case TreasureType.yellow:
-			yellowTreasure.Add (myTreasure);
-		break;
-		}
-	}
+        switch (myTreasure._treasureType)
+        {
+            case TreasureType.blue:
+                if (GameManager.GetGameStats != null)
+                {
+                
+                    if (GameManager.getCurLevel.getMyState(TreasureType.blue, myTreasure.MyIndex) != TreasureState.pickedUp)
+                    {
+                        blueTreasure.Add(myTreasure);
+                  
+                    }
+                    else
+                    {
+                     //   blueTreasure.Add(myTreasure);
+                        myTreasure.gameObject.SetActive(false);
+                        myTreasure.gameObject.transform.position = new Vector3(0, 0, -20f); //we're going to disable and move all of the used treasures that way there's no way the player encounters them
+                                                                                            //	myTreasure.ChangeState (GameManager.getCurLevel.getMyState (TreasureType.blue, myTreasure.MyIndex));
+                    }
+                }
+                break;
+            case TreasureType.red:
+                if (GameManager.GetGameStats != null)
+                {
+                 //   Debug.Log(GameManager.getCurLevel.getMyState(TreasureType.red, myTreasure.MyIndex));
+                    if (GameManager.getCurLevel.getMyState(TreasureType.red, myTreasure.MyIndex) != TreasureState.pickedUp)
+                    {
+                        redTreasure.Add(myTreasure);
+                    }
+                    else
+                    {
+                        //    Debug.Log("not picked up");
+                       // redTreasure.Add(myTreasure);
+                        myTreasure.gameObject.SetActive(false);
+                        myTreasure.gameObject.transform.position = new Vector3(0, 0, -20f); //we're going to disable and move all of the used treasures that way there's no way the player encounters them
+                    }
+                }
+                break;
+            case TreasureType.green:
+                if (GameManager.GetGameStats != null)
+                {
+                    if (GameManager.getCurLevel.getMyState(TreasureType.green, myTreasure.MyIndex) != TreasureState.pickedUp)
+                    {
+                        greenTreasure.Add(myTreasure);
+                    }
+                    else
+                    {
+                        //greenTreasure.Add(myTreasure);
+                        myTreasure.gameObject.SetActive(false);
+                        myTreasure.gameObject.transform.position = new Vector3(0, 0, -20f); //we're going to disable and move all of the used treasures that way there's no way the player encounters them
+                    }
+
+                }
+                break;
+            case TreasureType.yellow:
+                if (GameManager.getCurLevel.getMyState(TreasureType.yellow, myTreasure.MyIndex) != TreasureState.pickedUp)
+                {
+                    yellowTreasure.Add(myTreasure);
+                }
+                else
+                {
+                   // yellowTreasure.Add(myTreasure);
+                    myTreasure.gameObject.SetActive(false);
+                    myTreasure.gameObject.transform.position = new Vector3(0, 0, -20f); //we're going to disable and move all of the used treasures that way there's no way the player encounters them
+                }
+                break;
+        }
+    }
 
 	public int getCollectedTreasureAmount(TreasureType color){
 		int collectedAmount = 0;
@@ -169,12 +221,67 @@ public class TreasureManager : MonoBehaviour {
 
 
 	public void RespawnRelic(){
-		if (redTreasure.Count > 0) {
+        bool foundTreasure = false;
+
+        //search for a redtreasure and make it lost
+        if (!foundTreasure)
+        {
+            for (int i = 0; i < blueTreasure.Count; i++)
+            {
+                if (blueTreasure[i].IsCollected && !foundTreasure)
+                {
+                    blueTreasure[i].ChangeState(TreasureState.lost);
+                    foundTreasure = true;
+                }
+            }
+        }
+        //if you haven't found a red treasure, search for a blue treasure to make lost
+        if(!foundTreasure)
+        {
+            for (int i = 0; i < redTreasure.Count; i++)
+            {
+                if (redTreasure[i].IsCollected && !foundTreasure)
+                {
+                    redTreasure[i].ChangeState(TreasureState.lost);
+                    foundTreasure = true;
+                }
+            }
+            
+        }
+        //if you haven't found a red or blue treasure make a green treasure lost
+        if (!foundTreasure)
+        {
+            for (int i = 0; i < greenTreasure.Count; i++)
+            {
+                if (greenTreasure[i].IsCollected && !foundTreasure)
+                {
+                    greenTreasure[i].ChangeState(TreasureState.lost);
+                    foundTreasure = true;
+                }
+            }
+        }
+        //if you haven't found any treasure, make a yellow lost
+        if (!foundTreasure)
+        {
+            for (int i = 0; i < yellowTreasure.Count; i++)
+            {
+                if (yellowTreasure[i].IsCollected && !foundTreasure)
+                {
+                    yellowTreasure[i].ChangeState(TreasureState.lost);
+                    foundTreasure = true;
+                }
+            }
+        }
+
+        //Legacy code
+        /*
+        if (redTreasure.Count > 0) {
 			redTreasure [Random.Range (0, redTreasure.Count - 1)].ChangeState (TreasureState.lost);
 			//respawn red
 		} else if (yellowTreasure.Count > 0) {
 			yellowTreasure [Random.Range (0, yellowTreasure.Count - 1)].ChangeState (TreasureState.lost);
 			//respawn yellow
+
 		} else if (blueTreasure.Count > 0) {
 			blueTreasure [Random.Range (0, blueTreasure.Count - 1)].ChangeState (TreasureState.lost);
 			//respawn blue
@@ -183,7 +290,7 @@ public class TreasureManager : MonoBehaviour {
 			//respawn green
 		} else {
 			//nothin
-		}
+		}*/
 	}
 
 

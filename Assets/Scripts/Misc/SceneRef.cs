@@ -52,4 +52,10 @@ public static class SceneRef{
 		get { return earth; }
 	}
 
+	private static int final = 7;
+
+	public static int getFinalLevel
+	{
+		get { return final; }
+	}
 }

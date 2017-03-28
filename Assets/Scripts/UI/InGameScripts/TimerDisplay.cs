@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿//Original Author:  | Last Edited: Ying Xiong | Modified on Feb 09, 2017
+//This script's purpose is to display the time run's time
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
@@ -10,17 +12,26 @@ public class TimerDisplay : MonoBehaviour {
 
 	private float timer = 0.0f;
 
-	bool UpdateTime = true;
+    [HideInInspector]
+    public bool UpdateTime;
 
 	// Use this for initialization
 	void Start () {
+        UpdateTime = false;
 		myTimer = this;
 		MyTimerText = this.GetComponent<Text>();
-	
-	}
+        MyTimerText.text = TimeToString();
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
+        
+        // Returns the function until the player hits the teleport
+        if(!UpdateTime)
+            return;
+
+        // Time will start running once Phase 2 has started
 		if (UpdateTime) {
 			timer += Time.deltaTime;
 			if (MyTimerText != null) {

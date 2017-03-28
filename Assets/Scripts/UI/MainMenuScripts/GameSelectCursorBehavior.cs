@@ -29,8 +29,20 @@ public class GameSelectCursorBehavior : MonoBehaviour {
 			else
 			{
 				SceneManager.LoadScene(SceneRef.getLevelSelect);
-			}		
+			}
+
+
+			
+			
 		
 		}
 	}
+
+	void LoadTutorialLevel()
+	{
+
+
+	}
+
+
 }

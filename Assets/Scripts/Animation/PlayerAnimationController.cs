@@ -13,57 +13,62 @@ public class PlayerAnimationController : MonoBehaviour {
     PlayerMovement playerMovement;
     Jumping jumping;
     CharacterController _characterController;
-    Animator anim; 
-
-
+    Animator anim;
+    WallGrab _wallGrab;
+    Slash slash;
+    public LayerMask groundLayer;
+    private bool canIdle = true;
+    private float timeLeft = 8f;
+    private bool timerStarted;
     // Use this for initialization
-    void Start()
+    void Awake()
     {
-		Init();
+        animController = GetComponent<Animator>();
+        animParams = animController.parameters;
+        charController = gameObject.AddComponent<Assets.Scripts.Character.CharController>();
+        dash = this.gameObject.GetComponent<Dash>();
+        playerMovement = this.gameObject.GetComponent<PlayerMovement>();
+        jumping = this.gameObject.GetComponent<Jumping>();
+        _characterController = gameObject.GetComponent<CharacterController>();
+        anim = gameObject.GetComponent<Animator>();
+        _wallGrab = gameObject.GetComponent<WallGrab>();
+        slash = this.gameObject.GetComponent<Slash>();
     }
 
     // Update is called once per frame
     void FixedUpdate () {
-		Debug.Log(CharController.Instance);
-		if(CharController.Instance == null)
-		{
-
-		}
-		else
-		{
-			if(charController == null)
-			{
-				Init();
-				charController = CharController.Instance;
-			}
-
-			DetermineAnimatorParams();
-		}
-
-     
-	}
-
-	void Init()
-	{
-		animController = GetComponent<Animator>();
-		animParams = animController.parameters;
-		//charController = gameObject.AddComponent<Assets.Scripts.Character.CharController>();
-		charController = CharController.Instance;
-		dash = this.gameObject.GetComponent<Dash>();
-		playerMovement = this.gameObject.GetComponent<PlayerMovement>();
-		jumping = this.gameObject.GetComponent<Jumping>();
-		_characterController = gameObject.GetComponent<CharacterController>();
-		anim = gameObject.GetComponent<Animator>();
-
+        DetermineAnimatorParams();
 	}
 
     void DetermineAnimatorParams()
     {
-        animController.SetBool("Moving", playerMovement.moving);
-        Debug.DrawRay(transform.position + (new Vector3(0, 1, 0)), -transform.up * 1f);
-        if (Physics.Raycast(transform.position + (new Vector3( 0,1,0)), -transform.up, 1f))
+        if (charController.horzInput >= 0.15f || charController.horzInput <= -0.15f)
         {
-            animController.SetBool("Grounded", true);
+            animController.SetBool("Moving", true);
+            canIdle = false;
+            timerStarted = false;
+            timeLeft = 3f;
+        }
+        else
+        {
+            if (canIdle == true)
+            {
+                animController.SetBool("Moving", false);
+                timeLeft -= Time.deltaTime;
+                if (timeLeft < 0)
+                {
+                    Debug.Log("ya");
+                    timerStarted = false;
+                    timeLeft = 8f;
+                }
+
+
+            }
+            IdleWait();
+        }
+        if (Physics.Raycast(transform.position + (new Vector3( 0,1,0)), -transform.up, 2.5f, groundLayer))
+        {
+                animController.SetBool("Grounded", true);
         }
         else
         {
@@ -78,6 +83,16 @@ public class PlayerAnimationController : MonoBehaviour {
         {
             animController.SetBool("HasDashed", false);
         }
+
+        if(slash.slashing)
+        {
+            animController.SetBool("Slash", true);
+        }
+        else if (!slash.slashing)
+        {
+            animController.SetBool("Slash", false);
+        }
+
         animController.SetFloat("JumpStage", jumping.jumpStage);
         animController.SetBool("HitCeiling", playerMovement.hitCeiling);
 
@@ -105,6 +120,27 @@ public class PlayerAnimationController : MonoBehaviour {
         {
             animController.SetBool("DoubleJump", false);
         }
+        if (playerMovement.walled != 0)
+        {
+            animController.SetBool("Walled", true);
+            if (Physics.Raycast(transform.position + (new Vector3(0, 1, 0)), -transform.up, .4f, groundLayer))
+            {
+                animController.SetBool("Grounded", true);
+            }
+        }
+        else
+        {
+            animController.SetBool("Walled", false);
+        }
+        if (_wallGrab.wallDir != 0)
+        {
+            animController.SetBool("CloseWall", true);
+        }
+        else
+        {
+            animController.SetBool("CloseWall", false);
+        }
+        animController.SetFloat("WallJumps", jumping.wallJumps);
     }
 
 
@@ -121,8 +157,14 @@ public class PlayerAnimationController : MonoBehaviour {
         }
     }
 
-    //check Dash script for the enum. when enum is in startingLock
+    void IdleWait()
+    {
+        canIdle = true;
+    }
+
+    void IdleTime()
+    {
 
 
-
+    }
 }

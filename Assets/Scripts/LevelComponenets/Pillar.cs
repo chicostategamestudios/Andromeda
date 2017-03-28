@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-using FMODUnity;
+//using FMODUnity;uncomment this when fmod is back
 
 public class Pillar : MonoBehaviour {
 	public Transform pillarRoot;
@@ -8,7 +8,7 @@ public class Pillar : MonoBehaviour {
 	public Transform platformPoint;
 	float fallspeed;
 	public float fallAngle;
-    public StudioEventEmitter target;
+    //public StudioEventEmitter target;uncomment this when fmod is back
     bool startedPlaying = false;
 
 	bool resetting = false;
@@ -22,6 +22,12 @@ public class Pillar : MonoBehaviour {
 	private Vector3 startPosition;
 	private Quaternion startRotation;
 
+
+	private Object[] audioPrefabs;
+	private GameObject tiltingPillarAudio;
+
+    //[FMODUnity.EventRef]uncomment this when fmod is back
+    private string tiltingPillarAudioString = "event:/Lava Level/Structures/Dragon Statues/Tilting Pillars";
 	
 
 	BoxCollider myTrigger;
@@ -29,7 +35,7 @@ public class Pillar : MonoBehaviour {
 	void Start () {
 
 
-		platform.position = platformPoint.position;
+	    platform.position = platformPoint.position;
 		StoreStartPosition();
 		LevelReset.myLevelElements.Add(this);
 		fallspeed = startingSpeed;
@@ -41,16 +47,34 @@ public class Pillar : MonoBehaviour {
 
 		}
 
-	}
-	
-	void OnTriggerEnter(Collider col){
+		audioPrefabs = Resources.LoadAll ("");
+        /*uncomment this when fmod is back
+		foreach (Object gameAudio in audioPrefabs) {
+			if (gameAudio is GameObject) {
+				if ((gameAudio as GameObject).GetComponent<StudioEventEmitter> ()) {
+					tiltingPillarAudio = (gameAudio as GameObject);
+				}
+			}
+		}
+        */
+        tiltingPillarAudio = GameObject.Instantiate (tiltingPillarAudio, this.transform.position, Quaternion.identity) as GameObject;
+		tiltingPillarAudio.transform.parent = this.transform;
+		tiltingPillarAudio.transform.localPosition = new Vector3 (0, 11.5f, 0);
+        //Double Check This
+        //tiltingPillarAudio.GetComponent<StudioEventEmitter> ().Event = tiltingPillarAudioString;uncomment this when fmod is back
+        //Debug.Log (tiltingPillarAudio.GetComponent<StudioEventEmitter> ().Event);
+
+    }
+
+    void OnTriggerEnter(Collider col){
 
 
 		if(col.gameObject.tag == ("Player")){
 			InvokeRepeating("Fall", 0.01f,0.01f);
             if (!startedPlaying)
             {
-                target.Play();
+                //target.Play();
+				//tiltingPillarAudio.GetComponent<StudioEventEmitter> ().Play (); uncomment this when fmod is back
                 startedPlaying = true;
             }
 			myTrigger.enabled = false;

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-using FMODUnity;
+//using FMODUnity;
 
 public class BeamDragonStatue : MonoBehaviour {
     [Tooltip("Override for playtesting (or other reasons). Make this true if you want to activate the statue before the relic is grabbed")]
@@ -18,7 +18,13 @@ public class BeamDragonStatue : MonoBehaviour {
     bool activated = false;
     [Tooltip("Here's a tip, leave this guy alone. He's introverted.")]
     public GameObject beam;
-    public StudioEventEmitter target;
+    //public StudioEventEmitter target; uncomment this when fmod is back
+
+	private Object[] audioPrefabs;
+	private GameObject dragonLaserAudio;
+
+    //[FMODUnity.EventRef]uncomment this when fmod is back
+    //private string dragonLaserAudioString = "event:/Lava Level/Structures/Dragon Statues/LaserDragon";uncomment this when fmod is back
 
     // Use this for initialization
     void Start()
@@ -27,6 +33,26 @@ public class BeamDragonStatue : MonoBehaviour {
         beam.GetComponent<FlamePillar>().beamDuration = beamDuration;
         beam.GetComponent<FlamePillar>().dealyOfExplosion = dealyOfExplosion;
         beam.GetComponent<FlamePillar>().explosionDuration = explosionDuration;
+
+		audioPrefabs = Resources.LoadAll ("");
+        /*uncomment this when fmod is back
+		foreach (Object gameAudio in audioPrefabs) {
+			if (gameAudio is GameObject) {
+				if ((gameAudio as GameObject).GetComponent<StudioEventEmitter> ()) {
+					dragonLaserAudio = (gameAudio as GameObject);
+				}
+			}
+		}
+        */
+        dragonLaserAudio = GameObject.Instantiate (dragonLaserAudio, this.transform.position, Quaternion.identity) as GameObject;
+		dragonLaserAudio.transform.parent = this.transform;
+		dragonLaserAudio.transform.localPosition = new Vector3 (-5.78f, 55.12f, -68.88f);
+		//Double Check This
+		//dragonLaserAudio.GetComponent<StudioEventEmitter> ().Event = dragonLaserAudioString;
+		//Debug.Log (dragonLaserAudio.GetComponent<StudioEventEmitter> ().Event);
+
+
+
     }
 
     // Update is called once per frame
@@ -43,9 +69,9 @@ public class BeamDragonStatue : MonoBehaviour {
 
     void FireBeam()
     {
-        target.Play();
+        //uncomment this when fmod is back
+		//dragonLaserAudio.GetComponent<StudioEventEmitter> ().Play ();
         //The beam gets activated (It deactivates itself)
-        Debug.Log("I got here");
         beam.GetComponent<FlamePillar>().isActive = true;
     }
 }

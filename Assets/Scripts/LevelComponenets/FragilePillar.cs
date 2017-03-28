@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Assets.Scripts.Components;
-using FMODUnity;
+//using FMODUnity;
 
 public class FragilePillar : MonoBehaviour {
 	Transform PillarBotHalf;
@@ -9,7 +9,7 @@ public class FragilePillar : MonoBehaviour {
 	public Jumping playerjumping;
 	bool canDestroy;
 	Vector3 botHalfPos;
-    public StudioEventEmitter target;
+    //public StudioEventEmitter target;
     bool startedPlaying = false;
 	// Use this for initialization
 	void Start () {
@@ -46,7 +46,7 @@ public class FragilePillar : MonoBehaviour {
 			PillarBotHalf.GetComponent<Rigidbody> ().isKinematic = false;
 			CrackTrigger.enabled = false;
             if (!startedPlaying) {
-                target.Play();
+                //target.Play();
                 startedPlaying = true;
             }
 		}

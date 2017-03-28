@@ -13,7 +13,7 @@ namespace Assets.Scripts.Components
 		public static float maxJumps = 1;
 		public static float maxWallJumps = 999f;
 
-		float wallJumps = 0f;
+		public float wallJumps = 0f;
 		float wallJumpDir = 0f; 
 		float wallJumpGrav = 0f;
 

@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿//Original Author: Michael Kennedy? || Last Edited: Alexander Stamatis [A.S] | Modified on Feb 19, 2017
+
+using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
 
@@ -12,6 +14,24 @@ public class PauseMenuYesNo : MonoBehaviour {
 
 	
 	private int mainMenuSceneIndex, levelSelectSceneIndex;
+
+	//Added this awake function [A.S.]
+	private void Awake()
+	{
+		//Assign PauseMenu OBJ - A.S.
+		if (pauseMenuMain == null)
+		{
+			//Get GameObject named "GUI 1", go to first child named "Canvas" then get child #3 named "Pause Menu"
+			//Its important that the PauseMenu is in the correct hierarchy under parent "Canvas"
+			if (GameObject.Find("GUI 1").transform.GetChild(0).GetChild(2).gameObject)
+			{
+				pauseMenuMain = GameObject.Find("GUI 1").transform.GetChild(0).GetChild(2).gameObject;
+			}
+		} else
+		{
+			Debug.LogError("pauseMenu is not assigned");
+		}
+	}
 
 	// Use this for initialization
 	void Start () {

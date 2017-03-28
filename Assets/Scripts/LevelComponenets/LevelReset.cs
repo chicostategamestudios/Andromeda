@@ -5,13 +5,21 @@ using System.Collections.Generic;
 public class LevelReset : MonoBehaviour {
 	public static List<MonoBehaviour> myLevelElements = new List<MonoBehaviour>();
 
+    private static List<LevelElement> LevelElements = new List<LevelElement>();
+
 	public bool reset = false;
 
 	public static void Reset(){
 
-		//Debug.Log("reset");
+        //Debug.Log("reset");
 
-		foreach (var plat in myLevelElements) {
+        for (int ele = 0; ele < LevelElements.Count; ele++)
+        {
+            Debug.Log("resetting: " + LevelElements[ele]);
+            LevelElements[ele].Reset();
+        }
+
+        foreach (var plat in myLevelElements) {
 			if (plat is WheelPlatforms) {
 				(plat as WheelPlatforms).Reset ();
 			}
@@ -37,9 +45,16 @@ public class LevelReset : MonoBehaviour {
 
 		}
 
+       
+
 
 
 	}
+
+    public static void AddToLevelElements(LevelElement newElement)
+    {
+        LevelElements.Add(newElement);
+    }
 
 	void Update(){
 		if (reset) {

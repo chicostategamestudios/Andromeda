@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CanDestroy : MonoBehaviour {
+public class CanDestroy : LevelElement {
 	public float hp;
 
 
@@ -11,9 +11,21 @@ public class CanDestroy : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () {
-		if (hp < 1) {
-			Destroy (this.gameObject);
-		}
-	}
+	
+    public float dealDamage
+    {
+        set
+        {
+            hp -= value;
+            if(hp <= 0)
+            {
+                this.DestroyMe();
+            }
+        }
+    }
+
+    public virtual void DestroyMe()
+    {
+        Destroy(this.gameObject); //default if not overriden into child classes.
+    }
 }

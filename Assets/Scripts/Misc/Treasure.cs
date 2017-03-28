@@ -57,7 +57,7 @@ public class Treasure : MonoBehaviour {
 			break;
 		case TreasureState.lost: //lost is ran if the player takes damage after picking it up
 			myState = newState;
-			this.gameObject.SetActive (true);
+			//this.gameObject.SetActive (true);
 			break;
 		case TreasureState.notPickedUp: //not picked up is the default treasure state if the player has not picked it up
 			myState = newState;
@@ -71,39 +71,48 @@ public class Treasure : MonoBehaviour {
 }
 
 [Serializable]
-public class SerializableTreasure : IEquatable<Treasure>{
+public class SerializableTreasure : IEquatable<Treasure>
+{
 
-	[SerializeField]
-	public TreasureType _treasureType; //this is my type (color)
+    [SerializeField]
+    public TreasureType _treasureType; //this is my type (color)
 
-	[SerializeField]
-	public TreasureState myState = TreasureState.notPickedUp; //this is my state
+    [SerializeField]
+    public TreasureState myState = TreasureState.notPickedUp; //this is my state
 
-	[SerializeField]
-	public int MyIndex;
+    [SerializeField]
+    public int MyIndex;
 
-	public SerializableTreasure(Treasure inputTreasure){
-		_treasureType = inputTreasure._treasureType;
-		myState = inputTreasure.myState;
-		MyIndex = inputTreasure.MyIndex;
+    public SerializableTreasure(Treasure inputTreasure)
+    {
+        _treasureType = inputTreasure._treasureType;
+        myState = inputTreasure.myState;
+        Debug.Log(myState);
+        MyIndex = inputTreasure.MyIndex;
 
-	}
+    }
 
-	public SerializableTreasure returnTreasure{
-		get{
-			return this;
-		}
-	}
+    public SerializableTreasure returnTreasure
+    {
+        get
+        {
+            return this;
+        }
+    }
 
 
-	public bool Equals(Treasure myTreas){
-		if (MyIndex == myTreas.MyIndex) {
-			return true;
-		} else {
-			return false;
-		}
-	}
-	//curUnit.unitStaticData = unitBase.Find(UnitBaseData => UnitBaseData.unit_id == curUnit.unitClassID).unitStats;
+    public bool Equals(Treasure myTreas)
+    {
+        if (MyIndex == myTreas.MyIndex)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    //curUnit.unitStaticData = unitBase.Find(UnitBaseData => UnitBaseData.unit_id == curUnit.unitClassID).unitStats;
 
 
 }

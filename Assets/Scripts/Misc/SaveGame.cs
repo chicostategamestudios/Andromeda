@@ -4,7 +4,7 @@ using System;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using System.Collections.Generic;
-using Assets.Scripts.Components;
+
 
 
 //This is our save game tool. The save game tool holds the level stats class (the stats that each level can have) as well as the game stats class (the stats that
@@ -17,7 +17,8 @@ public enum LevelToUnlock //these will be used to decide what level we are unloc
 	earthLevel,
 	fireLevel,
 	airLevel,
-	iceLevel
+	iceLevel,
+	finalLevel
 }
 
 public enum LockMode //this is just the lockmode of the level. We can use this to relock a level or something like that.
@@ -47,6 +48,7 @@ public class SaveGame : MonoBehaviour { //This class will save the game.
 	private static GameStats myGame;
 	private static MyLoadedGame curGame;
 	private static SaveGame GameSaver;
+	
 
 	void Awake()
 	{ //this setup is to ensure a singleton of the object. We only need one gamesaver
@@ -76,8 +78,8 @@ public class SaveGame : MonoBehaviour { //This class will save the game.
 
 			return GameSaver;}
 	}
-
-	public MyGames GetMyGames(){ //this will return my games, we SHOULD be loading games before we return myGames....
+    //C:\Users\CAGD Student\AppData\LocalLow\DefaultCompany\Andromeda
+    public MyGames GetMyGames(){ //this will return my games, we SHOULD be loading games before we return myGames....
 		if (_myGames != null) {
 			return _myGames;
 		} else {
@@ -86,6 +88,8 @@ public class SaveGame : MonoBehaviour { //This class will save the game.
 		}
 
 	}
+
+	
 
 	public GameStats GetGameStats{ //this contains the value of our currently selected game. 
 		get {
@@ -98,11 +102,13 @@ public class SaveGame : MonoBehaviour { //This class will save the game.
 	}
 
 
+
+
 	public void LoadGames() //this should be ran in the beginning of the game
 	{
 
 		MyGames curGames = new MyGames(); //creates a new MyGames object which stores all of the data for each Game
-
+        //Debug.Log("aaffaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaf"+Application.persistentDataPath);
 		if (File.Exists(Application.persistentDataPath + saveDataFile + saveDataFileEnding)) //check if we have a file to open (the game has been played before)
 		{
 			BinaryFormatter loadBf = new BinaryFormatter(); //open a BinaryFormatter
@@ -197,6 +203,7 @@ public class SaveGame : MonoBehaviour { //This class will save the game.
 		newGame.EarthLevelStats.thisLevel = LevelToUnlock.earthLevel;
 		newGame.FireLevelStats.thisLevel = LevelToUnlock.fireLevel;
 		newGame.WaterLevelStats.thisLevel = LevelToUnlock.iceLevel;
+		newGame.FinalLevelStats.thisLevel = LevelToUnlock.finalLevel;
 		//newGame.existingFile = false;
 		newGame.PlayTime = 0f;
 		newGame.treasureCollected = 0f;
@@ -245,6 +252,7 @@ public class GameStats //this object holds all of our game stats. we can store t
 	public LevelStats FireLevelStats = new LevelStats();
 	public LevelStats WaterLevelStats = new LevelStats();
 	public LevelStats AirLevelStats = new LevelStats();
+	public LevelStats FinalLevelStats = new LevelStats();
 
 	public LevelStats GetStats(LevelToUnlock GetLevel){
 		switch (GetLevel) {
@@ -262,6 +270,10 @@ public class GameStats //this object holds all of our game stats. we can store t
 			break;
 		case LevelToUnlock.iceLevel:
 			return WaterLevelStats;
+			break;
+			case LevelToUnlock.finalLevel:
+				return FinalLevelStats;
+				break;
 		}
 			return null;
 		}
@@ -282,20 +294,11 @@ public class GameStats //this object holds all of our game stats. we can store t
 		case LevelToUnlock.tutorial:
 			TutorialLevelStats = stats;
 			break;
+			case LevelToUnlock.finalLevel:
+				FinalLevelStats = stats;
+				break;
 		}
 	}
-
-	public RelicManager assignAbilities(RelicManager inMan){
-		RelicManager myMan = inMan;
-
-		myMan.dashRelic = !AirLevelStats.locked;
-		myMan.jumpRelic = !FireLevelStats.locked;
-		myMan.wallJumpRelic = !WaterLevelStats.locked;
-		myMan.slashRelic = !EarthLevelStats.locked;
-		return myMan;
-	}
-
-
 
 }
 
@@ -303,46 +306,50 @@ public class GameStats //this object holds all of our game stats. we can store t
 public class LevelStats //level stats is used to save attriubtes of levels. right now we are just saving the lockmode, but later it will be easy to expand to saving
 //things like player scores and times and things as well.
 {
-	public LevelToUnlock thisLevel;
-	public bool locked = true;
-	public float relicsCollected;
-	public float totalRelics;
+    public LevelToUnlock thisLevel;
+    public bool locked = true;
+    public float relicsCollected;
+    public float totalRelics;
 
-	public LevelGrade grade;
+    public LevelGrade grade;
 
-	public string completionTime;
+    public string completionTime;
 
-	public List<SerializableTreasure> RedTreasuresRemaining = new List<SerializableTreasure>();
-	public List<SerializableTreasure> GreenTreasuresRemaining = new List<SerializableTreasure>();
-	public List<SerializableTreasure> BlueTreasuresRemaining = new List<SerializableTreasure>();
-	public List<SerializableTreasure> YellowTreasuresRemaining = new List<SerializableTreasure>();
+    public List<SerializableTreasure> RedTreasuresRemaining = new List<SerializableTreasure>();
+    public List<SerializableTreasure> GreenTreasuresRemaining = new List<SerializableTreasure>();
+    public List<SerializableTreasure> BlueTreasuresRemaining = new List<SerializableTreasure>();
+    public List<SerializableTreasure> YellowTreasuresRemaining = new List<SerializableTreasure>();
 
-	public TreasureState getMyState(TreasureType color, int myIndex){
-		TreasureState returnState = TreasureState.notPickedUp;
-		List<SerializableTreasure> myTreasureList = null;
+    public TreasureState getMyState(TreasureType color, int myIndex)
+    {
+        TreasureState returnState = TreasureState.notPickedUp;
+        List<SerializableTreasure> myTreasureList = null;
 
-		switch (color) {
-		case(TreasureType.blue):
-			myTreasureList = BlueTreasuresRemaining;
-			break;
-		case(TreasureType.red):
-			myTreasureList = RedTreasuresRemaining;
-			break;
-		case(TreasureType.green):
-			myTreasureList = GreenTreasuresRemaining;
-			break;
-		case(TreasureType.yellow):
-			myTreasureList = YellowTreasuresRemaining;
-			break;
-		}
-		for (int tres = 0; tres < myTreasureList.Count; tres++) {
-			if (myIndex == myTreasureList [tres].MyIndex) {
-				returnState = myTreasureList [tres].myState;
-			}
-		}
-		return returnState;
-	}
+        switch (color)
+        {
+            case (TreasureType.blue):
+                myTreasureList = BlueTreasuresRemaining;
+                break;
+            case (TreasureType.red):
+                myTreasureList = RedTreasuresRemaining;
+                break;
+            case (TreasureType.green):
+                myTreasureList = GreenTreasuresRemaining;
+                break;
+            case (TreasureType.yellow):
+                myTreasureList = YellowTreasuresRemaining;
+                break;
+        }
+        for (int tres = 0; tres < myTreasureList.Count; tres++)
+        {
+            if (myIndex == myTreasureList[tres].MyIndex)
+            {
+                returnState = myTreasureList[tres].myState;
+            }
+        }
+       
+        return returnState;
+    }
 
 
 }
-

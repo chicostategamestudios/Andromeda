@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Assets.Scripts.Components;
+using Assets.Scripts.Character;
 
 public class WindyArea : MonoBehaviour {
     [Tooltip("The force the player gets pushed in the x direction")]
@@ -14,7 +15,12 @@ public class WindyArea : MonoBehaviour {
     public bool activated = false;
     PlayerMovement move;
     Vector2 modVec;
-    
+
+    public ParticleSystem mySystem;
+	void Start()
+	{
+		move = CharController.Instance.gameObject.GetComponent<PlayerMovement>();
+	}
 
 	void OnTriggerEnter(Collider col) {
         if(col.tag == "Player") {
@@ -37,11 +43,21 @@ public class WindyArea : MonoBehaviour {
     }
 
     IEnumerator Windy () {
+        if(mySystem != null)
+        {
+            
+            mySystem.Play();
+        }
         while (activated) {
             yield return new WaitForSeconds(timeGoingLeft);
             modVec = new Vector2 (-Mathf.Abs(xForce), yForce); 
             yield return new WaitForSeconds(timeGoingRight);
             modVec = new Vector2(Mathf.Abs(xForce), yForce);
+        }
+        if (mySystem != null)
+        {
+
+            mySystem.Stop();
         }
     }
 
@@ -52,6 +68,6 @@ public class WindyArea : MonoBehaviour {
         {
             move.modificationVec = Vector2.zero;
         }
-        print(modVec);
+        //print(modVec);
     }
 }
