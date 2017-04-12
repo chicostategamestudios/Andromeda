@@ -33,10 +33,6 @@ namespace Assets.Scripts.Components
 		private bool midWallJump;
 		//private float totalWallJumps = 0f;
 
-
-
-
-
 		public void BasicJump(float jumpHeight){
 			
 			if ((jumpStage < maxJumps)) {
@@ -44,7 +40,6 @@ namespace Assets.Scripts.Components
 				jumpStage++;
 
 			}
-		
 
 		}
 

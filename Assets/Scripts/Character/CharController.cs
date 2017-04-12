@@ -9,7 +9,7 @@ namespace Assets.Scripts.Character
     class CharController : Components.ControllerBase
     {
         [Tooltip("Timer value must be more than 0. This is the timer that prevents the player from spamming jump")]
-        public float jump_spam_timer = 0.1f; //This is the amount of time before a player can jump again.
+        public float jump_spam_timer = 0.0f; //This is the amount of time before a player can jump again.
 
         [Tooltip("Timer value must be more than 0. This is the timer that prevents the player from spamming dash")]
         public float dash_spam_timer = 0.5f; //This is the amount of time before a player can dash again.
@@ -101,20 +101,20 @@ namespace Assets.Scripts.Character
                 return;
             }
 
+            //_movement.DashHandler (playerDirection);
+            GetInput();
+
+        }
+        void FixedUpdate()
+        {
             if (_movement.grounded) //if the player is on the ground, this resets the hold_jump_time back to 0 so they can hold the jump button again.
             {
                 hold_jump_time = 0.0f;
             }
 
-
-            GetInput();
+            
             _movement.MovePlayer(playerDirection);
             _movement.WallGrab();
-            //_movement.DashHandler (playerDirection);
-
-        }
-        void FixedUpdate()
-        {
             _relics.AbilityManager();
         }
 

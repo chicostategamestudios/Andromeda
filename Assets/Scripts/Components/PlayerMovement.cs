@@ -27,6 +27,7 @@ namespace Assets.Scripts.Components
         public static float speed = 15f;
         public static float speedModifier = 1f;
         public float jumpHeight = 20.0f;    //originally 28.5f... changed this to balance the player's jumping potential
+        public float hold_jump_force = 45.4f;
         public float dashJump;
         public static Vector2 moveVector;
         public static float playerDir;
@@ -140,20 +141,18 @@ namespace Assets.Scripts.Components
                 _dash.ResetDashing();
             }
 
-
             if (applyGravity)
             {
                 if (grounded)
                 {
-
-
                     verticleSpeed = -0.1f;
                     checkforwalls = false;
                 }
-                if (!grounded)
+                else if (!grounded)
                 {
                     if (verticleSpeed > maxVertSpeed)
                     {
+                        print("Max vet speed: " + maxVertSpeed);
                         verticleSpeed -= gravity * Time.deltaTime;
                     }
                 }
@@ -167,7 +166,6 @@ namespace Assets.Scripts.Components
             Upray();
             if (!overrideInput)
             {
-
 
                 if (isStunned)
                 {
@@ -234,7 +232,7 @@ namespace Assets.Scripts.Components
 
         public void HoverPlayer()  //This will make the player float for a bit. It is called when the player holds the jump button while in the air.
         {
-            verticleSpeed += .8f;
+            verticleSpeed += hold_jump_force * Time.deltaTime;
         }
 
         public void WallGrab()

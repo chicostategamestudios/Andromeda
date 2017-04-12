@@ -94,6 +94,7 @@ public class DisplayEndLevelStats : MonoBehaviour {
 		if (Input.GetButton ("Start")) {
 			CharController myCont = CharController.Instance;
 			myCont.endScene();
+            Time.timeScale = 1;
 
 			//CharController.endScene();
 			SceneManager.LoadScene (SceneRef.getLevelSelect);
