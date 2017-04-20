@@ -41,7 +41,7 @@ public class LevelSelectController : MonoBehaviour {
 				} else {
 					cursorPositionIndex--;
 				}
-				cursor.GetComponent<RectTransform> ().localPosition = new Vector2 (cursorPosition.x, cursorYPositions [cursorPositionIndex]);
+				//cursor.GetComponent<RectTransform> ().localPosition = new Vector2 (cursorPosition.x, cursorYPositions [cursorPositionIndex]);
 				return cursorPositionIndex;
 			}
 			//If the thumbstick has been pushed down
@@ -52,7 +52,7 @@ public class LevelSelectController : MonoBehaviour {
 				} else {
 					cursorPositionIndex++;
 				}
-				cursor.GetComponent<RectTransform> ().localPosition = new Vector2 (cursorPosition.x, cursorYPositions [cursorPositionIndex]);
+				//cursor.GetComponent<RectTransform> ().localPosition = new Vector2 (cursorPosition.x, cursorYPositions [cursorPositionIndex]);
 				return cursorPositionIndex;
 			} 
 			//No movement done (must return something)
